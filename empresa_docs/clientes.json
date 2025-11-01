@@ -1,0 +1,322 @@
+[
+  {
+    "cliente_id": "CLI001",
+    "nombre_empresa": "LogiTrans SA",
+    "industria": "Logística",
+    "tamaño_empresa": "Mediana (250 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "María Torres",
+      "cargo": "Coordinadora de Operaciones",
+      "email": "maría.torres@logitrans.com",
+      "telefono": "+54 11 4073-3694"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2024-04-14",
+    "valor_total_proyectos_usd": 337710
+  },
+  {
+    "cliente_id": "CLI002",
+    "nombre_empresa": "Banco del Norte",
+    "industria": "Fintech",
+    "tamaño_empresa": "Grande (1200 empleados)",
+    "ubicacion": "Montevideo",
+    "contacto_principal": {
+      "nombre": "Laura Paredes",
+      "cargo": "Gerente de Tecnología",
+      "email": "laura.paredes@bancodelnorte.com",
+      "telefono": "+54 11 4713-5040"
+    },
+    "relacion_comercial": "Cliente Activo",
+    "fecha_primer_contacto": "2024-11-13",
+    "valor_total_proyectos_usd": 320335
+  },
+  {
+    "cliente_id": "CLI003",
+    "nombre_empresa": "TechParts SA",
+    "industria": "Manufactura",
+    "tamaño_empresa": "Mediana (180 empleados)",
+    "ubicacion": "Córdoba",
+    "contacto_principal": {
+      "nombre": "Martín Figueroa",
+      "cargo": "Responsable de Sistemas",
+      "email": "martín.figueroa@techparts.com",
+      "telefono": "+54 11 4552-3532"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2024-05-27",
+    "valor_total_proyectos_usd": 275726
+  },
+  {
+    "cliente_id": "CLI004",
+    "nombre_empresa": "MediHealth Clinic",
+    "industria": "Salud",
+    "tamaño_empresa": "Pequeña (80 empleados)",
+    "ubicacion": "Rosario",
+    "contacto_principal": {
+      "nombre": "Julián López",
+      "cargo": "CTO",
+      "email": "julián.lópez@medihealth.com",
+      "telefono": "+54 11 4606-4938"
+    },
+    "relacion_comercial": "Cliente Recurrente",
+    "fecha_primer_contacto": "2024-11-18",
+    "valor_total_proyectos_usd": 148861
+  },
+  {
+    "cliente_id": "CLI005",
+    "nombre_empresa": "EduTech Solutions",
+    "industria": "Educación",
+    "tamaño_empresa": "Startup (25 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Rodrigo Sánchez",
+      "cargo": "Director de Innovación",
+      "email": "rodrigo.sánchez@edutech.com",
+      "telefono": "+54 11 4043-7323"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2025-02-21",
+    "valor_total_proyectos_usd": 434368
+  },
+  {
+    "cliente_id": "CLI006",
+    "nombre_empresa": "RetailMax",
+    "industria": "Retail",
+    "tamaño_empresa": "Grande (2000 empleados)",
+    "ubicacion": "Santiago",
+    "contacto_principal": {
+      "nombre": "Patricia Gómez",
+      "cargo": "Jefe de IT",
+      "email": "patricia.gómez@retailmax.com",
+      "telefono": "+54 11 4102-9482"
+    },
+    "relacion_comercial": "Cliente Recurrente",
+    "fecha_primer_contacto": "2024-06-21",
+    "valor_total_proyectos_usd": 252687
+  },
+  {
+    "cliente_id": "CLI007",
+    "nombre_empresa": "FarmConnect",
+    "industria": "Agricultura",
+    "tamaño_empresa": "Mediana (150 empleados)",
+    "ubicacion": "Mendoza",
+    "contacto_principal": {
+      "nombre": "Roberto Díaz",
+      "cargo": "Gerente de Proyectos",
+      "email": "roberto.díaz@farmconnect.com",
+      "telefono": "+54 11 4352-1610"
+    },
+    "relacion_comercial": "Cliente Activo",
+    "fecha_primer_contacto": "2023-04-15",
+    "valor_total_proyectos_usd": 259167
+  },
+  {
+    "cliente_id": "CLI008",
+    "nombre_empresa": "SecureBank Digital",
+    "industria": "Fintech",
+    "tamaño_empresa": "Grande (800 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Claudia Fernández",
+      "cargo": "CEO",
+      "email": "claudia.fernández@securebankdigital.com",
+      "telefono": "+54 11 4113-1534"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2025-05-02",
+    "valor_total_proyectos_usd": 70766
+  },
+  {
+    "cliente_id": "CLI009",
+    "nombre_empresa": "CargoFleet",
+    "industria": "Logística",
+    "tamaño_empresa": "Mediana (320 empleados)",
+    "ubicacion": "Montevideo",
+    "contacto_principal": {
+      "nombre": "Jorge Martínez",
+      "cargo": "VP de Tecnología",
+      "email": "jorge.martínez@cargofleet.com",
+      "telefono": "+54 11 4509-4782"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2024-10-01",
+    "valor_total_proyectos_usd": 88378
+  },
+  {
+    "cliente_id": "CLI010",
+    "nombre_empresa": "ShopNow Argentina",
+    "industria": "E-commerce",
+    "tamaño_empresa": "Mediana (200 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Silvia Castro",
+      "cargo": "Líder Técnico",
+      "email": "silvia.castro@shopnowargentina.com",
+      "telefono": "+54 11 4258-1924"
+    },
+    "relacion_comercial": "Cliente Activo",
+    "fecha_primer_contacto": "2023-08-18",
+    "valor_total_proyectos_usd": 261065
+  },
+  {
+    "cliente_id": "CLI011",
+    "nombre_empresa": "PowerGrid Solutions",
+    "industria": "Energía",
+    "tamaño_empresa": "Grande (1500 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Fernando Ruiz",
+      "cargo": "Coordinadora de Operaciones",
+      "email": "fernando.ruiz@powergrid.com",
+      "telefono": "+54 11 4882-3055"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2025-07-17",
+    "valor_total_proyectos_usd": 348068
+  },
+  {
+    "cliente_id": "CLI012",
+    "nombre_empresa": "InsureTech Plus",
+    "industria": "Seguros",
+    "tamaño_empresa": "Mediana (280 empleados)",
+    "ubicacion": "Santiago",
+    "contacto_principal": {
+      "nombre": "Gabriela Morales",
+      "cargo": "Gerente de Tecnología",
+      "email": "gabriela.morales@insuretechplus.com",
+      "telefono": "+54 11 4575-4930"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2024-03-25",
+    "valor_total_proyectos_usd": 262340
+  },
+  {
+    "cliente_id": "CLI013",
+    "nombre_empresa": "TelecomSur",
+    "industria": "Telecomunicaciones",
+    "tamaño_empresa": "Grande (3000 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Ricardo Pérez",
+      "cargo": "Responsable de Sistemas",
+      "email": "ricardo.pérez@telecomsur.com",
+      "telefono": "+54 11 4033-3700"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2024-07-13",
+    "valor_total_proyectos_usd": 339324
+  },
+  {
+    "cliente_id": "CLI014",
+    "nombre_empresa": "HealthTrack App",
+    "industria": "Salud",
+    "tamaño_empresa": "Startup (15 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Monica Herrera",
+      "cargo": "CTO",
+      "email": "monica.herrera@healthtrackapp.com",
+      "telefono": "+54 11 4614-2040"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2023-04-02",
+    "valor_total_proyectos_usd": 495103
+  },
+  {
+    "cliente_id": "CLI015",
+    "nombre_empresa": "GobiernoDigital",
+    "industria": "Gobierno",
+    "tamaño_empresa": "Grande (500 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Alberto Silva",
+      "cargo": "Director de Innovación",
+      "email": "alberto.silva@gobiernodigital.com",
+      "telefono": "+54 11 4122-4784"
+    },
+    "relacion_comercial": "Cliente Activo",
+    "fecha_primer_contacto": "2023-06-03",
+    "valor_total_proyectos_usd": 45616
+  },
+  {
+    "cliente_id": "CLI016",
+    "nombre_empresa": "MarketPlace Local",
+    "industria": "E-commerce",
+    "tamaño_empresa": "Startup (30 empleados)",
+    "ubicacion": "Córdoba",
+    "contacto_principal": {
+      "nombre": "Daniela Vega",
+      "cargo": "Jefe de IT",
+      "email": "daniela.vega@marketplacelocal.com",
+      "telefono": "+54 11 4819-5050"
+    },
+    "relacion_comercial": "Cliente Activo",
+    "fecha_primer_contacto": "2023-04-24",
+    "valor_total_proyectos_usd": 379101
+  },
+  {
+    "cliente_id": "CLI017",
+    "nombre_empresa": "IndustrialTech",
+    "industria": "Manufactura",
+    "tamaño_empresa": "Grande (1100 empleados)",
+    "ubicacion": "Rosario",
+    "contacto_principal": {
+      "nombre": "Gustavo Rojas",
+      "cargo": "Gerente de Proyectos",
+      "email": "gustavo.rojas@industrialtech.com",
+      "telefono": "+54 11 4342-6887"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2024-10-22",
+    "valor_total_proyectos_usd": 43102
+  },
+  {
+    "cliente_id": "CLI018",
+    "nombre_empresa": "SmartFarm Technologies",
+    "industria": "Agricultura",
+    "tamaño_empresa": "Mediana (95 empleados)",
+    "ubicacion": "Mendoza",
+    "contacto_principal": {
+      "nombre": "Adriana Mendoza",
+      "cargo": "CEO",
+      "email": "adriana.mendoza@smartfarmtechnologies.com",
+      "telefono": "+54 11 4681-6356"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2024-01-19",
+    "valor_total_proyectos_usd": 174651
+  },
+  {
+    "cliente_id": "CLI019",
+    "nombre_empresa": "EnergyTrack Solutions",
+    "industria": "Energía",
+    "tamaño_empresa": "Mediana (220 empleados)",
+    "ubicacion": "Santiago",
+    "contacto_principal": {
+      "nombre": "Pablo Guerrero",
+      "cargo": "VP de Tecnología",
+      "email": "pablo.guerrero@energytrack.com",
+      "telefono": "+54 11 4987-6308"
+    },
+    "relacion_comercial": "Cliente Nuevo",
+    "fecha_primer_contacto": "2025-08-08",
+    "valor_total_proyectos_usd": 85792
+  },
+  {
+    "cliente_id": "CLI020",
+    "nombre_empresa": "LearnOnline Platform",
+    "industria": "Educación",
+    "tamaño_empresa": "Mediana (120 empleados)",
+    "ubicacion": "Buenos Aires",
+    "contacto_principal": {
+      "nombre": "Carolina Ortiz",
+      "cargo": "Líder Técnico",
+      "email": "carolina.ortiz@learnonlineplatform.com",
+      "telefono": "+54 11 4894-9975"
+    },
+    "relacion_comercial": "Lead Calificado",
+    "fecha_primer_contacto": "2024-12-05",
+    "valor_total_proyectos_usd": 52659
+  }
+]

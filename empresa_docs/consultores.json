@@ -1,0 +1,1878 @@
+[
+  {
+    "consultor_id": "CONS001",
+    "nombre": "Juan González",
+    "email": "juan.gonzález@consultora.com",
+    "rol_principal": "Mobile Developer",
+    "años_experiencia": 2,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "React Native",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Flutter",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Xamarin",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Angular",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "TypeScript",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Agricultura",
+      "Educación",
+      "Fintech",
+      "Gobierno"
+    ],
+    "tarifa_dia_usd": 241,
+    "modalidad_trabajo": "Flexible",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": [
+      "PMP Certification",
+      "Scrum Master Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS002",
+    "nombre": "María Rodríguez",
+    "email": "maría.rodríguez@consultora.com",
+    "rol_principal": "DevOps Engineer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2026-02-19",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "GCP",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "GitHub Actions",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "AWS",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Docker",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Kubernetes",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Azure",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "NestJS",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": ".NET",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "Agricultura",
+      "Energía"
+    ],
+    "tarifa_dia_usd": 366,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Rosario",
+    "certificaciones": [
+      "PMP Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS003",
+    "nombre": "Carlos Fernández",
+    "email": "carlos.fernández@consultora.com",
+    "rol_principal": "UX/UI Designer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Figma",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Adobe XD",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Sketch",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "InVision",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Illustrator",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Photoshop",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "User Research",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      }
+    ],
+    "industrias_trabajadas": [
+      "Educación",
+      "Telecomunicaciones"
+    ],
+    "tarifa_dia_usd": 195,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Montevideo",
+    "certificaciones": [
+      "PMP Certification",
+      "Microsoft Azure Developer",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS004",
+    "nombre": "Ana López",
+    "email": "ana.lópez@consultora.com",
+    "rol_principal": "QA Engineer",
+    "años_experiencia": 12,
+    "disponibilidad": {
+      "disponible_desde": "2026-02-19",
+      "porcentaje_disponible": 50
+    },
+    "skills": [
+      {
+        "nombre": "Selenium",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "Cypress",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Jest",
+        "nivel": "Expert",
+        "años_experiencia": 11
+      },
+      {
+        "nombre": "Postman",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "TestRail",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "API Testing",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "Automation",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      }
+    ],
+    "industrias_trabajadas": [
+      "Retail",
+      "Seguros",
+      "Fintech",
+      "Agricultura",
+      "Educación"
+    ],
+    "tarifa_dia_usd": 497,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Montevideo",
+    "certificaciones": [
+      "Google Cloud Professional",
+      "Scrum Master Certification",
+      "Microsoft Azure Developer"
+    ]
+  },
+  {
+    "consultor_id": "CONS005",
+    "nombre": "Pedro Martínez",
+    "email": "pedro.martínez@consultora.com",
+    "rol_principal": "Frontend Developer",
+    "años_experiencia": 8,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 50
+    },
+    "skills": [
+      {
+        "nombre": "Redux",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "React",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Webpack",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Tailwind CSS",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "Vue.js",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "CSS3",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Odoo",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "SAP",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      }
+    ],
+    "industrias_trabajadas": [
+      "Telecomunicaciones",
+      "Manufactura",
+      "Gobierno"
+    ],
+    "tarifa_dia_usd": 367,
+    "modalidad_trabajo": "Presencial",
+    "ubicacion": "Córdoba",
+    "certificaciones": [
+      "PMP Certification",
+      "MongoDB Certified Developer"
+    ]
+  },
+  {
+    "consultor_id": "CONS006",
+    "nombre": "Laura García",
+    "email": "laura.garcía@consultora.com",
+    "rol_principal": "DevOps Engineer",
+    "años_experiencia": 9,
+    "disponibilidad": {
+      "disponible_desde": "2026-01-20",
+      "porcentaje_disponible": 50
+    },
+    "skills": [
+      {
+        "nombre": "Terraform",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Docker",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Ansible",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "GitHub Actions",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "GCP",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Jenkins",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Django",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Flask",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      }
+    ],
+    "industrias_trabajadas": [
+      "Salud",
+      "Educación",
+      "Fintech"
+    ],
+    "tarifa_dia_usd": 475,
+    "modalidad_trabajo": "Presencial",
+    "ubicacion": "Rosario",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS007",
+    "nombre": "Diego Pérez",
+    "email": "diego.pérez@consultora.com",
+    "rol_principal": "Mobile Developer",
+    "años_experiencia": 3,
+    "disponibilidad": {
+      "disponible_desde": "2025-12-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Xamarin",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Ionic",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Swift",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Angular",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "CSS3",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Gobierno",
+      "Logística"
+    ],
+    "tarifa_dia_usd": 320,
+    "modalidad_trabajo": "Flexible",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": [
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS008",
+    "nombre": "Sofía Sánchez",
+    "email": "sofía.sánchez@consultora.com",
+    "rol_principal": "Backend Developer",
+    "años_experiencia": 8,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "FastAPI",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "NestJS",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Spring Boot",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "C#",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Redis",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Oracle",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "MySQL",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "REST APIs",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Agile/Scrum",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "Salud",
+      "Agricultura",
+      "Educación"
+    ],
+    "tarifa_dia_usd": 188,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Mendoza",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS009",
+    "nombre": "Miguel Ramírez",
+    "email": "miguel.ramírez@consultora.com",
+    "rol_principal": "Project Manager",
+    "años_experiencia": 12,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Agile/Scrum",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "JIRA",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Microsoft Project",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Stakeholder Management",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Risk Management",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "Budget Planning",
+        "nivel": "Expert",
+        "años_experiencia": 10
+      }
+    ],
+    "industrias_trabajadas": [
+      "Salud",
+      "Fintech",
+      "Logística",
+      "Educación",
+      "Gobierno"
+    ],
+    "tarifa_dia_usd": 183,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Santiago",
+    "certificaciones": [
+      "Microsoft Azure Developer",
+      "Scrum Master Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS010",
+    "nombre": "Valentina Torres",
+    "email": "valentina.torres@consultora.com",
+    "rol_principal": "Frontend Developer",
+    "años_experiencia": 12,
+    "disponibilidad": {
+      "disponible_desde": "2026-02-19",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "CSS3",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "Next.js",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Expert",
+        "años_experiencia": 10
+      },
+      {
+        "nombre": "Vue.js",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "React",
+        "nivel": "Expert",
+        "años_experiencia": 10
+      },
+      {
+        "nombre": "TypeScript",
+        "nivel": "Expert",
+        "años_experiencia": 12
+      },
+      {
+        "nombre": "Odoo",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "Machine Learning",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      }
+    ],
+    "industrias_trabajadas": [
+      "Energía",
+      "Logística",
+      "Salud"
+    ],
+    "tarifa_dia_usd": 374,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Santiago",
+    "certificaciones": [
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS011",
+    "nombre": "Martín Flores",
+    "email": "martín.flores@consultora.com",
+    "rol_principal": "DevOps Engineer",
+    "años_experiencia": 7,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Ansible",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "GitLab CI/CD",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "GitHub Actions",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "AWS",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "GCP",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Jenkins",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Spring Boot",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Python",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      }
+    ],
+    "industrias_trabajadas": [
+      "Educación",
+      "Gobierno",
+      "Salud"
+    ],
+    "tarifa_dia_usd": 372,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS012",
+    "nombre": "Lucía Rivera",
+    "email": "lucía.rivera@consultora.com",
+    "rol_principal": "Data Engineer",
+    "años_experiencia": 4,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Python",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "SQL",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Apache Spark",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Airflow",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "ETL",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Data Modeling",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "AWS Glue",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      }
+    ],
+    "industrias_trabajadas": [
+      "E-commerce",
+      "Energía"
+    ],
+    "tarifa_dia_usd": 456,
+    "modalidad_trabajo": "Presencial",
+    "ubicacion": "Santiago",
+    "certificaciones": [
+      "Scrum Master Certification",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS013",
+    "nombre": "Federico Gómez",
+    "email": "federico.gómez@consultora.com",
+    "rol_principal": "Frontend Developer",
+    "años_experiencia": 8,
+    "disponibilidad": {
+      "disponible_desde": "2026-01-20",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Webpack",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Figma",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "TypeScript",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Vue.js",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Agile/Scrum",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Power BI",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "E-commerce",
+      "Fintech",
+      "Manufactura"
+    ],
+    "tarifa_dia_usd": 158,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": [
+      "Google Cloud Professional"
+    ]
+  },
+  {
+    "consultor_id": "CONS014",
+    "nombre": "Camila Díaz",
+    "email": "camila.díaz@consultora.com",
+    "rol_principal": "QA Engineer",
+    "años_experiencia": 2,
+    "disponibilidad": {
+      "disponible_desde": "2026-01-20",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Selenium",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Cypress",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Jest",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Postman",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "TestRail",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "API Testing",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Automation",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      }
+    ],
+    "industrias_trabajadas": [
+      "Energía",
+      "Manufactura",
+      "Telecomunicaciones",
+      "E-commerce"
+    ],
+    "tarifa_dia_usd": 450,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Montevideo",
+    "certificaciones": [
+      "Scrum Master Certification",
+      "AWS Certified Solutions Architect",
+      "PMP Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS015",
+    "nombre": "Sebastián Cruz",
+    "email": "sebastián.cruz@consultora.com",
+    "rol_principal": "Mobile Developer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Swift",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Kotlin",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Xamarin",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Next.js",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      }
+    ],
+    "industrias_trabajadas": [
+      "Logística",
+      "Fintech",
+      "Retail",
+      "Educación",
+      "Energía"
+    ],
+    "tarifa_dia_usd": 278,
+    "modalidad_trabajo": "Presencial",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": [
+      "Microsoft Azure Developer",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS016",
+    "nombre": "Florencia Morales",
+    "email": "florencia.morales@consultora.com",
+    "rol_principal": "DevOps Engineer",
+    "años_experiencia": 9,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Jenkins",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "GitHub Actions",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "Terraform",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "GitLab CI/CD",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "Ansible",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Docker",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Spring Boot",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "FastAPI",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      }
+    ],
+    "industrias_trabajadas": [
+      "Energía",
+      "Gobierno",
+      "Manufactura",
+      "Telecomunicaciones",
+      "Logística"
+    ],
+    "tarifa_dia_usd": 310,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Santiago",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS017",
+    "nombre": "Rodrigo Herrera",
+    "email": "rodrigo.herrera@consultora.com",
+    "rol_principal": "Full Stack Developer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2026-02-19",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Angular",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Vue.js",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Java",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Python",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Flask",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "SQL Server",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "DynamoDB",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Logística",
+      "Manufactura",
+      "Energía",
+      "Seguros",
+      "E-commerce"
+    ],
+    "tarifa_dia_usd": 495,
+    "modalidad_trabajo": "Flexible",
+    "ubicacion": "Mendoza",
+    "certificaciones": [
+      "MongoDB Certified Developer",
+      "Microsoft Azure Developer",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS018",
+    "nombre": "Agustina Jiménez",
+    "email": "agustina.jiménez@consultora.com",
+    "rol_principal": "Backend Developer",
+    "años_experiencia": 9,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": ".NET",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Flask",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "C#",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Express.js",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "MongoDB",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "DynamoDB",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "SQL Server",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "REST APIs",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Microservices",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      }
+    ],
+    "industrias_trabajadas": [
+      "Manufactura",
+      "Seguros",
+      "Agricultura"
+    ],
+    "tarifa_dia_usd": 226,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS019",
+    "nombre": "Nicolás Álvarez",
+    "email": "nicolás.álvarez@consultora.com",
+    "rol_principal": "Backend Developer",
+    "años_experiencia": 12,
+    "disponibilidad": {
+      "disponible_desde": "2025-12-21",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Spring Boot",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Java",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Express.js",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": ".NET",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "DynamoDB",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Oracle",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "MongoDB",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Agile/Scrum",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Git",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "Manufactura",
+      "Salud"
+    ],
+    "tarifa_dia_usd": 310,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Santiago",
+    "certificaciones": [
+      "Google Cloud Professional",
+      "Scrum Master Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS020",
+    "nombre": "Juliana Romero",
+    "email": "juliana.romero@consultora.com",
+    "rol_principal": "UX/UI Designer",
+    "años_experiencia": 5,
+    "disponibilidad": {
+      "disponible_desde": "2025-12-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Figma",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Adobe XD",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Sketch",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "InVision",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Illustrator",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Photoshop",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "User Research",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      }
+    ],
+    "industrias_trabajadas": [
+      "Telecomunicaciones",
+      "Fintech",
+      "Educación"
+    ],
+    "tarifa_dia_usd": 199,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Buenos Aires",
+    "certificaciones": [
+      "AWS Certified Solutions Architect",
+      "Google Cloud Professional"
+    ]
+  },
+  {
+    "consultor_id": "CONS021",
+    "nombre": "Matías Medina",
+    "email": "matías.medina@consultora.com",
+    "rol_principal": "Data Engineer",
+    "años_experiencia": 10,
+    "disponibilidad": {
+      "disponible_desde": "2025-12-21",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Python",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "SQL",
+        "nivel": "Expert",
+        "años_experiencia": 8
+      },
+      {
+        "nombre": "Apache Spark",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Airflow",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "ETL",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Data Modeling",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "AWS Glue",
+        "nivel": "Expert",
+        "años_experiencia": 10
+      }
+    ],
+    "industrias_trabajadas": [
+      "Energía",
+      "Retail",
+      "Seguros",
+      "Logística"
+    ],
+    "tarifa_dia_usd": 470,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Mendoza",
+    "certificaciones": [
+      "PMP Certification",
+      "Google Cloud Professional"
+    ]
+  },
+  {
+    "consultor_id": "CONS022",
+    "nombre": "Carolina Ruiz",
+    "email": "carolina.ruiz@consultora.com",
+    "rol_principal": "Backend Developer",
+    "años_experiencia": 3,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 50
+    },
+    "skills": [
+      {
+        "nombre": "Spring Boot",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Python",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": ".NET",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Flask",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Elasticsearch",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "PostgreSQL",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "DynamoDB",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Power BI",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "GraphQL",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      }
+    ],
+    "industrias_trabajadas": [
+      "Salud",
+      "Agricultura"
+    ],
+    "tarifa_dia_usd": 326,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Mendoza",
+    "certificaciones": [
+      "Scrum Master Certification",
+      "Microsoft Azure Developer",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  {
+    "consultor_id": "CONS023",
+    "nombre": "Facundo Vargas",
+    "email": "facundo.vargas@consultora.com",
+    "rol_principal": "UX/UI Designer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2025-12-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Figma",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Adobe XD",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Sketch",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "InVision",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Illustrator",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Photoshop",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "User Research",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      }
+    ],
+    "industrias_trabajadas": [
+      "Educación",
+      "Seguros",
+      "Gobierno",
+      "Retail"
+    ],
+    "tarifa_dia_usd": 492,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Rosario",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS024",
+    "nombre": "Victoria Castro",
+    "email": "victoria.castro@consultora.com",
+    "rol_principal": "Data Engineer",
+    "años_experiencia": 2,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Python",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "SQL",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Apache Spark",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Airflow",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "ETL",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Data Modeling",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "AWS Glue",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Educación",
+      "Manufactura"
+    ],
+    "tarifa_dia_usd": 162,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Santiago",
+    "certificaciones": [
+      "Google Cloud Professional",
+      "Microsoft Azure Developer"
+    ]
+  },
+  {
+    "consultor_id": "CONS025",
+    "nombre": "Andrés Ortiz",
+    "email": "andrés.ortiz@consultora.com",
+    "rol_principal": "Mobile Developer",
+    "años_experiencia": 11,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Kotlin",
+        "nivel": "Expert",
+        "años_experiencia": 11
+      },
+      {
+        "nombre": "Flutter",
+        "nivel": "Expert",
+        "años_experiencia": 11
+      },
+      {
+        "nombre": "Swift",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Webpack",
+        "nivel": "Expert",
+        "años_experiencia": 9
+      },
+      {
+        "nombre": "Tailwind CSS",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "Salud",
+      "E-commerce",
+      "Telecomunicaciones",
+      "Agricultura",
+      "Educación"
+    ],
+    "tarifa_dia_usd": 190,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Rosario",
+    "certificaciones": [
+      "AWS Certified Solutions Architect",
+      "Scrum Master Certification",
+      "MongoDB Certified Developer"
+    ]
+  },
+  {
+    "consultor_id": "CONS026",
+    "nombre": "Micaela Silva",
+    "email": "micaela.silva@consultora.com",
+    "rol_principal": "Full Stack Developer",
+    "años_experiencia": 7,
+    "disponibilidad": {
+      "disponible_desde": "2025-10-22",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Next.js",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Webpack",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "React",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "HTML5",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Django",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Express.js",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": ".NET",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Firebase",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "DynamoDB",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      }
+    ],
+    "industrias_trabajadas": [
+      "Retail",
+      "Energía",
+      "Agricultura"
+    ],
+    "tarifa_dia_usd": 320,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Córdoba",
+    "certificaciones": [
+      "AWS Certified Solutions Architect",
+      "Scrum Master Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS027",
+    "nombre": "Santiago Mendoza",
+    "email": "santiago.mendoza@consultora.com",
+    "rol_principal": "Full Stack Developer",
+    "años_experiencia": 7,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "React",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "TypeScript",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Figma",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Flask",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Django",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Express.js",
+        "nivel": "Expert",
+        "años_experiencia": 7
+      },
+      {
+        "nombre": "Firebase",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "SQL Server",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Gobierno",
+      "Retail",
+      "Manufactura"
+    ],
+    "tarifa_dia_usd": 477,
+    "modalidad_trabajo": "Híbrido",
+    "ubicacion": "Mendoza",
+    "certificaciones": [
+      "PMP Certification"
+    ]
+  },
+  {
+    "consultor_id": "CONS028",
+    "nombre": "Paula Guerrero",
+    "email": "paula.guerrero@consultora.com",
+    "rol_principal": "Data Engineer",
+    "años_experiencia": 4,
+    "disponibilidad": {
+      "disponible_desde": "2026-01-20",
+      "porcentaje_disponible": 100
+    },
+    "skills": [
+      {
+        "nombre": "Python",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "SQL",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Apache Spark",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Airflow",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "ETL",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Data Modeling",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "AWS Glue",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Telecomunicaciones",
+      "Gobierno",
+      "Energía",
+      "Seguros",
+      "Agricultura"
+    ],
+    "tarifa_dia_usd": 416,
+    "modalidad_trabajo": "Presencial",
+    "ubicacion": "Mendoza",
+    "certificaciones": []
+  },
+  {
+    "consultor_id": "CONS029",
+    "nombre": "Gabriel Vega",
+    "email": "gabriel.vega@consultora.com",
+    "rol_principal": "Project Manager",
+    "años_experiencia": 7,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 50
+    },
+    "skills": [
+      {
+        "nombre": "Agile/Scrum",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "JIRA",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      },
+      {
+        "nombre": "Microsoft Project",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "Stakeholder Management",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Risk Management",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "Budget Planning",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      }
+    ],
+    "industrias_trabajadas": [
+      "Retail",
+      "Fintech"
+    ],
+    "tarifa_dia_usd": 408,
+    "modalidad_trabajo": "Remoto",
+    "ubicacion": "Córdoba",
+    "certificaciones": [
+      "PMP Certification",
+      "Google Cloud Professional"
+    ]
+  },
+  {
+    "consultor_id": "CONS030",
+    "nombre": "Romina Rojas",
+    "email": "romina.rojas@consultora.com",
+    "rol_principal": "Full Stack Developer",
+    "años_experiencia": 6,
+    "disponibilidad": {
+      "disponible_desde": "2025-11-21",
+      "porcentaje_disponible": 25
+    },
+    "skills": [
+      {
+        "nombre": "Angular",
+        "nivel": "Advanced",
+        "años_experiencia": 5
+      },
+      {
+        "nombre": "React",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "TypeScript",
+        "nivel": "Intermediate",
+        "años_experiencia": 3
+      },
+      {
+        "nombre": "Redux",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "C#",
+        "nivel": "Expert",
+        "años_experiencia": 6
+      },
+      {
+        "nombre": "Express.js",
+        "nivel": "Intermediate",
+        "años_experiencia": 2
+      },
+      {
+        "nombre": "Django",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "SQL Server",
+        "nivel": "Advanced",
+        "años_experiencia": 4
+      },
+      {
+        "nombre": "PostgreSQL",
+        "nivel": "Beginner",
+        "años_experiencia": 1
+      }
+    ],
+    "industrias_trabajadas": [
+      "Educación",
+      "Retail",
+      "Logística",
+      "Seguros"
+    ],
+    "tarifa_dia_usd": 360,
+    "modalidad_trabajo": "Flexible",
+    "ubicacion": "Mendoza",
+    "certificaciones": [
+      "Microsoft Azure Developer",
+      "MongoDB Certified Developer"
+    ]
+  }
+]

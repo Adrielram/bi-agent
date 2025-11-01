@@ -1,0 +1,1788 @@
+[
+  {
+    "caso_id": "CASE001",
+    "titulo": "Transformación Digital: De Excel a Plataforma Web en el Sector Logístico",
+    "proyecto_relacionado_id": "PROJ001",
+    "cliente": {
+      "nombre": "SecureBank Digital",
+      "industria": "Fintech",
+      "tamaño": "Pequeña (50-200)",
+      "ubicacion": "Montevideo"
+    },
+    "contexto": {
+      "desafio": "LogiTrans SA gestionaba toda su operación logística mediante hojas de Excel compartidas, generando errores frecuentes, falta de trazabilidad y limitaciones severas de escalabilidad. Con 250 empleados y crecimiento del 40% anual, el sistema manual se había vuelto insostenible.",
+      "objetivos": [
+        "Mejorar experiencia de usuario",
+        "Modernizar tecnología legacy",
+        "Incrementar escalabilidad"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Implementamos una metodología ágil de migración incremental, comenzando con un MVP del módulo de seguimiento de envíos. Trabajamos en sprints de 2 semanas con el equipo de operaciones para validar funcionalidades. La arquitectura elegida fue microservicios con React en frontend y Node.js en backend.",
+      "tecnologias": [
+        "Node.js",
+        "MQTT",
+        "InfluxDB",
+        "Grafana",
+        "AWS IoT Core"
+      ],
+      "equipo": {
+        "tamaño": 8,
+        "roles": [
+          "Frontend Developer",
+          "UX/UI Designer",
+          "Data Engineer",
+          "QA Engineer",
+          "Full Stack Developer",
+          "Mobile Developer"
+        ],
+        "project_manager": "Romina Rojas"
+      },
+      "duracion_meses": 14,
+      "metodologia": "Kanban"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 9,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Sincronización en tiempo real de datos críticos"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Reducción del 65% en errores operacionales, visibilidad en tiempo real de toda la flota, automatización del 80% de reportes manuales, y capacidad para escalar a 5x el volumen de operaciones sin aumentar headcount administrativo.",
+      "metricas": {
+        "roi_meses": 18,
+        "satisfaccion_cliente": 4.7,
+        "objetivos_cumplidos": 90,
+        "kpis": [
+          "Mejora 70% en satisfacción de usuarios finales",
+          "Escalabilidad mejorada para 10x usuarios",
+          "Incremento 45% en productividad del equipo"
+        ]
+      },
+      "valor_generado_anual_usd": 589477
+    },
+    "testimonio": {
+      "texto": "'Reducción del 65% en errores operacionales, visibilidad en tiempo real de toda la flota, automatización del 80% de reportes manuales, y capacidad para...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "SecureBank Digital",
+      "cargo": "Gerente de IT",
+      "fecha": "2026-04-19"
+    },
+    "lecciones_aprendidas": [
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Migración incremental reduce riesgos significativamente vs big bang",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro"
+    ],
+    "galeria": {
+      "screenshots": 7,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE002",
+    "titulo": "MVP Mobile: De Idea a App en 3 Meses para Marketplace Local",
+    "proyecto_relacionado_id": "PROJ002",
+    "cliente": {
+      "nombre": "IndustrialTech",
+      "industria": "Manufactura",
+      "tamaño": "Mediana (200-1000)",
+      "ubicacion": "Córdoba"
+    },
+    "contexto": {
+      "desafio": "MarketPlace Local tenía la visión de conectar comercios de barrio con clientes locales pero sin presupuesto para desarrollo extenso. Necesitaban validar el producto rápidamente con un MVP funcional.",
+      "objetivos": [
+        "Mejorar satisfacción de clientes",
+        "Habilitar toma de decisiones basada en datos",
+        "Automatizar procesos manuales"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Utilizamos React Native para desarrollo cross-platform, reduciendo costos. Priorizamos 3 funcionalidades core: descubrimiento de comercios por geolocalización, sistema de pedidos básico, y notificaciones. Diseño UX/UI minimalista pero profesional.",
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 3,
+        "roles": [
+          "Full Stack Developer",
+          "Backend Developer",
+          "Mobile Developer"
+        ],
+        "project_manager": "Sofía Sánchez"
+      },
+      "duracion_meses": 16,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Migración de datos históricos sin downtime",
+        "Cumplimiento de normativas de seguridad estrictas"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "App lanzada en 12 semanas, 500 usuarios en primer mes, 45 comercios activos. El cliente consiguió funding de $200K USD basado en el MVP y tracción inicial. Ahora escalando a versión full con nuestro equipo.",
+      "metricas": {
+        "roi_meses": 16,
+        "satisfaccion_cliente": 4.8,
+        "objetivos_cumplidos": 92,
+        "kpis": [
+          "Time-to-market reducido en 40%",
+          "Automatización del 85% de procesos manuales",
+          "Ahorro anual estimado de $80,000 USD"
+        ]
+      },
+      "valor_generado_anual_usd": 1891812
+    },
+    "testimonio": {
+      "texto": "'App lanzada en 12 semanas, 500 usuarios en primer mes, 45 comercios activos. El cliente consiguió funding de $200K USD basado en el MVP y tracción ini...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "IndustrialTech",
+      "cargo": "CTO",
+      "fecha": "2026-09-12"
+    },
+    "lecciones_aprendidas": [
+      "Comunicación frecuente con stakeholders previene malentendidos",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Testing automatizado es inversión que se paga en primera semana"
+    ],
+    "galeria": {
+      "screenshots": 8,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE003",
+    "titulo": "Integración Compleja: Conectando Odoo con 12 Proveedores Simultáneos",
+    "proyecto_relacionado_id": "PROJ003",
+    "cliente": {
+      "nombre": "GobiernoDigital",
+      "industria": "Gobierno",
+      "tamaño": "Pequeña (50-200)",
+      "ubicacion": "Buenos Aires"
+    },
+    "contexto": {
+      "desafio": "TechParts SA perdía 15 horas semanales actualizando manualmente stock y precios de 12 proveedores diferentes. Cada proveedor tenía APIs distintas (REST, SOAP, algunos sin documentación), generando un desafío técnico significativo.",
+      "objetivos": [
+        "Automatizar procesos manuales",
+        "Modernizar tecnología legacy",
+        "Mejorar experiencia de usuario"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Desarrollamos una capa de abstracción en Python que normaliza las distintas APIs a un modelo interno unificado. Implementamos sistema de reintentos, logging exhaustivo, y notificaciones de errores. Módulo personalizado de Odoo para orquestar sincronizaciones.",
+      "tecnologias": [
+        "React",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Data Engineer",
+          "Mobile Developer",
+          "Frontend Developer",
+          "DevOps Engineer"
+        ],
+        "project_manager": "Diego Pérez"
+      },
+      "duracion_meses": 8,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 6,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 3,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Optimización de performance para alto tráfico",
+        "Arquitectura distribuida en múltiples regiones"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Sincronización automática cada 2 horas de 8,500 SKUs, eliminación total del proceso manual, reducción de 95% en errores de stock, recuperación ROI en 6 meses. Cliente expandió contrato para agregar más módulos.",
+      "metricas": {
+        "roi_meses": 7,
+        "satisfaccion_cliente": 4.8,
+        "objetivos_cumplidos": 99,
+        "kpis": [
+          "Mejora 70% en satisfacción de usuarios finales",
+          "Reducción 60% en tiempo de procesamiento",
+          "Automatización del 85% de procesos manuales"
+        ]
+      },
+      "valor_generado_anual_usd": 1417693
+    },
+    "testimonio": {
+      "texto": "'Sincronización automática cada 2 horas de 8,500 SKUs, eliminación total del proceso manual, reducción de 95% en errores de stock, recuperación ROI en ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "GobiernoDigital",
+      "cargo": "CTO",
+      "fecha": "2024-11-12"
+    },
+    "lecciones_aprendidas": [
+      "Importancia de involucrar usuarios finales desde fase de discovery",
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Comunicación frecuente con stakeholders previene malentendidos"
+    ],
+    "galeria": {
+      "screenshots": 9,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE004",
+    "titulo": "Telemedicina en Record Time: Portal de Pacientes en Plena Pandemia",
+    "proyecto_relacionado_id": "PROJ004",
+    "cliente": {
+      "nombre": "EduTech Solutions",
+      "industria": "Educación",
+      "tamaño": "Grande (1000+)",
+      "ubicacion": "Santiago"
+    },
+    "contexto": {
+      "desafio": "MediHealth Clinic necesitaba urgentemente implementar telemedicina durante COVID-19. Tenían 2 meses para tener sistema funcional o perderían pacientes ante competencia digital.",
+      "objetivos": [
+        "Habilitar toma de decisiones basada en datos",
+        "Mejorar experiencia de usuario",
+        "Modernizar tecnología legacy"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Equipo dedicado de 5 personas trabajando en fast-track. Utilizamos WebRTC para videoconsultas, integración con sistema de facturación existente vía APIs, módulo de recetas digitales con firma electrónica. Cumplimiento estricto de normativas de datos médicos.",
+      "tecnologias": [
+        "React",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Full Stack Developer",
+          "Backend Developer",
+          "Frontend Developer",
+          "DevOps Engineer"
+        ],
+        "project_manager": "Rodrigo Herrera"
+      },
+      "duracion_meses": 10,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Arquitectura distribuida en múltiples regiones"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Sistema productivo en 8 semanas, 2,000+ videoconsultas en primer mes, 85% satisfacción pacientes, retención de base de pacientes durante pandemia. Ahora usado como herramienta permanente con 40% consultas remotas.",
+      "metricas": {
+        "roi_meses": 10,
+        "satisfaccion_cliente": 4.7,
+        "objetivos_cumplidos": 100,
+        "kpis": [
+          "Reducción 60% en tiempo de procesamiento",
+          "Automatización del 85% de procesos manuales",
+          "Incremento 45% en productividad del equipo"
+        ]
+      },
+      "valor_generado_anual_usd": 1987540
+    },
+    "testimonio": {
+      "texto": "'Sistema productivo en 8 semanas, 2,000+ videoconsultas en primer mes, 85% satisfacción pacientes, retención de base de pacientes durante pandemia. Aho...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "EduTech Solutions",
+      "cargo": "Gerente de IT",
+      "fecha": "2024-11-03"
+    },
+    "lecciones_aprendidas": [
+      "Importancia de involucrar usuarios finales desde fase de discovery",
+      "Arquitectura escalable desde inicio evita refactoring costoso",
+      "Comunicación frecuente con stakeholders previene malentendidos"
+    ],
+    "galeria": {
+      "screenshots": 10,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE005",
+    "titulo": "Modernización Bancaria: Migración de Monolito Legacy a Microservicios",
+    "proyecto_relacionado_id": "PROJ005",
+    "cliente": {
+      "nombre": "TelecomSur",
+      "industria": "Telecomunicaciones",
+      "tamaño": "Mediana (200-1000)",
+      "ubicacion": "Montevideo"
+    },
+    "contexto": {
+      "desafio": "Banco del Norte operaba con sistema monolítico de 15 años en .NET Framework. Deploys tomaban días, cualquier cambio requería testing completo, escalabilidad limitada, y tecnología obsoleta dificultaba reclutar talento.",
+      "objetivos": [
+        "Mejorar experiencia de usuario",
+        "Habilitar toma de decisiones basada en datos",
+        "Reducir costos operacionales"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Estrategia de strangler pattern: migración incremental sin detener operaciones. Comenzamos con servicios de menor riesgo (notificaciones, reportes). Implementamos API Gateway, containerización Docker, orquestación Kubernetes, CI/CD completo.",
+      "tecnologias": [
+        "Next.js",
+        "Node.js",
+        "Stripe",
+        "MongoDB",
+        "Vercel"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Mobile Developer",
+          "Frontend Developer",
+          "Backend Developer",
+          "Project Manager"
+        ],
+        "project_manager": "Diego Pérez"
+      },
+      "duracion_meses": 16,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Integración con sistema legacy sin API",
+        "Arquitectura distribuida en múltiples regiones"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "85% del sistema migrado en 14 meses, time-to-market reducido de semanas a días, zero downtime durante migración, escalabilidad horizontal habilitada, equipo de desarrollo 3x más productivo. Sistema preparado para próxima década.",
+      "metricas": {
+        "roi_meses": 13,
+        "satisfaccion_cliente": 4.8,
+        "objetivos_cumplidos": 99,
+        "kpis": [
+          "Escalabilidad mejorada para 10x usuarios",
+          "Mejora 70% en satisfacción de usuarios finales",
+          "Ahorro anual estimado de $80,000 USD"
+        ]
+      },
+      "valor_generado_anual_usd": 215330
+    },
+    "testimonio": {
+      "texto": "'85% del sistema migrado en 14 meses, time-to-market reducido de semanas a días, zero downtime durante migración, escalabilidad horizontal habilitada, ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "TelecomSur",
+      "cargo": "CTO",
+      "fecha": "2026-02-27"
+    },
+    "lecciones_aprendidas": [
+      "Arquitectura escalable desde inicio evita refactoring costoso",
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Comunicación frecuente con stakeholders previene malentendidos"
+    ],
+    "galeria": {
+      "screenshots": 10,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE006",
+    "titulo": "Analytics que Transforma: Dashboard Ejecutivo en Tiempo Real",
+    "proyecto_relacionado_id": "PROJ006",
+    "cliente": {
+      "nombre": "FarmConnect",
+      "industria": "Agricultura",
+      "tamaño": "Pequeña (50-200)",
+      "ubicacion": "Buenos Aires"
+    },
+    "contexto": {
+      "desafio": "PowerGrid Solutions tenía datos valiosos dispersos en 8 sistemas distintos. Directorio tomaba decisiones con reportes de Excel de la semana anterior, perdiendo oportunidades de optimización operacional en sector energético crítico.",
+      "objetivos": [
+        "Reducir costos operacionales",
+        "Modernizar tecnología legacy",
+        "Habilitar toma de decisiones basada en datos"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Construimos data warehouse centralizado, pipelines ETL con Apache Airflow para sincronización cada hora, dashboards Power BI interactivos con drill-down, alertas automáticas vía email/SMS cuando KPIs caen bajo umbrales.",
+      "tecnologias": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Redis",
+        "Kubernetes"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Full Stack Developer",
+          "Backend Developer",
+          "Mobile Developer",
+          "Project Manager"
+        ],
+        "project_manager": "Rodrigo Herrera"
+      },
+      "duracion_meses": 14,
+      "metodologia": "Scrum"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Arquitectura distribuida en múltiples regiones"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Decisiones basadas en datos del día vs semana anterior, identificación de $1.2M USD en eficiencias operacionales anuales, reducción 40% en reuniones de análisis, adopción 100% por directorio. Cliente solicitó expansión a 12 dashboards adicionales.",
+      "metricas": {
+        "roi_meses": 15,
+        "satisfaccion_cliente": 4.9,
+        "objetivos_cumplidos": 98,
+        "kpis": [
+          "Incremento 45% en productividad del equipo",
+          "Escalabilidad mejorada para 10x usuarios",
+          "Automatización del 85% de procesos manuales"
+        ]
+      },
+      "valor_generado_anual_usd": 1308122
+    },
+    "testimonio": {
+      "texto": "'Decisiones basadas en datos del día vs semana anterior, identificación de $1.2M USD en eficiencias operacionales anuales, reducción 40% en reuniones d...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "FarmConnect",
+      "cargo": "CTO",
+      "fecha": "2025-07-03"
+    },
+    "lecciones_aprendidas": [
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Importancia de involucrar usuarios finales desde fase de discovery",
+      "Arquitectura escalable desde inicio evita refactoring costoso"
+    ],
+    "galeria": {
+      "screenshots": 6,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE007",
+    "titulo": "IoT en Logística: Tracking Inteligente de Flota de 200 Vehículos",
+    "proyecto_relacionado_id": "PROJ007",
+    "cliente": {
+      "nombre": "SecureBank Digital",
+      "industria": "Fintech",
+      "tamaño": "Mediana (200-1000)",
+      "ubicacion": "Buenos Aires"
+    },
+    "contexto": {
+      "desafio": "CargoFleet no tenía visibilidad real de su flota de camiones, mantenimientos eran reactivos (costosos), rutas no optimizadas generaban sobrecosto de combustible del 25%, clientes se quejaban de falta de información de envíos.",
+      "objetivos": [
+        "Modernizar tecnología legacy",
+        "Incrementar escalabilidad",
+        "Habilitar toma de decisiones basada en datos"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Integración con dispositivos GPS telemétricos existentes, plataforma web de monitoreo en tiempo real con mapas interactivos, algoritmos de optimización de rutas considerando tráfico y ventanas horarias, app móvil para conductores, sistema predictivo de mantenimiento.",
+      "tecnologias": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Redis",
+        "Kubernetes"
+      ],
+      "equipo": {
+        "tamaño": 3,
+        "roles": [
+          "Data Engineer",
+          "UX/UI Designer",
+          "DevOps Engineer"
+        ],
+        "project_manager": "Juliana Romero"
+      },
+      "duracion_meses": 14,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 6,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Integración con sistema legacy sin API"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Reducción 28% en costos de combustible, mantenimientos preventivos reducen costos 35%, satisfacción clientes aumenta de 3.2 a 4.6/5, visibilidad 100% de flota en tiempo real. ROI recuperado en 10 meses.",
+      "metricas": {
+        "roi_meses": 12,
+        "satisfaccion_cliente": 4.7,
+        "objetivos_cumplidos": 96,
+        "kpis": [
+          "Time-to-market reducido en 40%",
+          "Reducción 50% en errores operacionales",
+          "Escalabilidad mejorada para 10x usuarios"
+        ]
+      },
+      "valor_generado_anual_usd": 266213
+    },
+    "testimonio": {
+      "texto": "'Reducción 28% en costos de combustible, mantenimientos preventivos reducen costos 35%, satisfacción clientes aumenta de 3.2 a 4.6/5, visibilidad 100% ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "SecureBank Digital",
+      "cargo": "Gerente de IT",
+      "fecha": "2024-08-22"
+    },
+    "lecciones_aprendidas": [
+      "Migración incremental reduce riesgos significativamente vs big bang",
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Comunicación frecuente con stakeholders previene malentendidos"
+    ],
+    "galeria": {
+      "screenshots": 7,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE008",
+    "titulo": "Fintech Seguro: App Bancaria Móvil con Biometría de Nueva Generación",
+    "proyecto_relacionado_id": "PROJ008",
+    "cliente": {
+      "nombre": "SmartFarm Technologies",
+      "industria": "Agricultura",
+      "tamaño": "Pequeña (50-200)",
+      "ubicacion": "Montevideo"
+    },
+    "contexto": {
+      "desafio": "SecureBank Digital tenía app móvil legacy con 2.8 estrellas en stores, proceso login complejo (token físico requerido), funcionalidades limitadas vs competencia digital. Perdiendo clientes millennials ante neo-banks.",
+      "objetivos": [
+        "Modernizar tecnología legacy",
+        "Mejorar satisfacción de clientes",
+        "Incrementar escalabilidad"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Rediseño completo UX/UI con research de usuarios, implementación Face ID/Touch ID, arquitectura de seguridad reforzada, integración con core bancario mainframe (desafío técnico), notificaciones push inteligentes, nueva identidad visual.",
+      "tecnologias": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Redis",
+        "Kubernetes"
+      ],
+      "equipo": {
+        "tamaño": 7,
+        "roles": [
+          "Backend Developer",
+          "Project Manager",
+          "QA Engineer",
+          "DevOps Engineer",
+          "Full Stack Developer"
+        ],
+        "project_manager": "Sofía Sánchez"
+      },
+      "duracion_meses": 12,
+      "metodologia": "Kanban"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 3,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Arquitectura distribuida en múltiples regiones",
+        "Integración con sistema legacy sin API"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Rating subió a 4.7 estrellas en 4 meses, adopción aumentó 150%, reducción 90% en llamadas a soporte por login, transacciones móviles crecieron 200%. App nombrada mejor app bancaria del año por asociación fintech.",
+      "metricas": {
+        "roi_meses": 18,
+        "satisfaccion_cliente": 4.6,
+        "objetivos_cumplidos": 92,
+        "kpis": [
+          "Escalabilidad mejorada para 10x usuarios",
+          "Automatización del 85% de procesos manuales",
+          "Ahorro anual estimado de $80,000 USD"
+        ]
+      },
+      "valor_generado_anual_usd": 1948905
+    },
+    "testimonio": {
+      "texto": "'Rating subió a 4.7 estrellas en 4 meses, adopción aumentó 150%, reducción 90% en llamadas a soporte por login, transacciones móviles crecieron 200%. A...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "SmartFarm Technologies",
+      "cargo": "CEO",
+      "fecha": "2024-12-18"
+    },
+    "lecciones_aprendidas": [
+      "Arquitectura escalable desde inicio evita refactoring costoso",
+      "Migración incremental reduce riesgos significativamente vs big bang",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro"
+    ],
+    "galeria": {
+      "screenshots": 10,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE009",
+    "titulo": "Transformación Digital: De Excel a Plataforma Web en el Sector Logístico",
+    "proyecto_relacionado_id": "PROJ009",
+    "cliente": {
+      "nombre": "IndustrialTech",
+      "industria": "Manufactura",
+      "tamaño": "Startup (10-50)",
+      "ubicacion": "Santiago"
+    },
+    "contexto": {
+      "desafio": "LogiTrans SA gestionaba toda su operación logística mediante hojas de Excel compartidas, generando errores frecuentes, falta de trazabilidad y limitaciones severas de escalabilidad. Con 250 empleados y crecimiento del 40% anual, el sistema manual se había vuelto insostenible.",
+      "objetivos": [
+        "Automatizar procesos manuales",
+        "Habilitar toma de decisiones basada en datos",
+        "Modernizar tecnología legacy"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Implementamos una metodología ágil de migración incremental, comenzando con un MVP del módulo de seguimiento de envíos. Trabajamos en sprints de 2 semanas con el equipo de operaciones para validar funcionalidades. La arquitectura elegida fue microservicios con React en frontend y Node.js en backend.",
+      "tecnologias": [
+        "React",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 8,
+        "roles": [
+          "Backend Developer",
+          "Frontend Developer",
+          "Project Manager",
+          "UX/UI Designer",
+          "QA Engineer",
+          "DevOps Engineer",
+          "Full Stack Developer"
+        ],
+        "project_manager": "Agustina Jiménez"
+      },
+      "duracion_meses": 13,
+      "metodologia": "Kanban"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 6,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Migración de datos históricos sin downtime",
+        "Arquitectura distribuida en múltiples regiones"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Reducción del 65% en errores operacionales, visibilidad en tiempo real de toda la flota, automatización del 80% de reportes manuales, y capacidad para escalar a 5x el volumen de operaciones sin aumentar headcount administrativo.",
+      "metricas": {
+        "roi_meses": 14,
+        "satisfaccion_cliente": 4.7,
+        "objetivos_cumplidos": 100,
+        "kpis": [
+          "Reducción 60% en tiempo de procesamiento",
+          "Automatización del 85% de procesos manuales",
+          "Incremento 45% en productividad del equipo"
+        ]
+      },
+      "valor_generado_anual_usd": 1558509
+    },
+    "testimonio": {
+      "texto": "'Reducción del 65% en errores operacionales, visibilidad en tiempo real de toda la flota, automatización del 80% de reportes manuales, y capacidad para...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "IndustrialTech",
+      "cargo": "CTO",
+      "fecha": "2025-03-15"
+    },
+    "lecciones_aprendidas": [
+      "Arquitectura escalable desde inicio evita refactoring costoso",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Migración incremental reduce riesgos significativamente vs big bang"
+    ],
+    "galeria": {
+      "screenshots": 5,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE010",
+    "titulo": "MVP Mobile: De Idea a App en 3 Meses para Marketplace Local",
+    "proyecto_relacionado_id": "PROJ010",
+    "cliente": {
+      "nombre": "TechParts SA",
+      "industria": "Manufactura",
+      "tamaño": "Grande (1000+)",
+      "ubicacion": "Montevideo"
+    },
+    "contexto": {
+      "desafio": "MarketPlace Local tenía la visión de conectar comercios de barrio con clientes locales pero sin presupuesto para desarrollo extenso. Necesitaban validar el producto rápidamente con un MVP funcional.",
+      "objetivos": [
+        "Mejorar satisfacción de clientes",
+        "Habilitar toma de decisiones basada en datos",
+        "Automatizar procesos manuales"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Utilizamos React Native para desarrollo cross-platform, reduciendo costos. Priorizamos 3 funcionalidades core: descubrimiento de comercios por geolocalización, sistema de pedidos básico, y notificaciones. Diseño UX/UI minimalista pero profesional.",
+      "tecnologias": [
+        "Python",
+        "Airflow",
+        "PostgreSQL",
+        "Power BI",
+        "AWS Redshift"
+      ],
+      "equipo": {
+        "tamaño": 3,
+        "roles": [
+          "QA Engineer",
+          "UX/UI Designer"
+        ],
+        "project_manager": "Camila Díaz"
+      },
+      "duracion_meses": 8,
+      "metodologia": "Kanban"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 9,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Migración de datos históricos sin downtime",
+        "Integración con sistema legacy sin API"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "App lanzada en 12 semanas, 500 usuarios en primer mes, 45 comercios activos. El cliente consiguió funding de $200K USD basado en el MVP y tracción inicial. Ahora escalando a versión full con nuestro equipo.",
+      "metricas": {
+        "roi_meses": 18,
+        "satisfaccion_cliente": 5.0,
+        "objetivos_cumplidos": 91,
+        "kpis": [
+          "Reducción 50% en errores operacionales",
+          "Time-to-market reducido en 40%",
+          "Automatización del 85% de procesos manuales"
+        ]
+      },
+      "valor_generado_anual_usd": 1416954
+    },
+    "testimonio": {
+      "texto": "'App lanzada en 12 semanas, 500 usuarios en primer mes, 45 comercios activos. El cliente consiguió funding de $200K USD basado en el MVP y tracción ini...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "TechParts SA",
+      "cargo": "CTO",
+      "fecha": "2025-10-30"
+    },
+    "lecciones_aprendidas": [
+      "Importancia de involucrar usuarios finales desde fase de discovery",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Migración incremental reduce riesgos significativamente vs big bang"
+    ],
+    "galeria": {
+      "screenshots": 8,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE011",
+    "titulo": "Integración Compleja: Conectando Odoo con 12 Proveedores Simultáneos",
+    "proyecto_relacionado_id": "PROJ011",
+    "cliente": {
+      "nombre": "TechParts SA",
+      "industria": "Manufactura",
+      "tamaño": "Startup (10-50)",
+      "ubicacion": "Córdoba"
+    },
+    "contexto": {
+      "desafio": "TechParts SA perdía 15 horas semanales actualizando manualmente stock y precios de 12 proveedores diferentes. Cada proveedor tenía APIs distintas (REST, SOAP, algunos sin documentación), generando un desafío técnico significativo.",
+      "objetivos": [
+        "Modernizar tecnología legacy",
+        "Reducir costos operacionales",
+        "Automatizar procesos manuales"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Desarrollamos una capa de abstracción en Python que normaliza las distintas APIs a un modelo interno unificado. Implementamos sistema de reintentos, logging exhaustivo, y notificaciones de errores. Módulo personalizado de Odoo para orquestar sincronizaciones.",
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 7,
+        "roles": [
+          "Backend Developer",
+          "UX/UI Designer",
+          "Data Engineer",
+          "QA Engineer",
+          "Full Stack Developer"
+        ],
+        "project_manager": "Romina Rojas"
+      },
+      "duracion_meses": 14,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 7,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Migración de datos históricos sin downtime",
+        "Sincronización en tiempo real de datos críticos"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Sincronización automática cada 2 horas de 8,500 SKUs, eliminación total del proceso manual, reducción de 95% en errores de stock, recuperación ROI en 6 meses. Cliente expandió contrato para agregar más módulos.",
+      "metricas": {
+        "roi_meses": 8,
+        "satisfaccion_cliente": 4.6,
+        "objetivos_cumplidos": 99,
+        "kpis": [
+          "Incremento 45% en productividad del equipo",
+          "Reducción 50% en errores operacionales",
+          "Automatización del 85% de procesos manuales"
+        ]
+      },
+      "valor_generado_anual_usd": 547936
+    },
+    "testimonio": {
+      "texto": "'Sincronización automática cada 2 horas de 8,500 SKUs, eliminación total del proceso manual, reducción de 95% en errores de stock, recuperación ROI en ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "TechParts SA",
+      "cargo": "Director de Tecnología",
+      "fecha": "2026-08-23"
+    },
+    "lecciones_aprendidas": [
+      "Migración incremental reduce riesgos significativamente vs big bang",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Testing automatizado es inversión que se paga en primera semana"
+    ],
+    "galeria": {
+      "screenshots": 9,
+      "arquitectura_diagrama": true,
+      "video_demo": false
+    }
+  },
+  {
+    "caso_id": "CASE012",
+    "titulo": "Telemedicina en Record Time: Portal de Pacientes en Plena Pandemia",
+    "proyecto_relacionado_id": "PROJ012",
+    "cliente": {
+      "nombre": "FarmConnect",
+      "industria": "Agricultura",
+      "tamaño": "Grande (1000+)",
+      "ubicacion": "Buenos Aires"
+    },
+    "contexto": {
+      "desafio": "MediHealth Clinic necesitaba urgentemente implementar telemedicina durante COVID-19. Tenían 2 meses para tener sistema funcional o perderían pacientes ante competencia digital.",
+      "objetivos": [
+        "Reducir costos operacionales",
+        "Mejorar satisfacción de clientes",
+        "Mejorar experiencia de usuario"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Equipo dedicado de 5 personas trabajando en fast-track. Utilizamos WebRTC para videoconsultas, integración con sistema de facturación existente vía APIs, módulo de recetas digitales con firma electrónica. Cumplimiento estricto de normativas de datos médicos.",
+      "tecnologias": [
+        "Node.js",
+        "MQTT",
+        "InfluxDB",
+        "Grafana",
+        "AWS IoT Core"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Full Stack Developer",
+          "Frontend Developer",
+          "UX/UI Designer",
+          "Project Manager"
+        ],
+        "project_manager": "Santiago Mendoza"
+      },
+      "duracion_meses": 12,
+      "metodologia": "Kanban"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 8,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 3,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Optimización de performance para alto tráfico",
+        "Integración con sistema legacy sin API"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Sistema productivo en 8 semanas, 2,000+ videoconsultas en primer mes, 85% satisfacción pacientes, retención de base de pacientes durante pandemia. Ahora usado como herramienta permanente con 40% consultas remotas.",
+      "metricas": {
+        "roi_meses": 16,
+        "satisfaccion_cliente": 4.8,
+        "objetivos_cumplidos": 92,
+        "kpis": [
+          "Escalabilidad mejorada para 10x usuarios",
+          "Reducción 50% en errores operacionales",
+          "Automatización del 85% de procesos manuales"
+        ]
+      },
+      "valor_generado_anual_usd": 698854
+    },
+    "testimonio": {
+      "texto": "'Sistema productivo en 8 semanas, 2,000+ videoconsultas en primer mes, 85% satisfacción pacientes, retención de base de pacientes durante pandemia. Aho...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "FarmConnect",
+      "cargo": "Director de Tecnología",
+      "fecha": "2025-08-09"
+    },
+    "lecciones_aprendidas": [
+      "Testing automatizado es inversión que se paga en primera semana",
+      "Comunicación frecuente con stakeholders previene malentendidos",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro"
+    ],
+    "galeria": {
+      "screenshots": 5,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE013",
+    "titulo": "Modernización Bancaria: Migración de Monolito Legacy a Microservicios",
+    "proyecto_relacionado_id": "PROJ013",
+    "cliente": {
+      "nombre": "Banco del Norte",
+      "industria": "Fintech",
+      "tamaño": "Startup (10-50)",
+      "ubicacion": "Córdoba"
+    },
+    "contexto": {
+      "desafio": "Banco del Norte operaba con sistema monolítico de 15 años en .NET Framework. Deploys tomaban días, cualquier cambio requería testing completo, escalabilidad limitada, y tecnología obsoleta dificultaba reclutar talento.",
+      "objetivos": [
+        "Reducir costos operacionales",
+        "Habilitar toma de decisiones basada en datos",
+        "Mejorar satisfacción de clientes"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Estrategia de strangler pattern: migración incremental sin detener operaciones. Comenzamos con servicios de menor riesgo (notificaciones, reportes). Implementamos API Gateway, containerización Docker, orquestación Kubernetes, CI/CD completo.",
+      "tecnologias": [
+        "Next.js",
+        "Node.js",
+        "Stripe",
+        "MongoDB",
+        "Vercel"
+      ],
+      "equipo": {
+        "tamaño": 3,
+        "roles": [
+          "Full Stack Developer",
+          "Backend Developer"
+        ],
+        "project_manager": "Micaela Silva"
+      },
+      "duracion_meses": 14,
+      "metodologia": "Agile con Sprints de 2 semanas"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 9,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Migración de datos históricos sin downtime"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "85% del sistema migrado en 14 meses, time-to-market reducido de semanas a días, zero downtime durante migración, escalabilidad horizontal habilitada, equipo de desarrollo 3x más productivo. Sistema preparado para próxima década.",
+      "metricas": {
+        "roi_meses": 11,
+        "satisfaccion_cliente": 4.9,
+        "objetivos_cumplidos": 96,
+        "kpis": [
+          "Reducción 60% en tiempo de procesamiento",
+          "Incremento 45% en productividad del equipo",
+          "Mejora 70% en satisfacción de usuarios finales"
+        ]
+      },
+      "valor_generado_anual_usd": 993249
+    },
+    "testimonio": {
+      "texto": "'85% del sistema migrado en 14 meses, time-to-market reducido de semanas a días, zero downtime durante migración, escalabilidad horizontal habilitada, ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "Banco del Norte",
+      "cargo": "Director de Tecnología",
+      "fecha": "2025-01-19"
+    },
+    "lecciones_aprendidas": [
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Comunicación frecuente con stakeholders previene malentendidos",
+      "Importancia de involucrar usuarios finales desde fase de discovery"
+    ],
+    "galeria": {
+      "screenshots": 6,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE014",
+    "titulo": "Analytics que Transforma: Dashboard Ejecutivo en Tiempo Real",
+    "proyecto_relacionado_id": "PROJ014",
+    "cliente": {
+      "nombre": "FarmConnect",
+      "industria": "Agricultura",
+      "tamaño": "Grande (1000+)",
+      "ubicacion": "Córdoba"
+    },
+    "contexto": {
+      "desafio": "PowerGrid Solutions tenía datos valiosos dispersos en 8 sistemas distintos. Directorio tomaba decisiones con reportes de Excel de la semana anterior, perdiendo oportunidades de optimización operacional en sector energético crítico.",
+      "objetivos": [
+        "Reducir costos operacionales",
+        "Incrementar escalabilidad",
+        "Mejorar satisfacción de clientes"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Construimos data warehouse centralizado, pipelines ETL con Apache Airflow para sincronización cada hora, dashboards Power BI interactivos con drill-down, alertas automáticas vía email/SMS cuando KPIs caen bajo umbrales.",
+      "tecnologias": [
+        "Python",
+        "Airflow",
+        "PostgreSQL",
+        "Power BI",
+        "AWS Redshift"
+      ],
+      "equipo": {
+        "tamaño": 8,
+        "roles": [
+          "Backend Developer",
+          "Project Manager",
+          "UX/UI Designer",
+          "Data Engineer",
+          "Full Stack Developer"
+        ],
+        "project_manager": "Matías Medina"
+      },
+      "duracion_meses": 12,
+      "metodologia": "Scrum/Kanban Híbrido"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 8,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Optimización de performance para alto tráfico",
+        "Sincronización en tiempo real de datos críticos"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Decisiones basadas en datos del día vs semana anterior, identificación de $1.2M USD en eficiencias operacionales anuales, reducción 40% en reuniones de análisis, adopción 100% por directorio. Cliente solicitó expansión a 12 dashboards adicionales.",
+      "metricas": {
+        "roi_meses": 17,
+        "satisfaccion_cliente": 5.0,
+        "objetivos_cumplidos": 95,
+        "kpis": [
+          "Mejora 70% en satisfacción de usuarios finales",
+          "Reducción 50% en errores operacionales",
+          "Time-to-market reducido en 40%"
+        ]
+      },
+      "valor_generado_anual_usd": 1340268
+    },
+    "testimonio": {
+      "texto": "'Decisiones basadas en datos del día vs semana anterior, identificación de $1.2M USD en eficiencias operacionales anuales, reducción 40% en reuniones d...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "FarmConnect",
+      "cargo": "Director de Tecnología",
+      "fecha": "2024-05-12"
+    },
+    "lecciones_aprendidas": [
+      "Arquitectura escalable desde inicio evita refactoring costoso",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Comunicación frecuente con stakeholders previene malentendidos"
+    ],
+    "galeria": {
+      "screenshots": 10,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  },
+  {
+    "caso_id": "CASE015",
+    "titulo": "IoT en Logística: Tracking Inteligente de Flota de 200 Vehículos",
+    "proyecto_relacionado_id": "PROJ015",
+    "cliente": {
+      "nombre": "LearnOnline Platform",
+      "industria": "Educación",
+      "tamaño": "Startup (10-50)",
+      "ubicacion": "Santiago"
+    },
+    "contexto": {
+      "desafio": "CargoFleet no tenía visibilidad real de su flota de camiones, mantenimientos eran reactivos (costosos), rutas no optimizadas generaban sobrecosto de combustible del 25%, clientes se quejaban de falta de información de envíos.",
+      "objetivos": [
+        "Modernizar tecnología legacy",
+        "Reducir costos operacionales",
+        "Incrementar escalabilidad"
+      ]
+    },
+    "solucion": {
+      "enfoque": "Integración con dispositivos GPS telemétricos existentes, plataforma web de monitoreo en tiempo real con mapas interactivos, algoritmos de optimización de rutas considerando tráfico y ventanas horarias, app móvil para conductores, sistema predictivo de mantenimiento.",
+      "tecnologias": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "AWS"
+      ],
+      "equipo": {
+        "tamaño": 4,
+        "roles": [
+          "Frontend Developer",
+          "QA Engineer",
+          "DevOps Engineer"
+        ],
+        "project_manager": "Valentina Torres"
+      },
+      "duracion_meses": 18,
+      "metodologia": "Scrum/Kanban Híbrido"
+    },
+    "implementacion": {
+      "fases": [
+        {
+          "numero": 1,
+          "nombre": "Discovery & Planning",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Documentación de requerimientos",
+            "Arquitectura técnica",
+            "Plan de proyecto"
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Desarrollo MVP",
+          "duracion_semanas": 9,
+          "entregables": [
+            "MVP funcional",
+            "Documentación técnica",
+            "Testing inicial"
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Testing & Refinamiento",
+          "duracion_semanas": 4,
+          "entregables": [
+            "Testing completo",
+            "Correcciones",
+            "UAT con cliente"
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Deploy & Capacitación",
+          "duracion_semanas": 2,
+          "entregables": [
+            "Sistema en producción",
+            "Capacitación usuarios",
+            "Documentación"
+          ]
+        }
+      ],
+      "desafios_tecnicos": [
+        "Cumplimiento de normativas de seguridad estrictas",
+        "Migración de datos históricos sin downtime"
+      ]
+    },
+    "resultados": {
+      "impacto_negocio": "Reducción 28% en costos de combustible, mantenimientos preventivos reducen costos 35%, satisfacción clientes aumenta de 3.2 a 4.6/5, visibilidad 100% de flota en tiempo real. ROI recuperado en 10 meses.",
+      "metricas": {
+        "roi_meses": 9,
+        "satisfaccion_cliente": 4.5,
+        "objetivos_cumplidos": 98,
+        "kpis": [
+          "Reducción 60% en tiempo de procesamiento",
+          "Reducción 50% en errores operacionales",
+          "Ahorro anual estimado de $80,000 USD"
+        ]
+      },
+      "valor_generado_anual_usd": 444537
+    },
+    "testimonio": {
+      "texto": "'Reducción 28% en costos de combustible, mantenimientos preventivos reducen costos 35%, satisfacción clientes aumenta de 3.2 a 4.6/5, visibilidad 100% ...' El equipo demostró profesionalismo excepcional y profundo conocimiento técnico. Superaron nuestras expectativas.",
+      "autor": "LearnOnline Platform",
+      "cargo": "CTO",
+      "fecha": "2025-08-05"
+    },
+    "lecciones_aprendidas": [
+      "Importancia de involucrar usuarios finales desde fase de discovery",
+      "Documentación técnica exhaustiva facilita mantenimiento futuro",
+      "Arquitectura escalable desde inicio evita refactoring costoso"
+    ],
+    "galeria": {
+      "screenshots": 9,
+      "arquitectura_diagrama": true,
+      "video_demo": true
+    }
+  }
+]

@@ -1,0 +1,2072 @@
+[
+  {
+    "propuesta_id": "PROP001",
+    "titulo": "Propuesta Técnica: Desarrollo Web Full Stack para IndustrialTech",
+    "cliente": {
+      "cliente_id": "CLI017",
+      "nombre": "IndustrialTech",
+      "contacto": "Gustavo Rojas"
+    },
+    "fecha_propuesta": "2025-04-26",
+    "vigencia_dias": 30,
+    "estado": "Aprobada",
+    "resumen_ejecutivo": {
+      "contexto": "IndustrialTech busca desarrollo de plataforma web empresarial con arquitectura moderna, escalable y segura",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Frontend responsivo con React 18 y TypeScript",
+        "Backend API REST con Node.js y Express",
+        "Base de datos PostgreSQL con diseño optimizado",
+        "Autenticación JWT con roles y permisos",
+        "Panel administrativo completo",
+        "Sistema de reportes exportables",
+        "Integración con APIs de terceros",
+        "Testing automatizado (Jest, Cypress)",
+        "Documentación técnica completa",
+        "Deploy en AWS con CI/CD"
+      ],
+      "excluido": [
+        "Aplicaciones móviles nativas",
+        "Integraciones no especificadas inicialmente",
+        "Contenido y copywriting",
+        "Capacitación presencial extendida"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Santiago Mendoza",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 477,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Pedro Martínez",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 367,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Carolina Ruiz",
+        "rol": "Backend Developer",
+        "seniority": "Semi-Senior",
+        "tarifa_dia_usd": 326,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Gabriel Vega",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 408,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Camila Díaz",
+        "rol": "QA Engineer",
+        "seniority": "Semi-Senior",
+        "tarifa_dia_usd": 450,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 10,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 405600,
+      "desglose": {
+        "desarrollo": 304200,
+        "project_management": 60840,
+        "qa_testing": 40560
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "React Native",
+      "Firebase",
+      "Node.js",
+      "MongoDB"
+    ],
+    "casos_exito_relevantes": [
+      "CASE005",
+      "CASE009",
+      "CASE014"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP002",
+    "titulo": "Propuesta Técnica: App Móvil MVP para GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "contacto": "Alberto Silva"
+    },
+    "fecha_propuesta": "2025-09-24",
+    "vigencia_dias": 30,
+    "estado": "Rechazada",
+    "resumen_ejecutivo": {
+      "contexto": "GobiernoDigital busca desarrollo de mvp mobile cross-platform para validación rápida de producto",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Aplicación móvil con React Native para iOS y Android",
+        "Backend serverless con Firebase",
+        "Autenticación con email y social login",
+        "3-5 pantallas principales definidas",
+        "Integración de pasarela de pagos",
+        "Push notifications básicas",
+        "Analytics y tracking de eventos",
+        "Deploy en App Store y Google Play",
+        "2 rondas de feedback y ajustes"
+      ],
+      "excluido": [
+        "Funcionalidades complejas de backend",
+        "Integraciones con sistemas enterprise",
+        "Soporte multi-idioma inicial",
+        "Versión web/desktop"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Rodrigo Herrera",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 495,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Pedro Martínez",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 367,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Nicolás Álvarez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 310,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Miguel Ramírez",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 183,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 5,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 185200,
+      "desglose": {
+        "desarrollo": 138900,
+        "project_management": 27780,
+        "qa_testing": 18520
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel"
+    ],
+    "casos_exito_relevantes": [
+      "CASE002",
+      "CASE005",
+      "CASE009"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP003",
+    "titulo": "Propuesta Técnica: Integración de Sistemas para RetailMax",
+    "cliente": {
+      "cliente_id": "CLI006",
+      "nombre": "RetailMax",
+      "contacto": "Patricia Gómez"
+    },
+    "fecha_propuesta": "2025-06-12",
+    "vigencia_dias": 30,
+    "estado": "Rechazada",
+    "resumen_ejecutivo": {
+      "contexto": "RetailMax busca integración robusta entre sistemas empresariales existentes vía apis",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 3 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Análisis de APIs de sistemas existentes",
+        "Desarrollo de capa de integración en Python",
+        "Transformación y mapeo de datos",
+        "Sistema de sincronización bidireccional",
+        "Manejo de errores y reintentos automáticos",
+        "Logging y monitoring completo",
+        "Documentación de flujos de integración",
+        "Testing end-to-end",
+        "Alertas automáticas ante fallos"
+      ],
+      "excluido": [
+        "Modificaciones a sistemas legacy",
+        "Migración de datos históricos",
+        "Desarrollo de nuevas funcionalidades",
+        "Soporte 24/7 post-implementación"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Sofía Sánchez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 188,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "María Rodríguez",
+        "rol": "DevOps Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 366,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Gabriel Vega",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 408,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 10,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 192400,
+      "desglose": {
+        "desarrollo": 144300,
+        "project_management": 28860,
+        "qa_testing": 19240
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "casos_exito_relevantes": [
+      "CASE002",
+      "CASE014",
+      "CASE010"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP004",
+    "titulo": "Propuesta Técnica: Desarrollo Web Full Stack para EnergyTrack Solutions",
+    "cliente": {
+      "cliente_id": "CLI019",
+      "nombre": "EnergyTrack Solutions",
+      "contacto": "Pablo Guerrero"
+    },
+    "fecha_propuesta": "2025-09-30",
+    "vigencia_dias": 30,
+    "estado": "Enviada",
+    "resumen_ejecutivo": {
+      "contexto": "EnergyTrack Solutions busca desarrollo de plataforma web empresarial con arquitectura moderna, escalable y segura",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Frontend responsivo con React 18 y TypeScript",
+        "Backend API REST con Node.js y Express",
+        "Base de datos PostgreSQL con diseño optimizado",
+        "Autenticación JWT con roles y permisos",
+        "Panel administrativo completo",
+        "Sistema de reportes exportables",
+        "Integración con APIs de terceros",
+        "Testing automatizado (Jest, Cypress)",
+        "Documentación técnica completa",
+        "Deploy en AWS con CI/CD"
+      ],
+      "excluido": [
+        "Aplicaciones móviles nativas",
+        "Integraciones no especificadas inicialmente",
+        "Contenido y copywriting",
+        "Capacitación presencial extendida"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Micaela Silva",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 320,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Valentina Torres",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 374,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Carolina Ruiz",
+        "rol": "Backend Developer",
+        "seniority": "Semi-Senior",
+        "tarifa_dia_usd": 326,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Gabriel Vega",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 408,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 4,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 154000,
+      "desglose": {
+        "desarrollo": 115500,
+        "project_management": 23100,
+        "qa_testing": 15400
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "casos_exito_relevantes": [
+      "CASE004",
+      "CASE006",
+      "CASE011"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP005",
+    "titulo": "Propuesta Técnica: App Móvil MVP para MarketPlace Local",
+    "cliente": {
+      "cliente_id": "CLI016",
+      "nombre": "MarketPlace Local",
+      "contacto": "Daniela Vega"
+    },
+    "fecha_propuesta": "2025-09-18",
+    "vigencia_dias": 30,
+    "estado": "Enviada",
+    "resumen_ejecutivo": {
+      "contexto": "MarketPlace Local busca desarrollo de mvp mobile cross-platform para validación rápida de producto",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Aplicación móvil con React Native para iOS y Android",
+        "Backend serverless con Firebase",
+        "Autenticación con email y social login",
+        "3-5 pantallas principales definidas",
+        "Integración de pasarela de pagos",
+        "Push notifications básicas",
+        "Analytics y tracking de eventos",
+        "Deploy en App Store y Google Play",
+        "2 rondas de feedback y ajustes"
+      ],
+      "excluido": [
+        "Funcionalidades complejas de backend",
+        "Integraciones con sistemas enterprise",
+        "Soporte multi-idioma inicial",
+        "Versión web/desktop"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Rodrigo Herrera",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 495,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Valentina Torres",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 374,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Nicolás Álvarez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 310,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Miguel Ramírez",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 183,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 4,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 148720,
+      "desglose": {
+        "desarrollo": 111540,
+        "project_management": 22308,
+        "qa_testing": 14872
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "casos_exito_relevantes": [
+      "CASE010",
+      "CASE015",
+      "CASE013"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP006",
+    "titulo": "Propuesta Técnica: Integración de Sistemas para TechParts SA",
+    "cliente": {
+      "cliente_id": "CLI003",
+      "nombre": "TechParts SA",
+      "contacto": "Martín Figueroa"
+    },
+    "fecha_propuesta": "2025-05-30",
+    "vigencia_dias": 30,
+    "estado": "Aprobada",
+    "resumen_ejecutivo": {
+      "contexto": "TechParts SA busca integración robusta entre sistemas empresariales existentes vía apis",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 3 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Análisis de APIs de sistemas existentes",
+        "Desarrollo de capa de integración en Python",
+        "Transformación y mapeo de datos",
+        "Sistema de sincronización bidireccional",
+        "Manejo de errores y reintentos automáticos",
+        "Logging y monitoring completo",
+        "Documentación de flujos de integración",
+        "Testing end-to-end",
+        "Alertas automáticas ante fallos"
+      ],
+      "excluido": [
+        "Modificaciones a sistemas legacy",
+        "Migración de datos históricos",
+        "Desarrollo de nuevas funcionalidades",
+        "Soporte 24/7 post-implementación"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Nicolás Álvarez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 310,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Martín Flores",
+        "rol": "DevOps Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 372,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Gabriel Vega",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 408,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 7,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 152600,
+      "desglose": {
+        "desarrollo": 114450,
+        "project_management": 22890,
+        "qa_testing": 15260
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "casos_exito_relevantes": [
+      "CASE002",
+      "CASE007",
+      "CASE010"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP007",
+    "titulo": "Propuesta Técnica: Desarrollo Web Full Stack para EnergyTrack Solutions",
+    "cliente": {
+      "cliente_id": "CLI019",
+      "nombre": "EnergyTrack Solutions",
+      "contacto": "Pablo Guerrero"
+    },
+    "fecha_propuesta": "2025-09-16",
+    "vigencia_dias": 30,
+    "estado": "Aprobada",
+    "resumen_ejecutivo": {
+      "contexto": "EnergyTrack Solutions busca desarrollo de plataforma web empresarial con arquitectura moderna, escalable y segura",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Frontend responsivo con React 18 y TypeScript",
+        "Backend API REST con Node.js y Express",
+        "Base de datos PostgreSQL con diseño optimizado",
+        "Autenticación JWT con roles y permisos",
+        "Panel administrativo completo",
+        "Sistema de reportes exportables",
+        "Integración con APIs de terceros",
+        "Testing automatizado (Jest, Cypress)",
+        "Documentación técnica completa",
+        "Deploy en AWS con CI/CD"
+      ],
+      "excluido": [
+        "Aplicaciones móviles nativas",
+        "Integraciones no especificadas inicialmente",
+        "Contenido y copywriting",
+        "Capacitación presencial extendida"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Santiago Mendoza",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 477,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Valentina Torres",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 374,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Agustina Jiménez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 226,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Miguel Ramírez",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 183,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 9,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 316260,
+      "desglose": {
+        "desarrollo": 237195,
+        "project_management": 47439,
+        "qa_testing": 31626
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "React Native",
+      "Firebase",
+      "Node.js",
+      "MongoDB"
+    ],
+    "casos_exito_relevantes": [
+      "CASE015",
+      "CASE002",
+      "CASE003"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP008",
+    "titulo": "Propuesta Técnica: App Móvil MVP para ShopNow Argentina",
+    "cliente": {
+      "cliente_id": "CLI010",
+      "nombre": "ShopNow Argentina",
+      "contacto": "Silvia Castro"
+    },
+    "fecha_propuesta": "2025-08-20",
+    "vigencia_dias": 30,
+    "estado": "En Revisión",
+    "resumen_ejecutivo": {
+      "contexto": "ShopNow Argentina busca desarrollo de mvp mobile cross-platform para validación rápida de producto",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Aplicación móvil con React Native para iOS y Android",
+        "Backend serverless con Firebase",
+        "Autenticación con email y social login",
+        "3-5 pantallas principales definidas",
+        "Integración de pasarela de pagos",
+        "Push notifications básicas",
+        "Analytics y tracking de eventos",
+        "Deploy en App Store y Google Play",
+        "2 rondas de feedback y ajustes"
+      ],
+      "excluido": [
+        "Funcionalidades complejas de backend",
+        "Integraciones con sistemas enterprise",
+        "Soporte multi-idioma inicial",
+        "Versión web/desktop"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Micaela Silva",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 320,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Pedro Martínez",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 367,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Agustina Jiménez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 226,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Miguel Ramírez",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 183,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 4,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 127440,
+      "desglose": {
+        "desarrollo": 95580,
+        "project_management": 19116,
+        "qa_testing": 12744
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel"
+    ],
+    "casos_exito_relevantes": [
+      "CASE015",
+      "CASE013",
+      "CASE002"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP009",
+    "titulo": "Propuesta Técnica: Integración de Sistemas para SecureBank Digital",
+    "cliente": {
+      "cliente_id": "CLI008",
+      "nombre": "SecureBank Digital",
+      "contacto": "Claudia Fernández"
+    },
+    "fecha_propuesta": "2025-07-19",
+    "vigencia_dias": 30,
+    "estado": "Enviada",
+    "resumen_ejecutivo": {
+      "contexto": "SecureBank Digital busca integración robusta entre sistemas empresariales existentes vía apis",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 3 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Análisis de APIs de sistemas existentes",
+        "Desarrollo de capa de integración en Python",
+        "Transformación y mapeo de datos",
+        "Sistema de sincronización bidireccional",
+        "Manejo de errores y reintentos automáticos",
+        "Logging y monitoring completo",
+        "Documentación de flujos de integración",
+        "Testing end-to-end",
+        "Alertas automáticas ante fallos"
+      ],
+      "excluido": [
+        "Modificaciones a sistemas legacy",
+        "Migración de datos históricos",
+        "Desarrollo de nuevas funcionalidades",
+        "Soporte 24/7 post-implementación"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Carolina Ruiz",
+        "rol": "Backend Developer",
+        "seniority": "Semi-Senior",
+        "tarifa_dia_usd": 326,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Laura García",
+        "rol": "DevOps Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 475,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Gabriel Vega",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 408,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 8,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 193440,
+      "desglose": {
+        "desarrollo": 145080,
+        "project_management": 29016,
+        "qa_testing": 19344
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "casos_exito_relevantes": [
+      "CASE008",
+      "CASE012",
+      "CASE015"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  },
+  {
+    "propuesta_id": "PROP010",
+    "titulo": "Propuesta Técnica: Desarrollo Web Full Stack para GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "contacto": "Alberto Silva"
+    },
+    "fecha_propuesta": "2025-04-25",
+    "vigencia_dias": 30,
+    "estado": "Negociación",
+    "resumen_ejecutivo": {
+      "contexto": "GobiernoDigital busca desarrollo de plataforma web empresarial con arquitectura moderna, escalable y segura",
+      "propuesta_valor": "Nuestra consultora cuenta con 40 proyectos completados exitosamente en 12 industrias diferentes. Proponemos un equipo de 5 especialistas con experiencia comprobada.",
+      "diferenciadores": [
+        "Experiencia específica en industria del cliente",
+        "Equipo senior disponible para inicio inmediato",
+        "Metodología ágil con entregas incrementales",
+        "Portfolio comprobado de proyectos similares",
+        "Soporte post-lanzamiento incluido"
+      ]
+    },
+    "alcance": {
+      "incluido": [
+        "Frontend responsivo con React 18 y TypeScript",
+        "Backend API REST con Node.js y Express",
+        "Base de datos PostgreSQL con diseño optimizado",
+        "Autenticación JWT con roles y permisos",
+        "Panel administrativo completo",
+        "Sistema de reportes exportables",
+        "Integración con APIs de terceros",
+        "Testing automatizado (Jest, Cypress)",
+        "Documentación técnica completa",
+        "Deploy en AWS con CI/CD"
+      ],
+      "excluido": [
+        "Aplicaciones móviles nativas",
+        "Integraciones no especificadas inicialmente",
+        "Contenido y copywriting",
+        "Capacitación presencial extendida"
+      ],
+      "entregables": [
+        "Código fuente completo en repositorio Git",
+        "Documentación técnica y de usuario",
+        "Ambiente de producción configurado",
+        "Plan de testing ejecutado",
+        "Capacitación al equipo técnico del cliente",
+        "1 mes de soporte post go-live incluido"
+      ]
+    },
+    "equipo_propuesto": [
+      {
+        "nombre": "Santiago Mendoza",
+        "rol": "Full Stack Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 477,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Valentina Torres",
+        "rol": "Frontend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 374,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Sofía Sánchez",
+        "rol": "Backend Developer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 188,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Miguel Ramírez",
+        "rol": "Project Manager",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 183,
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "nombre": "Ana López",
+        "rol": "QA Engineer",
+        "seniority": "Senior",
+        "tarifa_dia_usd": 497,
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "duracion_total_meses": 6,
+      "fecha_inicio_propuesta": "2025-11-06",
+      "fases": [
+        {
+          "fase": "Kickoff & Discovery",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Requerimientos finalizados",
+            "Arquitectura definida"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 1-2",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Módulos core desarrollados",
+            "Demo parcial"
+          ]
+        },
+        {
+          "fase": "Desarrollo Sprint 3-4",
+          "duracion_semanas": 4,
+          "hitos": [
+            "Funcionalidades completas",
+            "Integración finalizada"
+          ]
+        },
+        {
+          "fase": "Testing & QA",
+          "duracion_semanas": 2,
+          "hitos": [
+            "Testing completo",
+            "Bugs críticos resueltos"
+          ]
+        },
+        {
+          "fase": "Deploy & Capacitación",
+          "duracion_semanas": 1,
+          "hitos": [
+            "Sistema en producción",
+            "Equipo capacitado"
+          ]
+        }
+      ]
+    },
+    "inversion": {
+      "costo_total_usd": 206280,
+      "desglose": {
+        "desarrollo": 154710,
+        "project_management": 30942,
+        "qa_testing": 20628
+      },
+      "forma_pago": [
+        {
+          "hito": "Inicio proyecto (firma contrato)",
+          "porcentaje": 30
+        },
+        {
+          "hito": "50% desarrollo completado",
+          "porcentaje": 30
+        },
+        {
+          "hito": "Testing finalizado (pre-producción)",
+          "porcentaje": 25
+        },
+        {
+          "hito": "Go-live exitoso",
+          "porcentaje": 15
+        }
+      ],
+      "incluye": [
+        "Equipo completo dedicado",
+        "Infraestructura de desarrollo",
+        "Licencias de herramientas",
+        "1 mes soporte post-lanzamiento"
+      ]
+    },
+    "tecnologias_propuestas": [
+      "Next.js",
+      "TypeScript",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel"
+    ],
+    "casos_exito_relevantes": [
+      "CASE011",
+      "CASE009",
+      "CASE012"
+    ],
+    "supuestos": [
+      "Cliente provee accesos necesarios a sistemas en máximo 3 días hábiles",
+      "Disponibilidad de stakeholders para reuniones semanales",
+      "Ambiente de testing provisto por cliente",
+      "Aprobaciones de diseño/funcionalidad en máximo 5 días hábiles",
+      "Alcance congelado post firma (cambios sujetos a change request)"
+    ],
+    "riesgos": [
+      {
+        "riesgo": "Demoras en acceso a sistemas legacy",
+        "mitigacion": "Planificar integraciones en sprints finales, prototipar con datos mock",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      },
+      {
+        "riesgo": "Cambios de alcance durante desarrollo",
+        "mitigacion": "Proceso formal de change request, sprints revisables cada 2 semanas",
+        "probabilidad": "Alta",
+        "impacto": "Alto"
+      },
+      {
+        "riesgo": "Disponibilidad limitada de stakeholders clave",
+        "mitigacion": "Definir backup contacts, documentar todas las decisiones por escrito",
+        "probabilidad": "Media",
+        "impacto": "Medio"
+      }
+    ],
+    "proximos_pasos": [
+      "Revisión de propuesta con stakeholders",
+      "Reunión técnica de aclaraciones (si necesario)",
+      "Firma de contrato y orden de compra",
+      "Kickoff meeting con equipo completo",
+      "Inicio formal del proyecto"
+    ]
+  }
+]

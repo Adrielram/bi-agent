@@ -1,0 +1,70 @@
+[
+  {
+    "doc_id": "DOC001",
+    "titulo": "Arquitectura de Microservicios con Node.js y Kubernetes",
+    "categoria": "Arquitectura de Software",
+    "contenido": "\n# Arquitectura de Microservicios con Node.js y Kubernetes\n\n## Introducción\nEsta guía documenta nuestro enfoque estándar para implementar arquitecturas de microservicios utilizando Node.js como runtime principal y Kubernetes para orquestación.\n\n## Principios de Diseño\n\n### 1. Single Responsibility\nCada microservicio debe tener una única responsabilidad bien definida. Por ejemplo:\n- Servicio de Autenticación: maneja únicamente login, registro y tokens\n- Servicio de Notificaciones: maneja envío de emails, SMS y push notifications\n- Servicio de Pagos: procesa transacciones financieras\n\n### 2. Comunicación Asíncrona\nPreferimos comunicación asíncrona vía message queues (RabbitMQ, Kafka) para:\n- Desacoplamiento entre servicios\n- Mejor resiliencia ante fallos\n- Escalabilidad independiente\n\n### 3. API Gateway\nImplementamos un API Gateway (Kong, AWS API Gateway) que:\n- Centraliza autenticación y autorización\n- Maneja rate limiting\n- Proporciona punto único de entrada\n- Facilita versionado de APIs\n\n## Stack Tecnológico Recomendado\n\n**Backend Services:**\n- Node.js 18+ con TypeScript\n- Express.js o NestJS como frameworks\n- Jest para testing unitario\n- Supertest para testing de integración\n\n**Bases de Datos:**\n- PostgreSQL para datos transaccionales\n- MongoDB para datos no estructurados\n- Redis para caching y sessions\n\n**Infraestructura:**\n- Docker para containerización\n- Kubernetes para orquestación\n- Helm charts para deployment\n- GitLab CI/CD o GitHub Actions\n\n**Observabilidad:**\n- Prometheus + Grafana para métricas\n- ELK Stack (Elasticsearch, Logstash, Kibana) para logs\n- Jaeger para distributed tracing\n\n## Patrón de Implementación\n\n### Estructura de Proyecto\n```\nmicroservice-name/\n├── src/\n│   ├── controllers/\n│   ├── services/\n│   ├── repositories/\n│   ├── models/\n│   ├── middleware/\n│   └── utils/\n├── tests/\n├── Dockerfile\n├── k8s/\n│   ├── deployment.yaml\n│   ├── service.yaml\n│   └── ingress.yaml\n└── package.json\n```\n\n### Manejo de Errores\nImplementamos error handling centralizado con códigos de error consistentes:\n- 4xx para errores del cliente\n- 5xx para errores del servidor\n- Logging estructurado de todos los errores\n\n### Health Checks\nCada servicio expone endpoints:\n- `/health` - Liveness probe\n- `/ready` - Readiness probe\n- `/metrics` - Métricas de Prometheus\n\n## Casos de Uso Exitosos\nHemos implementado esta arquitectura en:\n- Sistema bancario con 20+ microservicios\n- E-commerce con 1M+ usuarios\n- Plataforma logística con 15 microservicios\n\n## Lecciones Aprendidas\n1. **No sobre-fragmentar**: Comenzar con servicios más grandes y dividir solo cuando sea necesario\n2. **Consistencia de datos**: Implementar Saga pattern para transacciones distribuidas\n3. **Testing**: Inversión fuerte en tests de integración entre servicios\n4. **Documentación**: OpenAPI/Swagger para cada servicio\n\n## Referencias\n- Martin Fowler - Microservices Architecture\n- Kubernetes Official Documentation\n- Node.js Best Practices Repository\n",
+    "tecnologias_mencionadas": [
+      "Kubernetes",
+      "Express.js",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "GitHub Actions",
+      "AWS",
+      "GitLab CI/CD",
+      "MongoDB",
+      "Docker",
+      "Elasticsearch",
+      "Node.js"
+    ],
+    "proyectos_relacionados": [
+      "PROJ001",
+      "PROJ002",
+      "PROJ003",
+      "PROJ004",
+      "PROJ005"
+    ],
+    "fecha_creacion": "2025-06-06",
+    "autor": "Carlos Fernández",
+    "versión": "1.0"
+  },
+  {
+    "doc_id": "DOC002",
+    "titulo": "Integración con ERP Odoo: Guía Completa",
+    "categoria": "Integraciones",
+    "contenido": "\n# Integración con ERP Odoo: Guía Completa\n\n## Overview\nOdoo es un ERP open-source modular ampliamente utilizado. Esta guía documenta nuestras mejores prácticas para integraciones con Odoo.\n\n## Métodos de Integración\n\n### 1. XML-RPC API\nEl método más común y estable:\n\n```python\nimport xmlrpc.client\n\nurl = 'https://demo.odoo.com'\ndb = 'database_name'\nusername = 'admin'\npassword = 'admin'\n\ncommon = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/common')\nuid = common.authenticate(db, username, password, {})\n\nmodels = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/object')\n\n# Buscar registros\npartners = models.execute_kw(db, uid, password,\n    'res.partner', 'search_read',\n    [[['is_company', '=', True]]],\n    {'fields': ['name', 'email'], 'limit': 5})\n```\n\n### 2. REST API (Odoo 13+)\nDisponible con módulo rest_api:\n- Requiere instalación de módulo adicional\n- Más familiar para desarrolladores web\n- Mejor para integraciones modernas\n\n### 3. Módulos Personalizados\nPara lógica compleja, desarrollar módulos Odoo en Python:\n- Permite hooks en workflow de Odoo\n- Acceso completo a ORM de Odoo\n- Mejor performance para operaciones complejas\n\n## Casos de Uso Comunes\n\n### Sincronización de Inventario\n**Problema**: Cliente necesita actualizar stock desde múltiples proveedores\n\n**Solución Implementada**:\n- Cron job cada 2 horas\n- Script Python que consulta APIs de proveedores\n- Actualización batch en Odoo via XML-RPC\n- Sistema de reintentos para APIs caídas\n- Logging completo en base de datos separada\n\n**Código ejemplo**:\n```python\ndef update_stock_from_supplier(supplier_api_url, product_mapping):\n    # Obtener stock del proveedor\n    stock_data = requests.get(f'{supplier_api_url}/stock').json()\n\n    # Mapear productos\n    for item in stock_data:\n        odoo_product_id = product_mapping.get(item['sku'])\n        if odoo_product_id:\n            models.execute_kw(db, uid, password,\n                'product.product', 'write',\n                [[odoo_product_id], {'qty_available': item['quantity']}])\n```\n\n### Automatización de Pedidos\n**Problema**: Pedidos manuales causan errores y demoras\n\n**Solución**:\n- Webhook desde sistema externo a middleware\n- Middleware valida datos y crea orden en Odoo\n- Notificación automática al departamento de compras\n\n## Mejores Prácticas\n\n1. **Rate Limiting**: Odoo tiene límites, implementar delays entre requests\n2. **Batch Operations**: Agrupar operaciones para mejor performance\n3. **Error Handling**: Odoo puede devolver errores no obvios, manejar robustamente\n4. **Testing**: Usar base de datos de testing, nunca producción directamente\n5. **Versionado**: Odoo cambia APIs entre versiones, documentar versión objetivo\n\n## Desafíos Comunes\n\n### Performance\n- Queries grandes pueden ser lentas\n- Solución: Paginar resultados, usar filtros específicos\n\n### Concurrencia\n- Actualizaciones simultáneas pueden causar conflictos\n- Solución: Implementar locks, usar colas de procesamiento\n\n### Documentación\n- Documentación de Odoo puede ser incompleta\n- Solución: Revisar código fuente de Odoo, comunidad activa\n\n## Proyectos Implementados\nHemos completado integraciones Odoo en:\n- TechParts SA: Integración con 12 proveedores\n- IndustrialTech: Sincronización con sistema de producción MES\n- RetailMax: Integración con e-commerce Shopify\n\n## Módulos Odoo Relevantes\n- `product` - Gestión de productos\n- `stock` - Inventario y almacenes\n- `purchase` - Compras\n- `sale` - Ventas\n- `account` - Contabilidad\n\n## Herramientas Útiles\n- OdooRPC: Librería Python simplificada\n- Odoo Studio: Customización sin código\n- Postman Collections: Para testing de APIs\n",
+    "tecnologias_mencionadas": [
+      "Python"
+    ],
+    "proyectos_relacionados": [],
+    "fecha_creacion": "2024-11-07",
+    "autor": "Rodrigo Herrera",
+    "versión": "1.0"
+  },
+  {
+    "doc_id": "DOC003",
+    "titulo": "Desarrollo Mobile con React Native: Estándares y Patrones",
+    "categoria": "Desarrollo Mobile",
+    "contenido": "\n# Desarrollo Mobile con React Native: Estándares y Patrones\n\n## Por Qué React Native\n\n### Ventajas\n- **Code Sharing**: 80-90% código compartido entre iOS y Android\n- **Developer Experience**: Hot reload, debugging familiar\n- **Ecosistema**: Miles de librerías npm disponibles\n- **Performance**: Nativo suficiente para mayoría de casos\n- **Time to Market**: 40% más rápido vs desarrollo nativo\n\n### Cuándo NO Usar\n- Apps con necesidades gráficas intensivas (juegos 3D)\n- Apps que requieren acceso a APIs nativas muy específicas\n- Cuando performance crítica es requerimiento absoluto\n\n## Stack Tecnológico\n\n**Core:**\n- React Native 0.72+\n- TypeScript para type safety\n- React Navigation 6.x para navegación\n- Redux Toolkit o Context API para estado global\n\n**UI/UX:**\n- React Native Paper o NativeBase para componentes\n- react-native-reanimated para animaciones complejas\n- react-native-gesture-handler para gestos\n\n**Networking:**\n- Axios o fetch para APIs\n- React Query para data fetching y caching\n- Socket.io para real-time\n\n**Storage:**\n- AsyncStorage para datos simples\n- Realm o WatermelonDB para datos complejos\n- Secure Storage para datos sensibles\n\n**Testing:**\n- Jest para unit tests\n- React Native Testing Library\n- Detox para E2E testing\n\n## Arquitectura Recomendada\n\n```\nsrc/\n├── assets/          # Imágenes, fonts\n├── components/      # Componentes reutilizables\n│   ├── Button/\n│   ├── Input/\n│   └── Card/\n├── screens/         # Pantallas de la app\n│   ├── Home/\n│   ├── Profile/\n│   └── Settings/\n├── navigation/      # Configuración de navegación\n├── services/        # API calls, integraciones\n├── store/          # Redux store o Context\n├── hooks/          # Custom hooks\n├── utils/          # Funciones utilidad\n├── types/          # TypeScript types\n└── theme/          # Colores, spacing, typography\n```\n\n## Patrones de Diseño\n\n### 1. Compound Components\nPara componentes complejos reutilizables:\n```typescript\n<Card>\n  <Card.Header title=\"Título\" />\n  <Card.Body>Contenido</Card.Body>\n  <Card.Footer>\n    <Button>Acción</Button>\n  </Card.Footer>\n</Card>\n```\n\n### 2. Custom Hooks\nExtraer lógica reutilizable:\n```typescript\nfunction useApi<T>(url: string) {\n  const [data, setData] = useState<T | null>(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState<Error | null>(null);\n\n  // ... lógica de fetching\n\n  return { data, loading, error };\n}\n```\n\n### 3. HOC para Features Cross-cutting\nAutenticación, analytics, etc:\n```typescript\nexport const withAuth = (Component: React.ComponentType) => {\n  return (props: any) => {\n    const { user } = useAuth();\n    if (!user) return <LoginScreen />;\n    return <Component {...props} />;\n  };\n};\n```\n\n## Performance Optimization\n\n### 1. FlatList Optimization\n```typescript\n<FlatList\n  data={items}\n  renderItem={renderItem}\n  keyExtractor={item => item.id}\n  removeClippedSubviews={true}\n  maxToRenderPerBatch={10}\n  windowSize={10}\n  initialNumToRender={10}\n  getItemLayout={(data, index) => ({\n    length: ITEM_HEIGHT,\n    offset: ITEM_HEIGHT * index,\n    index,\n  })}\n/>\n```\n\n### 2. React.memo para Componentes\n```typescript\nexport const ExpensiveComponent = React.memo(({ data }) => {\n  // rendering logic\n}, (prevProps, nextProps) => {\n  return prevProps.data.id === nextProps.data.id;\n});\n```\n\n### 3. useCallback y useMemo\n```typescript\nconst memoizedCallback = useCallback(() => {\n  doSomething(a, b);\n}, [a, b]);\n\nconst memoizedValue = useMemo(() => {\n  return computeExpensiveValue(a, b);\n}, [a, b]);\n```\n\n## CI/CD Pipeline\n\n### Fastlane\nAutomatización de builds y deploys:\n```ruby\nlane :beta do\n  increment_build_number\n  build_app(scheme: \"MyApp\")\n  upload_to_testflight\nend\n```\n\n### CodePush\nUpdates over-the-air sin app store:\n- Para fixes rápidos\n- No para cambios nativos\n- Rollback instantáneo si hay issues\n\n## Casos de Éxito\n\n### MarketPlace Local MVP\n- Desarrollado en 12 semanas\n- 500 usuarios primer mes\n- Rating 4.5 estrellas\n- Tech: RN, Firebase, Google Maps\n\n### HealthTrack App\n- App de telemedicina\n- Integración WebRTC para videoconsulta\n- 2,000+ consultas mensuales\n- Tech: RN, Node.js, Socket.io\n\n## Debugging Tips\n\n1. **React Native Debugger**: Mejor que Chrome DevTools\n2. **Flipper**: Herramienta oficial de debugging\n3. **Reactotron**: Para inspeccionar estado y APIs\n4. **Console Logs**: Usar `console.tron` para logs estructurados\n\n## Librerías Recomendadas\n\n**Must-Have:**\n- react-native-vector-icons\n- react-native-config (variables de entorno)\n- react-native-permissions\n- @react-native-firebase (push notifications, analytics)\n\n**Nice-to-Have:**\n- react-native-maps\n- react-native-camera\n- react-native-image-picker\n- react-native-share\n\n## Recursos\n- React Native Documentation\n- React Native Radio Podcast\n- Infinite Red Blog\n- William Candillon YouTube Channel\n",
+    "tecnologias_mencionadas": [
+      "TypeScript",
+      "Firebase",
+      "Node.js",
+      "React",
+      "React Native",
+      "Redux"
+    ],
+    "proyectos_relacionados": [
+      "PROJ001",
+      "PROJ002",
+      "PROJ003",
+      "PROJ004",
+      "PROJ005"
+    ],
+    "fecha_creacion": "2025-02-17",
+    "autor": "Diego Pérez",
+    "versión": "1.0"
+  }
+]

@@ -1,0 +1,3134 @@
+[
+  {
+    "proyecto_id": "PROJ001",
+    "nombre": "Plataforma de Gestión Logística Web - SecureBank Digital",
+    "cliente": {
+      "cliente_id": "CLI008",
+      "nombre": "SecureBank Digital",
+      "industria": "Fintech"
+    },
+    "descripcion_completa": "Desarrollo de plataforma web para gestionar procesos logísticos internos, incluyendo seguimiento de envíos, gestión de flota, y reportería avanzada. Migración desde sistema legacy en Excel a solución web moderna con arquitectura de microservicios.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + DevOps",
+    "problema_cliente": "Procesos manuales en Excel, falta de trazabilidad en tiempo real, dificultad para escalar operaciones",
+    "solucion_implementada": "Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, gestión de usuarios y roles",
+    "equipo": [
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS028",
+        "nombre": "Paula Guerrero",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS004",
+        "nombre": "Ana López",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS012",
+        "nombre": "Lucía Rivera",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS015",
+        "nombre": "Sebastián Cruz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-02-23",
+      "fecha_fin": "2026-04-19",
+      "duracion_meses": 14,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 934080,
+      "costo_real_usd": 887598,
+      "variacion_porcentaje": -5.0
+    },
+    "resultados": {
+      "objetivos_cumplidos": 85,
+      "satisfaccion_cliente": 4.3,
+      "kpis_principales": [
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Escalabilidad mejorada para 10x usuarios",
+        "Incremento 45% en productividad del equipo"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, ",
+      "contacto": "Claudia Fernández"
+    }
+  },
+  {
+    "proyecto_id": "PROJ002",
+    "nombre": "App Móvil Marketplace Local - IndustrialTech",
+    "cliente": {
+      "cliente_id": "CLI017",
+      "nombre": "IndustrialTech",
+      "industria": "Manufactura"
+    },
+    "descripcion_completa": "Desarrollo de MVP para aplicación móvil que conecta comercios locales con clientes del barrio. Incluye geolocalización, sistema de pedidos, pagos online y notificaciones push.",
+    "tipo_proyecto": "MVP Mobile",
+    "alcance": "Mobile + Backend + UX/UI",
+    "problema_cliente": "Comercios locales sin presencia digital, clientes sin forma de descubrir negocios cercanos",
+    "solucion_implementada": "App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración con pasarelas de pago",
+    "equipo": [
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS015",
+        "nombre": "Sebastián Cruz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-05-20",
+      "fecha_fin": "2026-09-12",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 251520,
+      "costo_real_usd": 267693,
+      "variacion_porcentaje": 6.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 93,
+      "satisfaccion_cliente": 5.0,
+      "kpis_principales": [
+        "Time-to-market reducido en 40%",
+        "Automatización del 85% de procesos manuales",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración ",
+      "contacto": "Gustavo Rojas"
+    }
+  },
+  {
+    "proyecto_id": "PROJ003",
+    "nombre": "Integración ERP Odoo con API Proveedores - GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "industria": "Gobierno"
+    },
+    "descripcion_completa": "Integración de sistema ERP Odoo existente con APIs de múltiples proveedores para automatizar pedidos, actualización de stock y sincronización de precios en tiempo real.",
+    "tipo_proyecto": "Integración",
+    "alcance": "Backend + APIs",
+    "problema_cliente": "Actualización manual de inventario, errores de stock, tiempo excesivo en gestión de pedidos",
+    "solucion_implementada": "Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidireccional, logging y monitoring",
+    "equipo": [
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-03-17",
+      "fecha_fin": "2024-11-12",
+      "duracion_meses": 8,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 262240,
+      "costo_real_usd": 270443,
+      "variacion_porcentaje": 3.1
+    },
+    "resultados": {
+      "objetivos_cumplidos": 88,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Reducción 60% en tiempo de procesamiento",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidirecci",
+      "contacto": "Alberto Silva"
+    }
+  },
+  {
+    "proyecto_id": "PROJ004",
+    "nombre": "Portal de Pacientes para Clínica - EduTech Solutions",
+    "cliente": {
+      "cliente_id": "CLI005",
+      "nombre": "EduTech Solutions",
+      "industria": "Educación"
+    },
+    "descripcion_completa": "Sistema web para gestión de turnos médicos, historia clínica electrónica, recetas digitales y telemedicina. Integración con sistema de facturación existente.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Integraciones",
+    "problema_cliente": "Gestión manual de turnos, historias clínicas en papel, falta de acceso remoto para pacientes",
+    "solucion_implementada": "Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de datos médicos cumpliendo normativas",
+    "equipo": [
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS016",
+        "nombre": "Florencia Morales",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-01-08",
+      "fecha_fin": "2024-11-03",
+      "duracion_meses": 10,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 254600,
+      "costo_real_usd": 300688,
+      "variacion_porcentaje": 18.1
+    },
+    "resultados": {
+      "objetivos_cumplidos": 88,
+      "satisfaccion_cliente": 4.9,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Automatización del 85% de procesos manuales",
+        "Incremento 45% en productividad del equipo"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de d",
+      "contacto": "Rodrigo Sánchez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ005",
+    "nombre": "Plataforma E-learning Corporativa - TelecomSur",
+    "cliente": {
+      "cliente_id": "CLI013",
+      "nombre": "TelecomSur",
+      "industria": "Telecomunicaciones"
+    },
+    "descripcion_completa": "Desarrollo de LMS (Learning Management System) para capacitación interna de empleados con tracking de progreso, certificaciones y gamificación.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + UX/UI",
+    "problema_cliente": "Capacitaciones presenciales costosas, falta de seguimiento de progreso, contenido no centralizado",
+    "solucion_implementada": "Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dashboards de progreso",
+    "equipo": [
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS029",
+        "nombre": "Gabriel Vega",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-11-04",
+      "fecha_fin": "2026-02-27",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Next.js",
+      "Node.js",
+      "Stripe",
+      "MongoDB",
+      "Vercel"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 382720,
+      "costo_real_usd": 423067,
+      "variacion_porcentaje": 10.5
+    },
+    "resultados": {
+      "objetivos_cumplidos": 85,
+      "satisfaccion_cliente": 4.5,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dash",
+      "contacto": "Ricardo Pérez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ006",
+    "nombre": "Sistema de Gestión de Inventario en Tiempo Real - FarmConnect",
+    "cliente": {
+      "cliente_id": "CLI007",
+      "nombre": "FarmConnect",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Aplicación web para control de inventario multi-sucursal con código de barras, alertas de stock mínimo y reportes de rotación de productos.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Mobile",
+    "problema_cliente": "Descontrol de stock, diferencias de inventario, falta de visibilidad entre sucursales",
+    "solucion_implementada": "Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivos, integraciones con POS",
+    "equipo": [
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-05-09",
+      "fecha_fin": "2025-07-03",
+      "duracion_meses": 14,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 370720,
+      "costo_real_usd": 338774,
+      "variacion_porcentaje": -8.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 98,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Escalabilidad mejorada para 10x usuarios",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivo",
+      "contacto": "Roberto Díaz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ007",
+    "nombre": "Refactorización y Modernización de Sistema Legacy - SecureBank Digital",
+    "cliente": {
+      "cliente_id": "CLI008",
+      "nombre": "SecureBank Digital",
+      "industria": "Fintech"
+    },
+    "descripcion_completa": "Migración de aplicación monolítica en .NET Framework a arquitectura de microservicios con .NET Core, containerización y CI/CD.",
+    "tipo_proyecto": "Modernización",
+    "alcance": "Backend + DevOps",
+    "problema_cliente": "Sistema obsoleto, difícil de mantener, escalabilidad limitada, deploys lentos",
+    "solucion_implementada": "Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downtime",
+    "equipo": [
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS012",
+        "nombre": "Lucía Rivera",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS011",
+        "nombre": "Martín Flores",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-06-29",
+      "fecha_fin": "2024-08-22",
+      "duracion_meses": 14,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 287560,
+      "costo_real_usd": 256837,
+      "variacion_porcentaje": -10.7
+    },
+    "resultados": {
+      "objetivos_cumplidos": 89,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Time-to-market reducido en 40%",
+        "Reducción 50% en errores operacionales",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downti",
+      "contacto": "Claudia Fernández"
+    }
+  },
+  {
+    "proyecto_id": "PROJ008",
+    "nombre": "Dashboard Ejecutivo de Business Intelligence - SmartFarm Technologi",
+    "cliente": {
+      "cliente_id": "CLI018",
+      "nombre": "SmartFarm Technologies",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Desarrollo de dashboards interactivos con Power BI y backend en Python para visualización de KPIs de negocio en tiempo real.",
+    "tipo_proyecto": "Analytics & BI",
+    "alcance": "Data Engineering + Frontend",
+    "problema_cliente": "Datos dispersos en múltiples sistemas, reportes manuales en Excel, decisiones sin datos en tiempo real",
+    "solucion_implementada": "ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+    "equipo": [
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS002",
+        "nombre": "María Rodríguez",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-12-24",
+      "fecha_fin": "2024-12-18",
+      "duracion_meses": 12,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 632160,
+      "costo_real_usd": 603719,
+      "variacion_porcentaje": -4.5
+    },
+    "resultados": {
+      "objetivos_cumplidos": 90,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Automatización del 85% de procesos manuales",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+      "contacto": "Adriana Mendoza"
+    }
+  },
+  {
+    "proyecto_id": "PROJ009",
+    "nombre": "Sistema de Gestión de Flota con IoT - IndustrialTech",
+    "cliente": {
+      "cliente_id": "CLI017",
+      "nombre": "IndustrialTech",
+      "industria": "Manufactura"
+    },
+    "descripcion_completa": "Plataforma para tracking GPS de vehículos, telemetría, gestión de mantenimiento y optimización de rutas usando datos en tiempo real.",
+    "tipo_proyecto": "IoT + Web",
+    "alcance": "Full Stack + IoT + Mobile",
+    "problema_cliente": "Falta de visibilidad de flota, mantenimientos reactivos, rutas no optimizadas, alto consumo de combustible",
+    "solucion_implementada": "Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, app móvil para conductores",
+    "equipo": [
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS029",
+        "nombre": "Gabriel Vega",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS011",
+        "nombre": "Martín Flores",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-02-19",
+      "fecha_fin": "2025-03-15",
+      "duracion_meses": 13,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 726180,
+      "costo_real_usd": 775264,
+      "variacion_porcentaje": 6.8
+    },
+    "resultados": {
+      "objetivos_cumplidos": 85,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Automatización del 85% de procesos manuales",
+        "Incremento 45% en productividad del equipo"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, ",
+      "contacto": "Gustavo Rojas"
+    }
+  },
+  {
+    "proyecto_id": "PROJ010",
+    "nombre": "App de Banca Móvil con Biometría - TechParts SA",
+    "cliente": {
+      "cliente_id": "CLI003",
+      "nombre": "TechParts SA",
+      "industria": "Manufactura"
+    },
+    "descripcion_completa": "Desarrollo de aplicación móvil bancaria con autenticación biométrica, transferencias, pagos de servicios y visualización de inversiones.",
+    "tipo_proyecto": "Mobile Fintech",
+    "alcance": "Mobile + Backend + Security",
+    "problema_cliente": "App legacy obsoleta, proceso de login complejo, funcionalidades limitadas",
+    "solucion_implementada": "App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones push",
+    "equipo": [
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-03-04",
+      "fecha_fin": "2025-10-30",
+      "duracion_meses": 8,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Airflow",
+      "PostgreSQL",
+      "Power BI",
+      "AWS Redshift"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 181920,
+      "costo_real_usd": 182934,
+      "variacion_porcentaje": 0.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 93,
+      "satisfaccion_cliente": 4.0,
+      "kpis_principales": [
+        "Reducción 50% en errores operacionales",
+        "Time-to-market reducido en 40%",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones ",
+      "contacto": "Martín Figueroa"
+    }
+  },
+  {
+    "proyecto_id": "PROJ011",
+    "nombre": "Plataforma de Gestión Logística Web - TechParts SA",
+    "cliente": {
+      "cliente_id": "CLI003",
+      "nombre": "TechParts SA",
+      "industria": "Manufactura"
+    },
+    "descripcion_completa": "Desarrollo de plataforma web para gestionar procesos logísticos internos, incluyendo seguimiento de envíos, gestión de flota, y reportería avanzada. Migración desde sistema legacy en Excel a solución web moderna con arquitectura de microservicios.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + DevOps",
+    "problema_cliente": "Procesos manuales en Excel, falta de trazabilidad en tiempo real, dificultad para escalar operaciones",
+    "solucion_implementada": "Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, gestión de usuarios y roles",
+    "equipo": [
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS028",
+        "nombre": "Paula Guerrero",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-06-29",
+      "fecha_fin": "2026-08-23",
+      "duracion_meses": 14,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 677040,
+      "costo_real_usd": 807172,
+      "variacion_porcentaje": 19.2
+    },
+    "resultados": {
+      "objetivos_cumplidos": 95,
+      "satisfaccion_cliente": 4.5,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Reducción 50% en errores operacionales",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, ",
+      "contacto": "Martín Figueroa"
+    }
+  },
+  {
+    "proyecto_id": "PROJ012",
+    "nombre": "App Móvil Marketplace Local - FarmConnect",
+    "cliente": {
+      "cliente_id": "CLI007",
+      "nombre": "FarmConnect",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Desarrollo de MVP para aplicación móvil que conecta comercios locales con clientes del barrio. Incluye geolocalización, sistema de pedidos, pagos online y notificaciones push.",
+    "tipo_proyecto": "MVP Mobile",
+    "alcance": "Mobile + Backend + UX/UI",
+    "problema_cliente": "Comercios locales sin presencia digital, clientes sin forma de descubrir negocios cercanos",
+    "solucion_implementada": "App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración con pasarelas de pago",
+    "equipo": [
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS029",
+        "nombre": "Gabriel Vega",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-08-14",
+      "fecha_fin": "2025-08-09",
+      "duracion_meses": 12,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 349920,
+      "costo_real_usd": 330871,
+      "variacion_porcentaje": -5.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 100,
+      "satisfaccion_cliente": 4.8,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Reducción 50% en errores operacionales",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración ",
+      "contacto": "Roberto Díaz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ013",
+    "nombre": "Integración ERP Odoo con API Proveedores - Banco del Norte",
+    "cliente": {
+      "cliente_id": "CLI002",
+      "nombre": "Banco del Norte",
+      "industria": "Fintech"
+    },
+    "descripcion_completa": "Integración de sistema ERP Odoo existente con APIs de múltiples proveedores para automatizar pedidos, actualización de stock y sincronización de precios en tiempo real.",
+    "tipo_proyecto": "Integración",
+    "alcance": "Backend + APIs",
+    "problema_cliente": "Actualización manual de inventario, errores de stock, tiempo excesivo en gestión de pedidos",
+    "solucion_implementada": "Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidireccional, logging y monitoring",
+    "equipo": [
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-11-26",
+      "fecha_fin": "2025-01-19",
+      "duracion_meses": 14,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Next.js",
+      "Node.js",
+      "Stripe",
+      "MongoDB",
+      "Vercel"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 267680,
+      "costo_real_usd": 296085,
+      "variacion_porcentaje": 10.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 95,
+      "satisfaccion_cliente": 4.9,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Incremento 45% en productividad del equipo",
+        "Mejora 70% en satisfacción de usuarios finales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidirecci",
+      "contacto": "Laura Paredes"
+    }
+  },
+  {
+    "proyecto_id": "PROJ014",
+    "nombre": "Portal de Pacientes para Clínica - FarmConnect",
+    "cliente": {
+      "cliente_id": "CLI007",
+      "nombre": "FarmConnect",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Sistema web para gestión de turnos médicos, historia clínica electrónica, recetas digitales y telemedicina. Integración con sistema de facturación existente.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Integraciones",
+    "problema_cliente": "Gestión manual de turnos, historias clínicas en papel, falta de acceso remoto para pacientes",
+    "solucion_implementada": "Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de datos médicos cumpliendo normativas",
+    "equipo": [
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-05-18",
+      "fecha_fin": "2024-05-12",
+      "duracion_meses": 12,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Airflow",
+      "PostgreSQL",
+      "Power BI",
+      "AWS Redshift"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 606240,
+      "costo_real_usd": 747421,
+      "variacion_porcentaje": 23.3
+    },
+    "resultados": {
+      "objetivos_cumplidos": 86,
+      "satisfaccion_cliente": 4.5,
+      "kpis_principales": [
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Reducción 50% en errores operacionales",
+        "Time-to-market reducido en 40%"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de d",
+      "contacto": "Roberto Díaz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ015",
+    "nombre": "Plataforma E-learning Corporativa - LearnOnline Platform",
+    "cliente": {
+      "cliente_id": "CLI020",
+      "nombre": "LearnOnline Platform",
+      "industria": "Educación"
+    },
+    "descripcion_completa": "Desarrollo de LMS (Learning Management System) para capacitación interna de empleados con tracking de progreso, certificaciones y gamificación.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + UX/UI",
+    "problema_cliente": "Capacitaciones presenciales costosas, falta de seguimiento de progreso, contenido no centralizado",
+    "solucion_implementada": "Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dashboards de progreso",
+    "equipo": [
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-02-12",
+      "fecha_fin": "2025-08-05",
+      "duracion_meses": 18,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 599760,
+      "costo_real_usd": 609090,
+      "variacion_porcentaje": 1.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 98,
+      "satisfaccion_cliente": 4.0,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Reducción 50% en errores operacionales",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dash",
+      "contacto": "Carolina Ortiz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ016",
+    "nombre": "Sistema de Gestión de Inventario en Tiempo Real - FarmConnect",
+    "cliente": {
+      "cliente_id": "CLI007",
+      "nombre": "FarmConnect",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Aplicación web para control de inventario multi-sucursal con código de barras, alertas de stock mínimo y reportes de rotación de productos.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Mobile",
+    "problema_cliente": "Descontrol de stock, diferencias de inventario, falta de visibilidad entre sucursales",
+    "solucion_implementada": "Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivos, integraciones con POS",
+    "equipo": [
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-02-10",
+      "fecha_fin": "2025-08-03",
+      "duracion_meses": 18,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 683640,
+      "costo_real_usd": 721844,
+      "variacion_porcentaje": 5.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 91,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Time-to-market reducido en 40%"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivo",
+      "contacto": "Roberto Díaz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ017",
+    "nombre": "Refactorización y Modernización de Sistema Legacy - PowerGrid Solutions",
+    "cliente": {
+      "cliente_id": "CLI011",
+      "nombre": "PowerGrid Solutions",
+      "industria": "Energía"
+    },
+    "descripcion_completa": "Migración de aplicación monolítica en .NET Framework a arquitectura de microservicios con .NET Core, containerización y CI/CD.",
+    "tipo_proyecto": "Modernización",
+    "alcance": "Backend + DevOps",
+    "problema_cliente": "Sistema obsoleto, difícil de mantener, escalabilidad limitada, deploys lentos",
+    "solucion_implementada": "Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downtime",
+    "equipo": [
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS016",
+        "nombre": "Florencia Morales",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS004",
+        "nombre": "Ana López",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-04-30",
+      "fecha_fin": "2024-07-29",
+      "duracion_meses": 3,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 164940,
+      "costo_real_usd": 176774,
+      "variacion_porcentaje": 7.2
+    },
+    "resultados": {
+      "objetivos_cumplidos": 87,
+      "satisfaccion_cliente": 4.4,
+      "kpis_principales": [
+        "Automatización del 85% de procesos manuales",
+        "Time-to-market reducido en 40%",
+        "Reducción 60% en tiempo de procesamiento"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downti",
+      "contacto": "Fernando Ruiz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ018",
+    "nombre": "Dashboard Ejecutivo de Business Intelligence - MarketPlace Local",
+    "cliente": {
+      "cliente_id": "CLI016",
+      "nombre": "MarketPlace Local",
+      "industria": "E-commerce"
+    },
+    "descripcion_completa": "Desarrollo de dashboards interactivos con Power BI y backend en Python para visualización de KPIs de negocio en tiempo real.",
+    "tipo_proyecto": "Analytics & BI",
+    "alcance": "Data Engineering + Frontend",
+    "problema_cliente": "Datos dispersos en múltiples sistemas, reportes manuales en Excel, decisiones sin datos en tiempo real",
+    "solucion_implementada": "ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+    "equipo": [
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS004",
+        "nombre": "Ana López",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-07-12",
+      "fecha_fin": "2025-05-08",
+      "duracion_meses": 10,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Airflow",
+      "PostgreSQL",
+      "Power BI",
+      "AWS Redshift"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 285800,
+      "costo_real_usd": 243865,
+      "variacion_porcentaje": -14.7
+    },
+    "resultados": {
+      "objetivos_cumplidos": 94,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Automatización del 85% de procesos manuales",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+      "contacto": "Daniela Vega"
+    }
+  },
+  {
+    "proyecto_id": "PROJ019",
+    "nombre": "Sistema de Gestión de Flota con IoT - HealthTrack App",
+    "cliente": {
+      "cliente_id": "CLI014",
+      "nombre": "HealthTrack App",
+      "industria": "Salud"
+    },
+    "descripcion_completa": "Plataforma para tracking GPS de vehículos, telemetría, gestión de mantenimiento y optimización de rutas usando datos en tiempo real.",
+    "tipo_proyecto": "IoT + Web",
+    "alcance": "Full Stack + IoT + Mobile",
+    "problema_cliente": "Falta de visibilidad de flota, mantenimientos reactivos, rutas no optimizadas, alto consumo de combustible",
+    "solucion_implementada": "Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, app móvil para conductores",
+    "equipo": [
+      {
+        "consultor_id": "CONS011",
+        "nombre": "Martín Flores",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS015",
+        "nombre": "Sebastián Cruz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-08-11",
+      "fecha_fin": "2024-12-03",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 622080,
+      "costo_real_usd": 738548,
+      "variacion_porcentaje": 18.7
+    },
+    "resultados": {
+      "objetivos_cumplidos": 98,
+      "satisfaccion_cliente": 4.5,
+      "kpis_principales": [
+        "Time-to-market reducido en 40%",
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, ",
+      "contacto": "Monica Herrera"
+    }
+  },
+  {
+    "proyecto_id": "PROJ020",
+    "nombre": "App de Banca Móvil con Biometría - GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "industria": "Gobierno"
+    },
+    "descripcion_completa": "Desarrollo de aplicación móvil bancaria con autenticación biométrica, transferencias, pagos de servicios y visualización de inversiones.",
+    "tipo_proyecto": "Mobile Fintech",
+    "alcance": "Mobile + Backend + Security",
+    "problema_cliente": "App legacy obsoleta, proceso de login complejo, funcionalidades limitadas",
+    "solucion_implementada": "App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones push",
+    "equipo": [
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS001",
+        "nombre": "Juan González",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-09-13",
+      "fecha_fin": "2025-06-10",
+      "duracion_meses": 9,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 144540,
+      "costo_real_usd": 125226,
+      "variacion_porcentaje": -13.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 95,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones ",
+      "contacto": "Alberto Silva"
+    }
+  },
+  {
+    "proyecto_id": "PROJ021",
+    "nombre": "Plataforma de Gestión Logística Web - PowerGrid Solutions",
+    "cliente": {
+      "cliente_id": "CLI011",
+      "nombre": "PowerGrid Solutions",
+      "industria": "Energía"
+    },
+    "descripcion_completa": "Desarrollo de plataforma web para gestionar procesos logísticos internos, incluyendo seguimiento de envíos, gestión de flota, y reportería avanzada. Migración desde sistema legacy en Excel a solución web moderna con arquitectura de microservicios.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + DevOps",
+    "problema_cliente": "Procesos manuales en Excel, falta de trazabilidad en tiempo real, dificultad para escalar operaciones",
+    "solucion_implementada": "Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, gestión de usuarios y roles",
+    "equipo": [
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS016",
+        "nombre": "Florencia Morales",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-03-29",
+      "fecha_fin": "2025-07-22",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 713600,
+      "costo_real_usd": 730714,
+      "variacion_porcentaje": 2.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 95,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Automatización del 85% de procesos manuales",
+        "Reducción 50% en errores operacionales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, ",
+      "contacto": "Fernando Ruiz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ022",
+    "nombre": "App Móvil Marketplace Local - CargoFleet",
+    "cliente": {
+      "cliente_id": "CLI009",
+      "nombre": "CargoFleet",
+      "industria": "Logística"
+    },
+    "descripcion_completa": "Desarrollo de MVP para aplicación móvil que conecta comercios locales con clientes del barrio. Incluye geolocalización, sistema de pedidos, pagos online y notificaciones push.",
+    "tipo_proyecto": "MVP Mobile",
+    "alcance": "Mobile + Backend + UX/UI",
+    "problema_cliente": "Comercios locales sin presencia digital, clientes sin forma de descubrir negocios cercanos",
+    "solucion_implementada": "App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración con pasarelas de pago",
+    "equipo": [
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-10-24",
+      "fecha_fin": "2025-10-19",
+      "duracion_meses": 12,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Node.js",
+      "MQTT",
+      "InfluxDB",
+      "Grafana",
+      "AWS IoT Core"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 223440,
+      "costo_real_usd": 244855,
+      "variacion_porcentaje": 9.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 100,
+      "satisfaccion_cliente": 5.0,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Reducción 50% en errores operacionales",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración ",
+      "contacto": "Jorge Martínez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ023",
+    "nombre": "Integración ERP Odoo con API Proveedores - SmartFarm Technologi",
+    "cliente": {
+      "cliente_id": "CLI018",
+      "nombre": "SmartFarm Technologies",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Integración de sistema ERP Odoo existente con APIs de múltiples proveedores para automatizar pedidos, actualización de stock y sincronización de precios en tiempo real.",
+    "tipo_proyecto": "Integración",
+    "alcance": "Backend + APIs",
+    "problema_cliente": "Actualización manual de inventario, errores de stock, tiempo excesivo en gestión de pedidos",
+    "solucion_implementada": "Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidireccional, logging y monitoring",
+    "equipo": [
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS002",
+        "nombre": "María Rodríguez",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-07-27",
+      "fecha_fin": "2024-02-22",
+      "duracion_meses": 7,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 207340,
+      "costo_real_usd": 181851,
+      "variacion_porcentaje": -12.3
+    },
+    "resultados": {
+      "objetivos_cumplidos": 96,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Reducción 50% en errores operacionales",
+        "Time-to-market reducido en 40%"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidirecci",
+      "contacto": "Adriana Mendoza"
+    }
+  },
+  {
+    "proyecto_id": "PROJ024",
+    "nombre": "Portal de Pacientes para Clínica - SmartFarm Technologi",
+    "cliente": {
+      "cliente_id": "CLI018",
+      "nombre": "SmartFarm Technologies",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Sistema web para gestión de turnos médicos, historia clínica electrónica, recetas digitales y telemedicina. Integración con sistema de facturación existente.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Integraciones",
+    "problema_cliente": "Gestión manual de turnos, historias clínicas en papel, falta de acceso remoto para pacientes",
+    "solucion_implementada": "Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de datos médicos cumpliendo normativas",
+    "equipo": [
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS001",
+        "nombre": "Juan González",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-07-21",
+      "fecha_fin": "2026-12-13",
+      "duracion_meses": 17,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Next.js",
+      "Node.js",
+      "Stripe",
+      "MongoDB",
+      "Vercel"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 481440,
+      "costo_real_usd": 505856,
+      "variacion_porcentaje": 5.1
+    },
+    "resultados": {
+      "objetivos_cumplidos": 98,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Escalabilidad mejorada para 10x usuarios",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de d",
+      "contacto": "Adriana Mendoza"
+    }
+  },
+  {
+    "proyecto_id": "PROJ025",
+    "nombre": "Plataforma E-learning Corporativa - EduTech Solutions",
+    "cliente": {
+      "cliente_id": "CLI005",
+      "nombre": "EduTech Solutions",
+      "industria": "Educación"
+    },
+    "descripcion_completa": "Desarrollo de LMS (Learning Management System) para capacitación interna de empleados con tracking de progreso, certificaciones y gamificación.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + UX/UI",
+    "problema_cliente": "Capacitaciones presenciales costosas, falta de seguimiento de progreso, contenido no centralizado",
+    "solucion_implementada": "Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dashboards de progreso",
+    "equipo": [
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS012",
+        "nombre": "Lucía Rivera",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-11-15",
+      "fecha_fin": "2024-06-12",
+      "duracion_meses": 7,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 224700,
+      "costo_real_usd": 222912,
+      "variacion_porcentaje": -0.8
+    },
+    "resultados": {
+      "objetivos_cumplidos": 95,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Reducción 60% en tiempo de procesamiento",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dash",
+      "contacto": "Rodrigo Sánchez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ026",
+    "nombre": "Sistema de Gestión de Inventario en Tiempo Real - LogiTrans SA",
+    "cliente": {
+      "cliente_id": "CLI001",
+      "nombre": "LogiTrans SA",
+      "industria": "Logística"
+    },
+    "descripcion_completa": "Aplicación web para control de inventario multi-sucursal con código de barras, alertas de stock mínimo y reportes de rotación de productos.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Mobile",
+    "problema_cliente": "Descontrol de stock, diferencias de inventario, falta de visibilidad entre sucursales",
+    "solucion_implementada": "Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivos, integraciones con POS",
+    "equipo": [
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-09-02",
+      "fecha_fin": "2025-02-23",
+      "duracion_meses": 18,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 353880,
+      "costo_real_usd": 338103,
+      "variacion_porcentaje": -4.5
+    },
+    "resultados": {
+      "objetivos_cumplidos": 96,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Ahorro anual estimado de $80,000 USD",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivo",
+      "contacto": "María Torres"
+    }
+  },
+  {
+    "proyecto_id": "PROJ027",
+    "nombre": "Refactorización y Modernización de Sistema Legacy - PowerGrid Solutions",
+    "cliente": {
+      "cliente_id": "CLI011",
+      "nombre": "PowerGrid Solutions",
+      "industria": "Energía"
+    },
+    "descripcion_completa": "Migración de aplicación monolítica en .NET Framework a arquitectura de microservicios con .NET Core, containerización y CI/CD.",
+    "tipo_proyecto": "Modernización",
+    "alcance": "Backend + DevOps",
+    "problema_cliente": "Sistema obsoleto, difícil de mantener, escalabilidad limitada, deploys lentos",
+    "solucion_implementada": "Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downtime",
+    "equipo": [
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS028",
+        "nombre": "Paula Guerrero",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS001",
+        "nombre": "Juan González",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS011",
+        "nombre": "Martín Flores",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-12-21",
+      "fecha_fin": "2025-01-14",
+      "duracion_meses": 13,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "AWS S3"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 616460,
+      "costo_real_usd": 730898,
+      "variacion_porcentaje": 18.6
+    },
+    "resultados": {
+      "objetivos_cumplidos": 100,
+      "satisfaccion_cliente": 4.6,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Automatización del 85% de procesos manuales",
+        "Reducción 50% en errores operacionales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downti",
+      "contacto": "Fernando Ruiz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ028",
+    "nombre": "Dashboard Ejecutivo de Business Intelligence - SecureBank Digital",
+    "cliente": {
+      "cliente_id": "CLI008",
+      "nombre": "SecureBank Digital",
+      "industria": "Fintech"
+    },
+    "descripcion_completa": "Desarrollo de dashboards interactivos con Power BI y backend en Python para visualización de KPIs de negocio en tiempo real.",
+    "tipo_proyecto": "Analytics & BI",
+    "alcance": "Data Engineering + Frontend",
+    "problema_cliente": "Datos dispersos en múltiples sistemas, reportes manuales en Excel, decisiones sin datos en tiempo real",
+    "solucion_implementada": "ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+    "equipo": [
+      {
+        "consultor_id": "CONS029",
+        "nombre": "Gabriel Vega",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS028",
+        "nombre": "Paula Guerrero",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-03-16",
+      "fecha_fin": "2024-07-14",
+      "duracion_meses": 4,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 202320,
+      "costo_real_usd": 245536,
+      "variacion_porcentaje": 21.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 86,
+      "satisfaccion_cliente": 4.0,
+      "kpis_principales": [
+        "Reducción 50% en errores operacionales",
+        "Escalabilidad mejorada para 10x usuarios",
+        "Reducción 60% en tiempo de procesamiento"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+      "contacto": "Claudia Fernández"
+    }
+  },
+  {
+    "proyecto_id": "PROJ029",
+    "nombre": "Sistema de Gestión de Flota con IoT - TelecomSur",
+    "cliente": {
+      "cliente_id": "CLI013",
+      "nombre": "TelecomSur",
+      "industria": "Telecomunicaciones"
+    },
+    "descripcion_completa": "Plataforma para tracking GPS de vehículos, telemetría, gestión de mantenimiento y optimización de rutas usando datos en tiempo real.",
+    "tipo_proyecto": "IoT + Web",
+    "alcance": "Full Stack + IoT + Mobile",
+    "problema_cliente": "Falta de visibilidad de flota, mantenimientos reactivos, rutas no optimizadas, alto consumo de combustible",
+    "solucion_implementada": "Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, app móvil para conductores",
+    "equipo": [
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS004",
+        "nombre": "Ana López",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS008",
+        "nombre": "Sofía Sánchez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-08-19",
+      "fecha_fin": "2025-12-12",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 902400,
+      "costo_real_usd": 1073096,
+      "variacion_porcentaje": 18.9
+    },
+    "resultados": {
+      "objetivos_cumplidos": 90,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Incremento 45% en productividad del equipo",
+        "Escalabilidad mejorada para 10x usuarios"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, ",
+      "contacto": "Ricardo Pérez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ030",
+    "nombre": "App de Banca Móvil con Biometría - RetailMax",
+    "cliente": {
+      "cliente_id": "CLI006",
+      "nombre": "RetailMax",
+      "industria": "Retail"
+    },
+    "descripcion_completa": "Desarrollo de aplicación móvil bancaria con autenticación biométrica, transferencias, pagos de servicios y visualización de inversiones.",
+    "tipo_proyecto": "Mobile Fintech",
+    "alcance": "Mobile + Backend + Security",
+    "problema_cliente": "App legacy obsoleta, proceso de login complejo, funcionalidades limitadas",
+    "solucion_implementada": "App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones push",
+    "equipo": [
+      {
+        "consultor_id": "CONS020",
+        "nombre": "Juliana Romero",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-09-02",
+      "fecha_fin": "2024-05-29",
+      "duracion_meses": 9,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 421200,
+      "costo_real_usd": 402733,
+      "variacion_porcentaje": -4.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 93,
+      "satisfaccion_cliente": 4.6,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Reducción 50% en errores operacionales",
+        "Automatización del 85% de procesos manuales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones ",
+      "contacto": "Patricia Gómez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ031",
+    "nombre": "Plataforma de Gestión Logística Web - InsureTech Plus",
+    "cliente": {
+      "cliente_id": "CLI012",
+      "nombre": "InsureTech Plus",
+      "industria": "Seguros"
+    },
+    "descripcion_completa": "Desarrollo de plataforma web para gestionar procesos logísticos internos, incluyendo seguimiento de envíos, gestión de flota, y reportería avanzada. Migración desde sistema legacy en Excel a solución web moderna con arquitectura de microservicios.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + DevOps",
+    "problema_cliente": "Procesos manuales en Excel, falta de trazabilidad en tiempo real, dificultad para escalar operaciones",
+    "solucion_implementada": "Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, gestión de usuarios y roles",
+    "equipo": [
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS026",
+        "nombre": "Micaela Silva",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS015",
+        "nombre": "Sebastián Cruz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS010",
+        "nombre": "Valentina Torres",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS002",
+        "nombre": "María Rodríguez",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS009",
+        "nombre": "Miguel Ramírez",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-06-27",
+      "fecha_fin": "2024-09-25",
+      "duracion_meses": 3,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 118260,
+      "costo_real_usd": 140508,
+      "variacion_porcentaje": 18.8
+    },
+    "resultados": {
+      "objetivos_cumplidos": 88,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Time-to-market reducido en 40%",
+        "Mejora 70% en satisfacción de usuarios finales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema web con dashboard interactivo, API REST para integraciones, módulo de reportes automáticos, ",
+      "contacto": "Gabriela Morales"
+    }
+  },
+  {
+    "proyecto_id": "PROJ032",
+    "nombre": "App Móvil Marketplace Local - CargoFleet",
+    "cliente": {
+      "cliente_id": "CLI009",
+      "nombre": "CargoFleet",
+      "industria": "Logística"
+    },
+    "descripcion_completa": "Desarrollo de MVP para aplicación móvil que conecta comercios locales con clientes del barrio. Incluye geolocalización, sistema de pedidos, pagos online y notificaciones push.",
+    "tipo_proyecto": "MVP Mobile",
+    "alcance": "Mobile + Backend + UX/UI",
+    "problema_cliente": "Comercios locales sin presencia digital, clientes sin forma de descubrir negocios cercanos",
+    "solucion_implementada": "App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración con pasarelas de pago",
+    "equipo": [
+      {
+        "consultor_id": "CONS002",
+        "nombre": "María Rodríguez",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-12-03",
+      "fecha_fin": "2024-06-30",
+      "duracion_meses": 7,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Next.js",
+      "Node.js",
+      "Stripe",
+      "MongoDB",
+      "Vercel"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 259280,
+      "costo_real_usd": 313052,
+      "variacion_porcentaje": 20.7
+    },
+    "resultados": {
+      "objetivos_cumplidos": 86,
+      "satisfaccion_cliente": 4.6,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Ahorro anual estimado de $80,000 USD",
+        "Reducción 60% en tiempo de procesamiento"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa iOS/Android con mapa interactivo, catálogo de productos, carrito de compras, integración ",
+      "contacto": "Jorge Martínez"
+    }
+  },
+  {
+    "proyecto_id": "PROJ033",
+    "nombre": "Integración ERP Odoo con API Proveedores - FarmConnect",
+    "cliente": {
+      "cliente_id": "CLI007",
+      "nombre": "FarmConnect",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Integración de sistema ERP Odoo existente con APIs de múltiples proveedores para automatizar pedidos, actualización de stock y sincronización de precios en tiempo real.",
+    "tipo_proyecto": "Integración",
+    "alcance": "Backend + APIs",
+    "problema_cliente": "Actualización manual de inventario, errores de stock, tiempo excesivo en gestión de pedidos",
+    "solucion_implementada": "Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidireccional, logging y monitoring",
+    "equipo": [
+      {
+        "consultor_id": "CONS029",
+        "nombre": "Gabriel Vega",
+        "rol_en_proyecto": "Project Manager",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS016",
+        "nombre": "Florencia Morales",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS028",
+        "nombre": "Paula Guerrero",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-12-29",
+      "fecha_fin": "2026-04-23",
+      "duracion_meses": 16,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Next.js",
+      "Node.js",
+      "Stripe",
+      "MongoDB",
+      "Vercel"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 606080,
+      "costo_real_usd": 663141,
+      "variacion_porcentaje": 9.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 85,
+      "satisfaccion_cliente": 4.8,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Ahorro anual estimado de $80,000 USD",
+        "Time-to-market reducido en 40%"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Módulos personalizados en Python para Odoo, conectores API REST, sistema de sincronización bidirecci",
+      "contacto": "Roberto Díaz"
+    }
+  },
+  {
+    "proyecto_id": "PROJ034",
+    "nombre": "Portal de Pacientes para Clínica - SmartFarm Technologi",
+    "cliente": {
+      "cliente_id": "CLI018",
+      "nombre": "SmartFarm Technologies",
+      "industria": "Agricultura"
+    },
+    "descripcion_completa": "Sistema web para gestión de turnos médicos, historia clínica electrónica, recetas digitales y telemedicina. Integración con sistema de facturación existente.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Integraciones",
+    "problema_cliente": "Gestión manual de turnos, historias clínicas en papel, falta de acceso remoto para pacientes",
+    "solucion_implementada": "Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de datos médicos cumpliendo normativas",
+    "equipo": [
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS017",
+        "nombre": "Rodrigo Herrera",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS004",
+        "nombre": "Ana López",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-11-02",
+      "fecha_fin": "2025-01-31",
+      "duracion_meses": 3,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 112140,
+      "costo_real_usd": 104580,
+      "variacion_porcentaje": -6.7
+    },
+    "resultados": {
+      "objetivos_cumplidos": 93,
+      "satisfaccion_cliente": 4.7,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Incremento 45% en productividad del equipo",
+        "Reducción 50% en errores operacionales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Portal web responsive, sistema de turnos online, videoconsulta integrada, almacenamiento seguro de d",
+      "contacto": "Adriana Mendoza"
+    }
+  },
+  {
+    "proyecto_id": "PROJ035",
+    "nombre": "Plataforma E-learning Corporativa - GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "industria": "Gobierno"
+    },
+    "descripcion_completa": "Desarrollo de LMS (Learning Management System) para capacitación interna de empleados con tracking de progreso, certificaciones y gamificación.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + UX/UI",
+    "problema_cliente": "Capacitaciones presenciales costosas, falta de seguimiento de progreso, contenido no centralizado",
+    "solucion_implementada": "Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dashboards de progreso",
+    "equipo": [
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS005",
+        "nombre": "Pedro Martínez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS014",
+        "nombre": "Camila Díaz",
+        "rol_en_proyecto": "QA Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS030",
+        "nombre": "Romina Rojas",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-09-03",
+      "fecha_fin": "2025-05-01",
+      "duracion_meses": 8,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "metodologia": "Scrum/Kanban Híbrido",
+    "presupuesto": {
+      "estimado_inicial_usd": 353920,
+      "costo_real_usd": 317629,
+      "variacion_porcentaje": -10.3
+    },
+    "resultados": {
+      "objetivos_cumplidos": 87,
+      "satisfaccion_cliente": 4.3,
+      "kpis_principales": [
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Automatización del 85% de procesos manuales",
+        "Reducción 50% en errores operacionales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Plataforma web con módulos de cursos, videos interactivos, quizzes, sistema de puntos y badges, dash",
+      "contacto": "Alberto Silva"
+    }
+  },
+  {
+    "proyecto_id": "PROJ036",
+    "nombre": "Sistema de Gestión de Inventario en Tiempo Real - ShopNow Argentina",
+    "cliente": {
+      "cliente_id": "CLI010",
+      "nombre": "ShopNow Argentina",
+      "industria": "E-commerce"
+    },
+    "descripcion_completa": "Aplicación web para control de inventario multi-sucursal con código de barras, alertas de stock mínimo y reportes de rotación de productos.",
+    "tipo_proyecto": "Desarrollo a Medida",
+    "alcance": "Full Stack + Mobile",
+    "problema_cliente": "Descontrol de stock, diferencias de inventario, falta de visibilidad entre sucursales",
+    "solucion_implementada": "Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivos, integraciones con POS",
+    "equipo": [
+      {
+        "consultor_id": "CONS012",
+        "nombre": "Lucía Rivera",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-01-09",
+      "fecha_fin": "2024-04-08",
+      "duracion_meses": 3,
+      "estado": "Completado"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 65460,
+      "costo_real_usd": 60326,
+      "variacion_porcentaje": -7.8
+    },
+    "resultados": {
+      "objetivos_cumplidos": 97,
+      "satisfaccion_cliente": 4.2,
+      "kpis_principales": [
+        "Escalabilidad mejorada para 10x usuarios",
+        "Time-to-market reducido en 40%",
+        "Mejora 70% en satisfacción de usuarios finales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Sistema centralizado con app móvil para escaneo, sincronización en tiempo real, dashboards ejecutivo",
+      "contacto": "Silvia Castro"
+    }
+  },
+  {
+    "proyecto_id": "PROJ037",
+    "nombre": "Refactorización y Modernización de Sistema Legacy - GobiernoDigital",
+    "cliente": {
+      "cliente_id": "CLI015",
+      "nombre": "GobiernoDigital",
+      "industria": "Gobierno"
+    },
+    "descripcion_completa": "Migración de aplicación monolítica en .NET Framework a arquitectura de microservicios con .NET Core, containerización y CI/CD.",
+    "tipo_proyecto": "Modernización",
+    "alcance": "Backend + DevOps",
+    "problema_cliente": "Sistema obsoleto, difícil de mantener, escalabilidad limitada, deploys lentos",
+    "solucion_implementada": "Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downtime",
+    "equipo": [
+      {
+        "consultor_id": "CONS027",
+        "nombre": "Santiago Mendoza",
+        "rol_en_proyecto": "Full Stack Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS003",
+        "nombre": "Carlos Fernández",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2025-06-15",
+      "fecha_fin": "2026-04-11",
+      "duracion_meses": 10,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 199600,
+      "costo_real_usd": 222037,
+      "variacion_porcentaje": 11.2
+    },
+    "resultados": {
+      "objetivos_cumplidos": 96,
+      "satisfaccion_cliente": 4.1,
+      "kpis_principales": [
+        "Time-to-market reducido en 40%",
+        "Reducción 50% en errores operacionales",
+        "Reducción 60% en tiempo de procesamiento"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Arquitectura de microservicios, Docker/Kubernetes, pipelines CI/CD, migración incremental sin downti",
+      "contacto": "Alberto Silva"
+    }
+  },
+  {
+    "proyecto_id": "PROJ038",
+    "nombre": "Dashboard Ejecutivo de Business Intelligence - ShopNow Argentina",
+    "cliente": {
+      "cliente_id": "CLI010",
+      "nombre": "ShopNow Argentina",
+      "industria": "E-commerce"
+    },
+    "descripcion_completa": "Desarrollo de dashboards interactivos con Power BI y backend en Python para visualización de KPIs de negocio en tiempo real.",
+    "tipo_proyecto": "Analytics & BI",
+    "alcance": "Data Engineering + Frontend",
+    "problema_cliente": "Datos dispersos en múltiples sistemas, reportes manuales en Excel, decisiones sin datos en tiempo real",
+    "solucion_implementada": "ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+    "equipo": [
+      {
+        "consultor_id": "CONS013",
+        "nombre": "Federico Gómez",
+        "rol_en_proyecto": "Frontend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS025",
+        "nombre": "Andrés Ortiz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS019",
+        "nombre": "Nicolás Álvarez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS015",
+        "nombre": "Sebastián Cruz",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS018",
+        "nombre": "Agustina Jiménez",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 100
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2023-12-24",
+      "fecha_fin": "2025-03-18",
+      "duracion_meses": 15,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "metodologia": "Kanban",
+    "presupuesto": {
+      "estimado_inicial_usd": 348600,
+      "costo_real_usd": 419868,
+      "variacion_porcentaje": 20.4
+    },
+    "resultados": {
+      "objetivos_cumplidos": 94,
+      "satisfaccion_cliente": 4.9,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Escalabilidad mejorada para 10x usuarios",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. ETL automatizado, data warehouse, dashboards interactivos con drill-down, alertas automáticas",
+      "contacto": "Silvia Castro"
+    }
+  },
+  {
+    "proyecto_id": "PROJ039",
+    "nombre": "Sistema de Gestión de Flota con IoT - ShopNow Argentina",
+    "cliente": {
+      "cliente_id": "CLI010",
+      "nombre": "ShopNow Argentina",
+      "industria": "E-commerce"
+    },
+    "descripcion_completa": "Plataforma para tracking GPS de vehículos, telemetría, gestión de mantenimiento y optimización de rutas usando datos en tiempo real.",
+    "tipo_proyecto": "IoT + Web",
+    "alcance": "Full Stack + IoT + Mobile",
+    "problema_cliente": "Falta de visibilidad de flota, mantenimientos reactivos, rutas no optimizadas, alto consumo de combustible",
+    "solucion_implementada": "Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, app móvil para conductores",
+    "equipo": [
+      {
+        "consultor_id": "CONS023",
+        "nombre": "Facundo Vargas",
+        "rol_en_proyecto": "UX/UI Designer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS022",
+        "nombre": "Carolina Ruiz",
+        "rol_en_proyecto": "Backend Developer",
+        "dedicacion_porcentaje": 50
+      },
+      {
+        "consultor_id": "CONS006",
+        "nombre": "Laura García",
+        "rol_en_proyecto": "DevOps Engineer",
+        "dedicacion_porcentaje": 50
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-03-09",
+      "fecha_fin": "2025-04-03",
+      "duracion_meses": 13,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "metodologia": "Scrum",
+    "presupuesto": {
+      "estimado_inicial_usd": 336180,
+      "costo_real_usd": 417613,
+      "variacion_porcentaje": 24.2
+    },
+    "resultados": {
+      "objetivos_cumplidos": 99,
+      "satisfaccion_cliente": 5.0,
+      "kpis_principales": [
+        "Incremento 45% en productividad del equipo",
+        "Reducción 50% en errores operacionales",
+        "Ahorro anual estimado de $80,000 USD"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. Integración con dispositivos GPS, plataforma web de monitoreo, algoritmos de optimización de rutas, ",
+      "contacto": "Silvia Castro"
+    }
+  },
+  {
+    "proyecto_id": "PROJ040",
+    "nombre": "App de Banca Móvil con Biometría - IndustrialTech",
+    "cliente": {
+      "cliente_id": "CLI017",
+      "nombre": "IndustrialTech",
+      "industria": "Manufactura"
+    },
+    "descripcion_completa": "Desarrollo de aplicación móvil bancaria con autenticación biométrica, transferencias, pagos de servicios y visualización de inversiones.",
+    "tipo_proyecto": "Mobile Fintech",
+    "alcance": "Mobile + Backend + Security",
+    "problema_cliente": "App legacy obsoleta, proceso de login complejo, funcionalidades limitadas",
+    "solucion_implementada": "App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones push",
+    "equipo": [
+      {
+        "consultor_id": "CONS021",
+        "nombre": "Matías Medina",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 100
+      },
+      {
+        "consultor_id": "CONS007",
+        "nombre": "Diego Pérez",
+        "rol_en_proyecto": "Mobile Developer",
+        "dedicacion_porcentaje": 75
+      },
+      {
+        "consultor_id": "CONS024",
+        "nombre": "Victoria Castro",
+        "rol_en_proyecto": "Data Engineer",
+        "dedicacion_porcentaje": 75
+      }
+    ],
+    "timeline": {
+      "fecha_inicio": "2024-09-19",
+      "fecha_fin": "2026-03-13",
+      "duracion_meses": 18,
+      "estado": "En Progreso"
+    },
+    "tecnologias_utilizadas": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "metodologia": "Agile con Sprints de 2 semanas",
+    "presupuesto": {
+      "estimado_inicial_usd": 342720,
+      "costo_real_usd": 318627,
+      "variacion_porcentaje": -7.0
+    },
+    "resultados": {
+      "objetivos_cumplidos": 89,
+      "satisfaccion_cliente": 4.6,
+      "kpis_principales": [
+        "Reducción 60% en tiempo de procesamiento",
+        "Mejora 70% en satisfacción de usuarios finales",
+        "Reducción 50% en errores operacionales"
+      ]
+    },
+    "testimonios": {
+      "cliente": "Excelente trabajo del equipo. App nativa con Face ID/Touch ID, arquitectura segura, integración con core bancario, notificaciones ",
+      "contacto": "Gustavo Rojas"
+    }
+  }
+]
