@@ -41,16 +41,31 @@ All business data lives in JSON files with consistent Spanish naming:
 
 REMEMBER DATA CAN BE IN ANY FORMAT. NOT NECESSARILY JSONS OR STRUCTURED LIKE 'proyectos.json', 'consultores.json', ETC. `empresa_docs/` IS JUST AN EXAMPLE.
 
+### ⚠️ ChromaDB & Semantic Search (Phase 5+ ONLY)
+**IMPORTANT**: ChromaDB is NOT part of Phases 1-4 (Core MVP).
+
+- **Phases 1-4 Tools** (Copilot-Like): `discover_files()`, `read_collection()`, `search_by_text()`
+  - ✅ Query latency: 2-5 seconds
+  - ✅ Zero startup time
+  - ✅ Sufficient for demo/portfolio
+
+- **Phase 5 Additional Tools** (Optional Hybrid): `semantic_search()`, `semantic_similarity()`
+  - ✅ Query latency: 50-200ms (20x faster)
+  - ⚠️ Startup time: 15-20s for indexing
+  - ✅ Only if needed: > 500 queries/day OR dataset > 1MB
+
+**Default is Copilot-Like (Phases 1-4)**. Semantic search is purely optional and added in Phase 5.
+
 ## Critical Workflows
 
-### Development Setup
+### Development Setup (Phases 1-4: Core MVP)
 ```powershell
 # Create virtual environment
 python -m venv venv
 .\venv\Scripts\activate
 
-# Install dependencies
-pip install -r requirements.txt
+# Install base dependencies (Copilot-Like MVP)
+pip install -r requirements-base.txt
 
 # Configure environment variables
 # .env file MUST include:
@@ -58,6 +73,18 @@ pip install -r requirements.txt
 # - LANGCHAIN_TRACING_V2=true
 # - LANGCHAIN_API_KEY (for observability)
 # - LANGCHAIN_PROJECT=bi-agent-dev
+```
+
+### Optional: Hybrid System Setup (Phase 5+)
+```powershell
+# IF you need semantic search + indexing (Phase 5+ only)
+pip install -r requirements-hybrid.txt
+
+# Then initialize ChromaDB
+python scripts/setup_chromadb.py
+
+# Enable in .env:
+# ENABLE_HYBRID=true
 ```
 
 ### Testing Queries

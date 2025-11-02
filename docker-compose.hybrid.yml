@@ -1,0 +1,121 @@
+# ========================
+# FASE 5: HYBRID DOCKER SETUP (Con Indexación - OPCIONAL)
+# ========================
+# Incluye: App + Prometheus + Grafana + ChromaDB + MLflow
+# Startup: 20-30 segundos (debido a indexación)
+#
+# USAR SOLO SI:
+# - Necesitas queries < 500ms
+# - Dataset > 1MB
+# - Búsqueda semántica avanzada
+#
+# Para Fase 1-4 (MVP), usar: docker-compose.yml
+
+version: '3.8'
+
+services:
+  # ========================
+  # Aplicación Principal (con Fase 5 habilitada)
+  # ========================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bi-agent-app-hybrid
+    ports:
+      - "8001:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - LANGCHAIN_TRACING_V2=true
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
+      - LANGCHAIN_PROJECT=bi-agent-prod
+      - ENABLE_HYBRID=true  # ⚠️ HABILITAR FASE 5
+      - ENABLE_MLFLOW=true
+    volumes:
+      - ./empresa_docs:/app/empresa_docs:ro
+      - ./logs:/app/logs
+    depends_on:
+      - prometheus
+      - chromadb
+      - mlflow
+    networks:
+      - bi-network-hybrid
+    command: python main.py --server --hybrid
+
+  # ========================
+  # Monitoreo (Prometheus + Grafana)
+  # ========================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: bi-agent-prometheus-hybrid
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data_hybrid:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - bi-network-hybrid
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: bi-agent-grafana-hybrid
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    volumes:
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+      - grafana_data_hybrid:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - bi-network-hybrid
+
+  # ========================
+  # ChromaDB (Búsqueda Semántica - Fase 5)
+  # ========================
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: bi-agent-chromadb
+    ports:
+      - "8000:8000"
+    environment:
+      - ALLOW_RESET=TRUE
+    volumes:
+      - chromadb_data:/chroma/data
+    networks:
+      - bi-network-hybrid
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/heartbeat"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # ========================
+  # MLflow (Experiment Tracking - Fase 3+)
+  # ========================
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    container_name: bi-agent-mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlflow
+    networks:
+      - bi-network-hybrid
+    command: mlflow server --host 0.0.0.0 --backend-store-uri file:///mlflow
+
+volumes:
+  prometheus_data_hybrid:
+  grafana_data_hybrid:
+  chromadb_data:
+  mlflow_data:
+
+networks:
+  bi-network-hybrid:
+    driver: bridge

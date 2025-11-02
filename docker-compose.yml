@@ -1,0 +1,77 @@
+# ========================
+# FASE 1-4: MINIMAL DOCKER SETUP (Copilot-Like MVP)
+# ========================
+# Solo servicios esenciales para desarrollar localmente
+# Startup: < 10 segundos
+# 
+# Para Fase 5+ (indexación), ver: docker-compose.hybrid.yml
+
+version: '3.8'
+
+services:
+  # ========================
+  # Aplicación Principal
+  # ========================
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bi-agent-app
+    ports:
+      - "8001:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - LANGCHAIN_TRACING_V2=true
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
+      - LANGCHAIN_PROJECT=bi-agent-dev
+      - ENABLE_HYBRID=false
+    volumes:
+      - ./empresa_docs:/app/empresa_docs:ro
+      - ./logs:/app/logs
+    depends_on:
+      - prometheus
+    networks:
+      - bi-network
+    command: python main.py --server
+
+  # ========================
+  # Monitoreo
+  # ========================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: bi-agent-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - bi-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: bi-agent-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_USER=admin
+    volumes:
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - bi-network
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  bi-network:
+    driver: bridge

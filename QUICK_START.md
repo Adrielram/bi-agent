@@ -1,56 +1,68 @@
-# 🚀 Quick Start - Inicio Rápido
+﻿#  Quick Start - Inicio Rápido
 
-## ⚡ 3 Opciones Rápidas
+**Configuración en menos de 5 minutos** | Tres formas de empezar
 
-### Opción 1️⃣: CLI (1 minuto)
+---
+
+##  3 Opciones Rápidas
+
+### Opción 1: CLI (Más rápido - 3 minutos)
 
 **Requisitos**: Python 3.11+, Google API Key, LangSmith API Key (opcional)
 
 ```powershell
-# Clonar
+# 1. Clonar
 git clone https://github.com/tuusuario/bi-agent-mvp.git
 cd bi-agent-mvp
 
-# Setup
+# 2. Setup
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+pip install -r requirements-base.txt
 
-# Configurar
+# 3. Configurar
 Copy-Item .env.example .env
 # Editar .env: GOOGLE_API_KEY, LANGCHAIN_API_KEY
 
-# Ejecutar
+# 4. Ejecutar
 python main.py
 ```
 
-**Ejemplo de query:**
+** Ejemplo de queries:**
 ```
-> ¿Qué datos tienes disponibles?
+> Qué datos tienes disponibles?
 > Busca Python
 > Muéstrame todos los consultores
 ```
 
 ---
 
-### Opción 2️⃣: Docker (1 minuto)
+### Opción 2: Docker (Infraestructura completa)
 
 **Requisitos**: Docker + Docker Compose
 
+#### Para MVP (Fase 1-4):
 ```powershell
-# Setup automático
 docker-compose up -d
-
-# Acceder a servicios:
-# - API: http://localhost:8001/docs
-# - Prometheus: http://localhost:9090
-# - Grafana: http://localhost:3000 (admin/admin)
-# - MLflow: http://localhost:5000
 ```
+
+**Servicios disponibles:**
+-  API REST: http://localhost:8001/docs
+-  Prometheus: http://localhost:9090
+-  Grafana: http://localhost:3000 (admin/admin)
+
+#### Para Fase 5+ (Indexación opcional):
+```powershell
+docker-compose -f docker-compose.hybrid.yml up -d
+```
+
+**Servicios adicionales:**
+-  ChromaDB (búsqueda semántica)
+-  MLflow: http://localhost:5000
 
 ---
 
-### Opción 3️⃣: API REST
+### Opción 3: API REST (Para integración)
 
 ```powershell
 # Iniciar servidor
@@ -65,96 +77,164 @@ curl -X POST "http://localhost:8001/query?user_input=Qué%20datos%20tienes"
 
 ---
 
-## 🔑 Variables de Entorno (.env)
+##  Variables de Entorno (.env)
 
-Copia `.env.example` y actualiza:
+Copia `.env.example` y actualiza con tus credenciales:
 
 ```bash
-# Requerido
+#  REQUERIDO
 GOOGLE_API_KEY=tu_clave_de_google_aqui
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=tu_langsmith_api_key_aqui
 LANGCHAIN_PROJECT=bi-agent-mvp
 
-# Opcional
-ENABLE_MLFLOW=true
-ENABLE_RAGAS_EVALUATION=true
-ENABLE_GUARDRAILS=true
+#  OPCIONAL (Fase 5+)
+ENABLE_HYBRID=false  # Cambiar a true para indexación
+ENABLE_MLFLOW=false
+ENABLE_RAGAS_EVALUATION=false
+ENABLE_GUARDRAILS=false
 ```
 
-**Obtener credenciales:**
-- Google API Key: https://makersuite.google.com/app/apikey
-- LangSmith API Key: https://smith.langchain.com/ (sign up, Settings → API Keys)
+** Obtener credenciales:**
+- **Google API Key**: https://makersuite.google.com/app/apikey
+- **LangSmith API Key**: https://smith.langchain.com/  Settings  API Keys
 
 ---
 
-## 📊 Verificar que todo funciona
+##  Dependencias
+
+### Para MVP Copilot-Like ( Recomendado - Fase 1-4)
 
 ```powershell
-# Test 1: Herramientas
+pip install -r requirements-base.txt
+```
+
+**Características:**
+-  Instalación 3x más rápida (2-3 min)
+-  Latencia: 2-5 segundos
+-  Perfecto para demo/portfolio
+-  Zero setup time
+
+### Para Fase 5+ con Indexación ( Opcional)
+
+```powershell
+pip install -r requirements-hybrid.txt
+```
+
+**Características:**
+-  Latencia: 50-200ms (20x más rápido)
+-  Incluye ChromaDB + semantic search
+-  Startup time: 15-20s para indexar
+-  Para producción con alto tráfico
+
+**Cuál debo usar?**  
+ Empieza con `requirements-base.txt`. Solo cambia a hybrid si necesitas:
+- Queries < 500ms
+- Dataset > 1MB
+- Búsqueda semántica
+
+---
+
+##  Verificar que todo funciona
+
+```powershell
+# Test 1: Herramientas básicas
 python -c "from agent.tools import discover_files; print(discover_files.invoke({}))"
 
-# Test 2: Agente
-python main.py  # Intenta una query simple
+# Test 2: Agente funcionando
+python main.py
+# Intenta: "Qué datos tienes disponibles?"
 
-# Test 3: Monitoreo
-# Prometheus: http://localhost:9090
-# Grafana: http://localhost:3000
-# LangSmith: https://smith.langchain.com/
+# Test 3: Servicios de monitoreo (si usas Docker)
+# - Prometheus: http://localhost:9090/targets
+# - Grafana: http://localhost:3000
+# - LangSmith: https://smith.langchain.com/
+```
+
+** Salida esperada en Test 1:**
+```
+Encontré 5 archivos disponibles:
+- proyectos.json
+- consultores.json
+- clientes.json
+...
 ```
 
 ---
 
-## 🎯 Próximos Pasos
+##  Próximos Pasos
 
-1. **Leer documentación completa**: Ver [`IMPLEMENTACION_HIBRIDA.md`](IMPLEMENTACION_HIBRIDA.md)
-2. **Explorar herramientas**: Ver `.github/copilot-instructions.md`
-3. **Ejecutar tests**: `pytest tests/ -v`
-4. **Agregar datos**: Coloca JSON en `empresa_docs/`
+1. ** Leer documentación completa**: Ver [`IMPLEMENTACION_HIBRIDA.md`](IMPLEMENTACION_HIBRIDA.md)
+2. ** Explorar herramientas**: Ver [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
+3. ** Ejecutar tests**: `pytest tests/ -v --cov=agent`
+4. ** Agregar tus datos**: Coloca archivos JSON/CSV en `empresa_docs/`
 
 ---
 
-## 🆘 Troubleshooting
+##  Troubleshooting
 
-### Error: "ModuleNotFoundError: No module named 'langchain'"
+###  Error: "ModuleNotFoundError: No module named 'langchain'"
+
 ```powershell
-pip install -r requirements.txt --upgrade
+# Solución: Reinstalar dependencias
+pip install -r requirements-base.txt --upgrade
 ```
 
-### Error: "GOOGLE_API_KEY not set"
+###  Error: "GOOGLE_API_KEY not set"
+
 ```powershell
-# Editar .env
+# Solución: Editar archivo .env
 notepad .env
 # Asegurate de agregar: GOOGLE_API_KEY=tu_clave_aqui
 ```
 
-### Error: "Port 8001 already in use"
+###  Error: "Port 8001 already in use"
+
 ```powershell
-# Cambiar puerto en docker-compose.yml
-# O matar proceso: netstat -ano | findstr :8001
+# Solución 1: Cambiar puerto en docker-compose.yml
+# Buscar: "8001:8000" y cambiar a "8002:8000"
+
+# Solución 2: Matar proceso existente
+netstat -ano | findstr :8001
+# Luego: taskkill /PID <numero_pid> /F
 ```
 
-### Error: "ChromaDB not initialized" (en queries semánticas)
+###  Advertencia: "ChromaDB not initialized"
+
 ```powershell
-# Es normal en Fases 1-4. ChromaDB es Fase 5+ (opcional)
-# Las búsquedas exactas funcionan sin ChromaDB
+# Esto es NORMAL en Fases 1-4
+# ChromaDB es Fase 5+ (opcional)
+# Las búsquedas por texto funcionan sin ChromaDB
 ```
+
+** Tip**: Si usas Fase 1-4 (MVP), ignora advertencias de ChromaDB.
 
 ---
 
-## 📚 Documentación Completa
+##  Documentación Completa
 
-- **[README.md](README.md)** - Visión general del proyecto
-- **[IMPLEMENTACION_HIBRIDA.md](IMPLEMENTACION_HIBRIDA.md)** - Guía de 18 días (recomendado)
-- **[IMPLEMENTACION_POR_FASES.md](IMPLEMENTACION_POR_FASES.md)** - Roadmap alternativo
-- **[.github/copilot-instructions.md](.github/copilot-instructions.md)** - Instrucciones para AI agents
+| Archivo | Descripción |
+|---------|-------------|
+| **[README.md](README.md)** | Visión general del proyecto |
+| **[IMPLEMENTACION_HIBRIDA.md](IMPLEMENTACION_HIBRIDA.md)** | Guía completa de 18 días ( recomendado) |
+| **[IMPLEMENTACION_POR_FASES.md](IMPLEMENTACION_POR_FASES.md)** | Roadmap alternativo |
+| **[.github/copilot-instructions.md](.github/copilot-instructions.md)** | Instrucciones para AI agents |
 
 ---
 
-## 💬 ¿Preguntas?
+##  Soporte y Comunidad
 
-- Documentación: Ver archivos `.md` arriba
-- Issues: [GitHub Issues](https://github.com/tuusuario/bi-agent-mvp/issues)
-- Discusiones: [GitHub Discussions](https://github.com/tuusuario/bi-agent-mvp/discussions)
+-  **Documentación**: Ver archivos `.md` en el repositorio
+-  **Reportar bugs**: [GitHub Issues](https://github.com/tuusuario/bi-agent-mvp/issues)
+-  **Discusiones**: [GitHub Discussions](https://github.com/tuusuario/bi-agent-mvp/discussions)
+-  **Dale una estrella** si te fue útil
 
-¡Hecho con ❤️!
+---
+
+<div align="center">
+
+** Hecho con  y LangChain! **
+
+[ Volver arriba](#-quick-start---inicio-rápido)
+
+</div>

@@ -275,18 +275,64 @@ Leyenda:
 
 ---
 
-## 🚀 FASE 0: Setup Inicial + LangSmith
+## 🚀 FASE 0: Pre-Setup + Setup Inicial + LangSmith
 
-**Duración**: Día 1 (4-6 horas)  
+**Duración Total**: Día 1 (4-6 horas)
+- **Pre-Setup**: 30 minutos (obtener credenciales)
+- **Setup**: 1-2 horas (proyecto + LangSmith)
+- **Verification**: 30 minutos (tests)
+
 **Objetivo**: Proyecto base funcional con observability desde minuto 1  
 **Criterio de éxito**: Primera query traced en LangSmith
 
-### 📋 Checklist
+---
 
-- [ ] Estructura de proyecto creada
-- [ ] Dependencias instaladas
-- [ ] LangSmith configurado y verificado
-- [ ] Primera query ejecutada y visible en LangSmith UI
+### 📋 Pre-Setup Checklist (30 minutos)
+
+Antes de empezar, prepara estos items:
+
+- [ ] **Python 3.11+** instalado
+  ```powershell
+  python --version  # Debe ser >= 3.11
+  ```
+
+- [ ] **Google API Key** generada
+  - Ir a: https://makersuite.google.com/app/apikey
+  - Click "Create API Key"
+  - Copy & paste en nota temporal
+
+- [ ] **LangSmith Account** creada
+  - Ir a: https://smith.langchain.com/
+  - Sign up (gratis, email suficiente)
+  - Settings → API Keys → Create API Key
+  - Copy & paste en nota temporal
+
+- [ ] **Git** instalado
+  ```powershell
+  git --version  # Verificar
+  ```
+
+- [ ] **Docker** (opcional, para Fase 2+)
+  ```powershell
+  docker --version  # Recomendado pero no obligatorio
+  ```
+
+**⏱️ Tiempo estimado**: 15-30 minutos (la mayoría es waiting en sign-up)
+
+---
+
+### 📊 Timeline General por Fase
+
+| Fase | Duración | Output | Queries | Requisitos |
+|------|----------|--------|---------|------------|
+| **0** | 30 min | Setup completo | - | 🔑 API Keys |
+| **1-2** | 8 días | MVP funcional | 2-5s | ✅ Mínimo |
+| **3** | 5 días | Producción | 2-5s | Docker (opt) |
+| **4** | 3 días | Portfolio | - | ✅ Completo |
+| **5** | 2-3 días (opt) | Indexación | 50-200ms | ChromaDB |
+
+**Total MVP (Fases 0-4): 16-18 días** ✅  
+**Con Fase 5: 18-21 días** (si necesitas)
 
 ---
 
@@ -334,7 +380,10 @@ AI_ASSISTANT_MVP/
 │
 ├── .env                      # Variables de entorno
 ├── .gitignore
-├── requirements.txt
+├── requirements-base.txt     # Fase 0-4 (MVP Copilot-Like)
+├── requirements-hybrid.txt   # Fase 5 (Indexación - OPCIONAL)
+├── docker-compose.yml        # Fase 0-4 (base)
+├── docker-compose.hybrid.yml # Fase 5 (opcional)
 ├── README.md
 └── main.py                   # Entry point (CLI)
 ```
@@ -345,63 +394,32 @@ AI_ASSISTANT_MVP/
 
 ### 0.2 Instalar Dependencias
 
-**Archivo**: `requirements.txt`
+**IMPORTANTE**: Ahora hay DOS archivos de requirements para mayor claridad.
 
-<details>
-<summary>💾 Ver código (txt)</summary>
+**Para Fase 0-4 (MVP Copilot-Like - Recomendado)**:
 
-```txt
-# ===========================================
-# CORE - LLM & Agent Framework (Fase 0-1)
-# ===========================================
-langchain==0.1.0
-langchain-google-genai==0.0.6
-langchain-community==0.0.20
+```powershell
+# Instalar SOLO dependencias base
+pip install -r requirements-base.txt
+```
 
-# Observability (DESDE DÍA 1) ✨
-langsmith==0.0.77
+**Para Fase 5+ (Indexación - OPCIONAL)**:
 
-# Data Processing
-pandas==2.1.4
-numpy==1.26.3
-python-dotenv==1.0.0
+```powershell
+# Instalar incluyendo ChromaDB y embeddings
+pip install -r requirements-hybrid.txt
+```
 
-# ===========================================
-# FASE 2 - Monitoring & Evaluation
-# ===========================================
-# API
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
+**¿Cuál debo usar?**
+- Empieza con `requirements-base.txt` (18 días, queries 2-5s)
+- Cambia a `requirements-hybrid.txt` SOLO SI necesitas:
+  - Queries < 500ms
+  - Dataset > 1MB
+  - Búsqueda semántica avanzada
 
-# Monitoring
-prometheus-client==0.19.0
+---
 
-# Evaluation
-ragas==0.1.0
-
-# Guardrails
-guardrails-ai==0.4.0
-
-# Caching
-redis==5.0.1
-
-# ===========================================
-# FASE 3 - Indexación & MLOps
-# ===========================================
-# Vector Store & Embeddings (AGREGAR EN FASE 3)
-chromadb==0.4.22
-sentence-transformers==2.3.1
-scikit-learn==1.4.0  # Para cosine similarity
-
-# MLOps
-mlflow==2.10.0
-
-# ===========================================
-# DEVELOPMENT & TESTING
-# ===========================================
-# Testing
-pytest==7.4.4
+### 0.2a Archivo: `requirements-base.txt` (Fase 0-4)
 pytest-asyncio==0.23.3
 pytest-cov==4.1.0
 
@@ -1131,7 +1149,51 @@ python main.py
 
 ---
 
-## 🔨 FASE 1: Agente MVP + Structured Logging
+## � Expectativas por Fase
+
+### ✅ Fase 0 (Hoy completado): Setup
+- **Tiempo**: 30 min - 2h
+- **Output**: Proyecto base + credenciales configuradas
+- **Queries**: 0 (solo verification)
+- **Setup**: Mínimo (solo API keys)
+
+### ✅ Fase 1-2: MVP Copilot-Like
+- **Tiempo**: 8 días
+- **Output**: Agente funcional, 3 tools, logging + monitoring
+- **Queries**: 2-5 segundos (primera query más lenta ~10s)
+- **Setup**: Docker optional, muy ligero
+- **Startup**: < 1 segundo
+- **Suficiente para**: Portfolio, demo, entrevistas
+
+### ✅ Fase 3: Production-Ready
+- **Tiempo**: 5 días
+- **Output**: MLOps, FastAPI, docker-compose completo
+- **Queries**: 2-5 segundos (igual que Fase 1-2)
+- **Setup**: Docker recomendado
+- **Startup**: 5-10 segundos
+- **Suficiente para**: Aplicación real, pequeña escala
+
+### ✅ Fase 4: Polish + Portfolio
+- **Tiempo**: 3 días
+- **Output**: Tests (85%), CI/CD, documentación
+- **Queries**: 2-5 segundos (igual)
+- **Setup**: Completo y profesional
+- **Startup**: 5-10 segundos
+- **Suficiente para**: **🎯 MVP COMPLETO** ✨
+
+### 🚀 Fase 5 (OPCIONAL): Indexación
+- **Tiempo**: 2-3 días adicionales
+- **Output**: ChromaDB, embeddings, búsqueda semántica
+- **Queries**: 50-200 ms (20x más rápido)
+- **Setup**: Más complejo (vector DB)
+- **Startup**: 15-20 segundos (indexación)
+- **Suficiente para**: Escala > 500 queries/día
+
+**📌 Recomendación**: Completa Fase 0-4 primero (18 días). Luego evalúa si necesitas Fase 5.
+
+---
+
+## �🔨 FASE 1: Agente MVP + Structured Logging
 
 **Duración**: Días 2-5 (4 días)  
 **Objetivo**: Agente con 3 herramientas genéricas + logging estructurado  

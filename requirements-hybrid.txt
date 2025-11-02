@@ -1,0 +1,18 @@
+# ========================
+# FASE 5: INDEXACIÓN + BÚSQUEDA SEMÁNTICA (OPCIONAL - Post-MVP)
+# ========================
+# Solo instalar SI necesitas:
+# - Queries en < 500ms
+# - Dataset > 1MB
+# - Búsqueda semántica avanzada
+
+# Incluye todas las dependencias base +
+-r requirements-base.txt
+
+# Indexación y embeddings
+chromadb==0.4.22
+sentence-transformers==2.3.1
+scikit-learn==1.4.0
+
+# Utilitarios para setup
+numpy==1.24.3
