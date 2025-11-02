@@ -12,17 +12,20 @@
 
 ```powershell
 # 1. Clonar
-git clone https://github.com/tuusuario/bi-agent-mvp.git
-cd bi-agent-mvp
+git clone https://github.com/Adrielram/bi-agent.git
+cd bi-agent
 
 # 2. Setup
 python -m venv venv
 .\venv\Scripts\Activate.ps1
-pip install -r requirements-base.txt
+pip install -r requirements.txt
 
 # 3. Configurar
 Copy-Item .env.example .env
-# Editar .env: GOOGLE_API_KEY, LANGCHAIN_API_KEY
+# Editar .env: GOOGLE_API_KEY, LANGCHAIN_API_KEY..
+
+-> si se esta usando un venv, usa el script 'setup_fase0.py' para chequear todas las dependencias
+ y configuraciones esten instaladas.
 
 # 4. Ejecutar
 python main.py

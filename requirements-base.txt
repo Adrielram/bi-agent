@@ -3,41 +3,43 @@
 # ========================
 # Dependencias mínimas para Copilot-Like BI Agent
 # Zero setup, queries rápidas (2-5s)
+# Versiones actualizadas y compatibles (Nov 2025)
 
-# LLM + LangChain
-langchain==0.1.0
-langchain-google-genai==0.0.6
-langchain-community==0.0.20
+# Core Dependencies - LangChain + Google Gemini
+langchain>=0.3.0,<0.4
+langchain-core>=0.3.0,<0.4
+langchain-google-genai>=2.0.0,<3.0
+langchain-community>=0.3.0,<0.4
 
-# Observability (Día 1)
-langsmith==0.0.77
+# Observability (Día 1) - LangSmith
+langsmith>=0.1.0,<1.0
 
 # API Server (Fase 3)
-fastapi==0.109.0
-uvicorn==0.27.0
-pydantic==2.5.0
+fastapi>=0.120.0,<1.0
+uvicorn>=0.30.0,<1.0
+pydantic>=2.5.0,<3.0
 
 # Monitoring (Fase 2)
-prometheus-client==0.19.0
+prometheus-client>=0.19.0,<1.0
 
 # Evaluation (Fase 2)
-ragas==0.1.0
-datasets==2.16.1
+ragas>=0.1.0,<1.0
+datasets>=2.16.0,<5.0
 
 # Security (Fase 2)
-guardrails-ai==0.4.0
+guardrails-ai>=0.6.0,<1.0
 
 # MLOps (Fase 3)
-mlflow==2.10.0
+mlflow>=2.10.0,<3.0
 
 # Testing (Fase 4)
-pytest==7.4.4
-pytest-cov==4.1.0
-pytest-asyncio==0.23.1
+pytest>=7.4.0,<9.0
+pytest-cov>=4.1.0,<6.0
+pytest-asyncio>=0.23.0,<1.0
 
 # Utilities
-python-dotenv==1.0.0
-requests==2.31.0
+python-dotenv>=1.0.0,<2.0
+requests>=2.31.0,<3.0
 
 # ========================
 # NOTA: ChromaDB y sentence-transformers están en
