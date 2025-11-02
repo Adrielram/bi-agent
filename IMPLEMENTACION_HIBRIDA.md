@@ -3,7 +3,7 @@
 <div align="center">
 
 ![LangChain](https://img.shields.io/badge/LangChain-0.1.0-blue?style=flat-square&logo=chainlink)
-![Gemini](https://img.shields.io/badge/Gemini-1.5%20Flash-orange?style=flat-square&logo=google)
+![Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-orange?style=flat-square&logo=google)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4.22-green?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
@@ -952,7 +952,7 @@ class BiAgent:
         
         # LLM (usar Flash para desarrollo - más barato)
         self.llm = ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model="gemini-2.0-flash",
             temperature=0.1,
             convert_system_message_to_human=True
         )
@@ -4349,7 +4349,7 @@ Monitoring (Prometheus + LangSmith)
 ### ReAct Agent with Tools
 ```python
 agent = create_react_agent(
-    llm=ChatGoogleGenerativeAI(model="gemini-1.5-flash"),
+    llm=ChatGoogleGenerativeAI(model="gemini-2.0-flash"),
     tools=[discover_files, read_collection, search_by_text, semantic_search],
     prompt=prompt
 )

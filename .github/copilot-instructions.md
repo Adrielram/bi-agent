@@ -1,5 +1,25 @@
 # AI Sales Assistant - BI Agent MVP
 
+## ⚠️ IMPORTANT: Documentation Policy
+
+**DO NOT automatically generate documentation files.** Only create `.md` files when explicitly requested by the user.
+
+This includes:
+- ❌ Status files (`FINAL_STATUS.md`, `PHASE_STATUS.md`, etc.)
+- ❌ Migration guides (`MIGRATION_COMPLETE.md`, etc.)
+- ❌ Summary documents (`CAMBIOS_*.md`, etc.)
+- ❌ Verification reports
+- ❌ Any other `.md` files not explicitly requested
+
+**ONLY create documentation when:**
+- User says "create a guide...", "document this...", "write a .md file..."
+- User specifically names a file to create
+- It's part of the core project structure (already exists)
+
+**Goal**: Keep root directory clean, organized, and clutter-free. No auto-generated documentation.
+
+---
+
 ## Project Overview
 This is a **Business Intelligence agent** MVP built with LangChain and Google Gemini that enables natural language queries over consulting company data (projects, consultants, clients, case studies, proposals). The project follows a **hybrid evolution pattern**: starting simple (Copilot-like approach) with zero setup, then optionally evolving to indexed search for production scale.
 
@@ -155,7 +175,7 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 
 ### LangChain + Gemini Setup
 - Use `ChatGoogleGenerativeAI` from `langchain-google-genai`
-- Model: `gemini-1.5-flash` (cost-effective, 2M token context)
+- Model: `gemini-2.0-flash` (latest, most capable model)
 - Temperature: 0.0 for factual queries, 0.3 for creative synthesis
 - Streaming: Disabled by default for evaluation consistency
 
@@ -185,6 +205,7 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 4. **Don't parse logs manually**: Use structured logging from day 1, query with `jq` or log aggregators.
 5. **Don't assume data schema**: JSON files may have nested structures - always inspect before writing filters.
 6. **Don't run Jupyter**: This is a ReAct agent, not a notebook analysis project.
+7. **⚠️ DO NOT AUTO-GENERATE DOCUMENTATION**: Only create `.md` files when explicitly requested by user with commands like "document this" or "create a guide". Do NOT create summary files, status files, migration guides, or any documentation proactively. Keep the root directory clean and organized.
 
 ## Key Files to Reference
 
