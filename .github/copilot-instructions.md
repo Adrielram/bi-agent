@@ -227,15 +227,41 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 
 ## Quick Reference Commands
 
-```powershell
-# Run agent CLI
-python cli.py
+### ⚠️ IMPORTANT: Always activate venv before running commands
 
-# Run tests
+```powershell
+# Activate virtual environment (ALWAYS DO THIS FIRST)
+.\venv\Scripts\Activate.ps1
+
+# Run agent CLI
+python main.py
+
+# Run agent in interactive mode
+python main.py --interactive
+
+# Run comprehensive tests (Fase 1.5)
+python test_fase1_5.py
+
+# Run API server (Fase 2+)
+python api.py
+
+# Test API endpoints (requires API running)
+python test_api.py
+
+# Run unit tests
+pytest tests/test_agent.py -v
+
+# Run all tests with coverage
 pytest tests/ -v --cov=agent --cov=utils
 
-# View logs (requires jq or similar)
+# View logs (last 10 lines)
 Get-Content logs\app.log | Select-Object -Last 10
+
+# View structured JSON logs (parse and display)
+Get-Content logs\app.log | ConvertFrom-Json | Select-Object timestamp, message, latency | Format-Table
+
+# Check test results
+Get-Content logs\fase1.5_test_results.json | ConvertFrom-Json | Format-List
 
 # Start monitoring stack (Phase 3+)
 docker-compose up -d
@@ -247,4 +273,40 @@ docker-compose up -d
 
 # Run RAGAS evaluation
 python evaluation/ragas_evaluator.py
+
+# Install/update dependencies
+pip install -r requirements-base.txt --upgrade
+
+# Deactivate venv (when done)
+deactivate
+```
+
+### Common Command Patterns
+
+**Single Query**:
+```powershell
+.\venv\Scripts\Activate.ps1
+python main.py "Your question here"
+deactivate
+```
+
+**Multiple Queries with Logging**:
+```powershell
+.\venv\Scripts\Activate.ps1
+python test_fase1_5.py
+deactivate
+```
+
+**Start API Server**:
+```powershell
+.\venv\Scripts\Activate.ps1
+python api.py
+# Keep this terminal open, open new terminal for tests
+```
+
+**Test API (in separate terminal)**:
+```powershell
+.\venv\Scripts\Activate.ps1
+python test_api.py
+deactivate
 ```
