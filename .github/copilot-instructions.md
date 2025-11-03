@@ -1,22 +1,51 @@
 # AI Sales Assistant - BI Agent MVP
 
-## ⚠️ IMPORTANT: Documentation Policy
+## ⚠️ IMPORTANT: Project Structure Policy
 
-**DO NOT automatically generate documentation files.** Only create `.md` files when explicitly requested by the user.
+**ALL code MUST respect the structure defined in `PROJECT_STRUCTURE.md`.**
 
-This includes:
-- ❌ Status files (`FINAL_STATUS.md`, `PHASE_STATUS.md`, etc.)
-- ❌ Migration guides (`MIGRATION_COMPLETE.md`, etc.)
-- ❌ Summary documents (`CAMBIOS_*.md`, etc.)
-- ❌ Verification reports
-- ❌ Any other `.md` files not explicitly requested
+### Before Creating/Modifying ANYTHING:
+1. **Check Phase**: Identify which phase (0-5) this belongs to
+2. **Check Location**: Consult `PROJECT_STRUCTURE.md` and `STRUCTURE_QUICK_REFERENCE.md`
+3. **Follow Conventions**: Spanish for business domain, English for technical
+4. **Add Tests**: Unit tests + integration tests
+5. **Use StructuredLogger**: Always for logging (from `utils/logging_config.py`)
 
-**ONLY create documentation when:**
-- User says "create a guide...", "document this...", "write a .md file..."
-- User specifically names a file to create
-- It's part of the core project structure (already exists)
+### Documentation Policy
+**DO NOT automatically generate documentation files.** Only create `.md` files when explicitly requested:
+- ❌ Auto-generated status files (`FINAL_STATUS.md`, `PHASE_STATUS.md`, etc.)
+- ❌ Auto-generated migration guides or summaries
+- ✅ ONLY create when user explicitly says "create a guide..." or names specific file
 
-**Goal**: Keep root directory clean, organized, and clutter-free. No auto-generated documentation.
+**Goal**: Keep project clean, organized per structure, and clutter-free.
+
+---
+
+## 📂 Project Structure Overview
+
+```
+bi-agent/
+├── agent/                      # CORE: Agent + tools (Fase 1+)
+├── api/                        # API: REST endpoints (Fase 2+)
+├── security/                   # Validation: Input/output (Fase 1.5+)
+├── evaluation/                 # Evaluation: RAGAS (Fase 3+)
+├── monitoring/                 # Monitoring: Prometheus (Fase 2+)
+├── mlflow/                     # MLOps: Experiments (Fase 3+)
+├── utils/                      # Shared: Logging, config, metrics
+├── tests/                      # Testing: unit/ + integration/
+├── empresa_docs/               # DATA: Business data (read-only)
+├── data/                       # Processing: ChromaDB (Fase 5+)
+├── config/                     # Configuration: .env, docker, prometheus
+├── scripts/                    # Automation: setup, deploy, evaluation
+├── docs/                       # Documentation: guides, implementations
+├── logs/                       # Output: logs, results
+└── .github/                    # CI/CD: workflows, copilot instructions
+```
+
+**Reference Files** (Essential - Review Before Coding):
+- `PROJECT_STRUCTURE.md` - Complete blueprint of structure + conventions
+- `PROJECT_STATUS.md` - Current state + what's next
+- `STRUCTURE_QUICK_REFERENCE.md` - Quick reference matrix
 
 ---
 
@@ -25,7 +54,8 @@ This is a **Business Intelligence agent** MVP built with LangChain and Google Ge
 
 ## Architecture Philosophy
 
-### Evolutionary Approach (Phases 1-5)
+### Evolutionary Approach (Phases 0-5)
+- **Phase 0**: Setup (venv, .env, requirements)
 - **Phases 1-4 (Core MVP)**: Copilot-Like architecture with on-demand file reading
   - Zero startup time, 2-5s query latency
   - Generic tools: `discover_files()`, `read_collection()`, `search_by_text()`
@@ -40,8 +70,9 @@ This is a **Business Intelligence agent** MVP built with LangChain and Google Ge
 1. **Observability from Day 1**: LangSmith tracing, structured JSON logging, Prometheus metrics configured before first query
 2. **Format-Agnostic Tools**: Generic file discovery & search tools that work with ANY data structure (JSON, CSV, text, nested objects, etc.)
 3. **No Domain Coupling**: Tools don't assume fixed schemas - agent dynamically handles any data format
-4. **ReAct Pattern**: Agent uses reasoning-action cycles with Google Gemini 1.5 Flash for cost-effective inference
+4. **ReAct Pattern**: Agent uses reasoning-action cycles with Google Gemini 2.0 Flash for cost-effective inference
 5. **Guardrails**: Input validation (SQL/prompt injection) and output validation (PII detection) via Guardrails AI
+6. **Structure-First Development**: All new code respects defined directory structure
 
 ## Data Structure (EXAMPLE)
 
@@ -59,9 +90,32 @@ All business data lives in JSON files with consistent Spanish naming:
 - Spanish field names: `años_experiencia`, `tarifa_dia_usd`, `disponibilidad`
 - Mixed data types: some fields are strings, some are structured objects
 
-REMEMBER DATA CAN BE IN ANY FORMAT. NOT NECESSARILY JSONS OR STRUCTURED LIKE 'proyectos.json', 'consultores.json', ETC. `empresa_docs/` IS JUST AN EXAMPLE.
+**⚠️ REMEMBER**: Data can be in ANY format. Use generic tools (`discover_files`, `read_collection`, `search_by_text`) that work with any structure.
 
-### ⚠️ ChromaDB & Semantic Search (Phase 5+ ONLY)
+---
+
+## Where Code Goes (Phase-Based Placement)
+
+| Need | Phase | Directory | File |
+|------|-------|-----------|------|
+| Modify agent | 1 | `agent/` | `bi_agent.py` |
+| Add tool | 1 | `agent/` | `tools.py` |
+| Input validation | 1.5 | `security/` | `input_validator.py` |
+| PII detection | 1.5 | `security/` | `output_validator.py` |
+| REST endpoint | 2 | `api/routes/` | `[name].py` |
+| API model | 2 | `api/models/` | `request.py`, `response.py` |
+| API auth | 2 | `api/middleware/` | `auth.py` |
+| Prometheus metrics | 2 | `monitoring/` | `prometheus_config.py` |
+| RAGAS evaluation | 3 | `evaluation/` | `ragas_evaluator.py` |
+| Experiment tracking | 3 | `mlflow/` | `tracker.py` |
+| Unit tests | Any | `tests/unit/` | `test_[module].py` |
+| Integration tests | Any | `tests/integration/` | `test_[flow].py` |
+
+**For complete reference**: See `STRUCTURE_QUICK_REFERENCE.md` Matrix section.
+
+---
+
+## ### ⚠️ ChromaDB & Semantic Search (Phase 5+ ONLY)
 **IMPORTANT**: ChromaDB is NOT part of Phases 1-4 (Core MVP).
 
 - **Phases 1-4 Tools** (Copilot-Like): `discover_files()`, `read_collection()`, `search_by_text()`
@@ -75,6 +129,8 @@ REMEMBER DATA CAN BE IN ANY FORMAT. NOT NECESSARILY JSONS OR STRUCTURED LIKE 'pr
   - ✅ Only if needed: > 500 queries/day OR dataset > 1MB
 
 **Default is Copilot-Like (Phases 1-4)**. Semantic search is purely optional and added in Phase 5.
+
+---
 
 ## Critical Workflows
 
@@ -108,37 +164,47 @@ python scripts/setup_chromadb.py
 ```
 
 ### Testing Queries
-- **DO NOT** run `jupyter notebook` or similar - this is a CLI/API agent
-- Use `python agent/bi_agent.py` or similar entry point
-- Every query automatically traces to LangSmith UI (https://smith.langchain.com/)
-- Check `logs/app.log` for structured JSON logs (parse with `jq` on Unix-like systems)
+- **Use CLI**: `python main.py "Your question"`
+- **Use Interactive**: `python main.py --interactive`
+- **Run tests**: `pytest tests/unit/ -v` or `python test_fase1_5.py`
+- **Every query traces to LangSmith** (https://smith.langchain.com/) automatically
+- **Check logs**: `Get-Content logs/app.log | ConvertFrom-Json | Format-Table`
 
 ### Monitoring Stack
-- **LangSmith**: Deep LLM observability, trace every agent step, view tool calls and reasoning
-- **Prometheus**: Time-series metrics on `/metrics` endpoint, track latency, error rates, tool usage
-- **Grafana**: Visual dashboards (runs on :3000), pre-configured for BI agent metrics
-- **RAGAS**: Automated evaluation of faithfulness, relevancy, precision (runs in `evaluation/` module)
+- **LangSmith**: Deep LLM observability, trace every agent step
+- **Prometheus**: Metrics collection on `/metrics` endpoint
+- **Grafana**: Visual dashboards (port :3000)
+- **RAGAS**: Automated evaluation (Phase 3+)
+
+---
 
 ## Project-Specific Conventions
 
-### File Organization
+### File Organization (Respect Structure!)
 ```
 agent/          - Core agent logic (tools, prompts, agent class)
-utils/          - Helpers (logging_config, metrics, data_loader)
+api/            - REST API (routes, models, middleware)
+security/       - Input/output validation, guardrails
 evaluation/     - RAGAS evaluation suite
 monitoring/     - Prometheus + Grafana configs
-docs/           - Implementation guides (IMPLEMENTACION_*.md)
+mlflow/         - Experiment tracking
+utils/          - Helpers (logging_config, metrics, data_loader)
+tests/          - Unit and integration tests
+docs/           - Implementation guides
+config/         - Configuration files
+scripts/        - Automation scripts
 empresa_docs/   - Business data (NEVER modify programmatically)
+logs/           - Structured JSON logs and results
 ```
 
 ### Naming Conventions
-- Use Spanish for business domain: `consultores`, `proyectos`, `clientes`
-- Use English for technical code: `BiAgent`, `MLflowTracker`, `tool_usage_counter`
-- Tools are verbs: `discover_files()`, `read_collection()`, `search_by_text()`
-- Metrics use snake_case: `bi_agent_query_duration_seconds`, `tool_usage_counter`
+- **Spanish for business domain**: `consultores`, `proyectos`, `clientes`, `bi_agent`
+- **English for technical code**: `utils`, `api`, `models`, `middleware`, `routes`
+- **Tools are verbs**: `discover_files()`, `read_collection()`, `search_by_text()`
+- **Metrics use snake_case**: `bi_agent_query_duration_seconds`, `tool_usage_counter`
 
 ### Logging Standards
-All logs must be **structured JSON** with these required fields:
+All logs must be **structured JSON** with required fields:
 ```python
 {
   "timestamp": "ISO-8601 format",
@@ -150,7 +216,7 @@ All logs must be **structured JSON** with these required fields:
 }
 ```
 
-Use the `StructuredLogger` class from `utils/logging_config.py`, not raw `logging` module.
+**Always use**: `StructuredLogger` from `utils/logging_config.py`, not raw `logging` module.
 
 ### Tool Implementation Pattern
 ```python
@@ -171,13 +237,15 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
     return formatted_string_result  # Always return strings, not dicts
 ```
 
+---
+
 ## Integration Points
 
 ### LangChain + Gemini Setup
 - Use `ChatGoogleGenerativeAI` from `langchain-google-genai`
-- Model: `gemini-2.0-flash` (latest, most capable model)
-- Temperature: 0.0 for factual queries, 0.3 for creative synthesis
-- Streaming: Disabled by default for evaluation consistency
+- Model: `gemini-2.0-flash` (latest, most capable)
+- Temperature: 0.0 for factual, 0.3 for creative
+- Streaming: Disabled by default
 
 ### LangSmith Integration
 - Tracing is **automatic** when `LANGCHAIN_TRACING_V2=true`
@@ -197,25 +265,31 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 - `grafana`: Dashboards (:3000)
 - `mlflow`: Experiment tracking (:5000)
 
+---
+
 ## Common Pitfalls to Avoid
 
 1. **Don't add indexing/ChromaDB before Phase 5**: The MVP works without it. Validate value first.
-2. **Don't use collection-specific tools**: Use generic `discover_files()` + `read_collection()` pattern for scalability.
-3. **Don't skip LangSmith setup**: It's 5 minutes that saves hours of debugging later.
-4. **Don't parse logs manually**: Use structured logging from day 1, query with `jq` or log aggregators.
-5. **Don't assume data schema**: JSON files may have nested structures - always inspect before writing filters.
-6. **Don't run Jupyter**: This is a ReAct agent, not a notebook analysis project.
-7. **⚠️ DO NOT AUTO-GENERATE DOCUMENTATION**: Only create `.md` files when explicitly requested by user with commands like "document this" or "create a guide". Do NOT create summary files, status files, migration guides, or any documentation proactively. Keep the root directory clean and organized.
+2. **Don't use collection-specific tools**: Use generic `discover_files()` + `read_collection()` pattern.
+3. **Don't skip LangSmith setup**: It's 5 minutes that saves hours of debugging.
+4. **Don't parse logs manually**: Use structured logging from day 1.
+5. **Don't assume data schema**: JSON files may have nested structures.
+6. **Don't ignore the project structure**: All code must follow `PROJECT_STRUCTURE.md`.
+7. **⚠️ DO NOT AUTO-GENERATE DOCUMENTATION**: Only create `.md` files when explicitly requested.
+
+---
 
 ## Key Files to Reference
 
-- `IMPLEMENTACION_HIBRIDA.md` - Complete 18-day implementation guide with code examples
-- `IMPLEMENTACION_POR_FASES.md` - Alternative implementation roadmap
-- `CHANGELOG_HYBRID.md` - Architecture evolution decisions and rationale
-- `README.md` - User-facing documentation with architecture diagrams
-- `agent/tools.py` - Tool implementations (reference for patterns)
+- `PROJECT_STRUCTURE.md` - Complete blueprint of structure + all conventions
+- `PROJECT_STATUS.md` - Current state + what's next
+- `STRUCTURE_QUICK_REFERENCE.md` - Quick reference matrix for searching
+- `README.md` - User-facing documentation
+- `agent/tools.py` - Tool implementation patterns
 - `utils/logging_config.py` - Structured logging setup
-- `evaluation/ragas_evaluator.py` - RAGAS evaluation patterns
+- `.github/copilot-instructions.md` - This file (Copilot guidelines)
+
+---
 
 ## Testing Expectations
 
@@ -224,10 +298,13 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 - E2E tests: Full query → response cycles with real data
 - Evaluation: RAGAS scores > 0.7 for faithfulness, > 0.8 for relevancy
 - Performance: < 5s latency for Copilot-like, < 200ms for hybrid
+- **All tests must pass before committing**
 
-## Quick Reference Commands
+---
 
-### ⚠️ IMPORTANT: Always activate venv before running commands
+## ⚠️ IMPORTANT: Always activate venv before running commands
+
+### Quick Reference Commands
 
 ```powershell
 # Activate virtual environment (ALWAYS DO THIS FIRST)
@@ -235,21 +312,20 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 
 # Run agent CLI
 python main.py
-
-# Run agent in interactive mode
+python main.py "Your question here"
 python main.py --interactive
 
-# Run comprehensive tests (Fase 1.5)
+# Run comprehensive tests
 python test_fase1_5.py
 
 # Run API server (Fase 2+)
 python api.py
 
-# Test API endpoints (requires API running)
+# Test API endpoints
 python test_api.py
 
 # Run unit tests
-pytest tests/test_agent.py -v
+pytest tests/unit/ -v
 
 # Run all tests with coverage
 pytest tests/ -v --cov=agent --cov=utils
@@ -257,7 +333,7 @@ pytest tests/ -v --cov=agent --cov=utils
 # View logs (last 10 lines)
 Get-Content logs\app.log | Select-Object -Last 10
 
-# View structured JSON logs (parse and display)
+# View structured JSON logs
 Get-Content logs\app.log | ConvertFrom-Json | Select-Object timestamp, message, latency | Format-Table
 
 # Check test results

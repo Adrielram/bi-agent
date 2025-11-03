@@ -12,6 +12,7 @@
 
 - [Resumen](#-resumen)
 - [Características](#-características)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Arquitectura](#️-arquitectura)
 - [Stack Tecnológico](#-stack-tecnológico)
 - [Uso](#-uso)
@@ -27,7 +28,9 @@
 
 BI Agent MVP es un asistente de Business Intelligence listo para producción que permite consultas en lenguaje natural sobre datos de consultora (proyectos, consultores, clientes, casos de estudio). Construido con prácticas modernas de MLOps, incluye observabilidad completa, evaluación de calidad automatizada, y guardrails de seguridad.
 
-👉 **[⚡ Quick Start en 3 minutos](QUICK_START.md)** - Comienza aquí
+👉 **[⚡ Quick Start en 3 minutos](docs/QUICK_START.md)** - Comienza aquí
+
+📚 **[📖 Ver toda la documentación centralizada en `docs/`](docs/README_DOCS.md)** ← Aquí encontrarás guías, referencias y análisis
 
 **Puntos Destacados:**
 - 🔍 **4 herramientas genéricas** agnósticas a estructura de datos (JSON, CSV, objetos anidados)
@@ -71,6 +74,102 @@ Las 4 herramientas funcionan con **CUALQUIER estructura de datos**:
 - **Validación de outputs**: Detección de PII y prevención de filtrado de prompts
 - **Rate limiting**: Protección de API y prevención de abuso
 - **Guardrails AI**: Framework de validación multi-capa
+
+---
+
+## 📂 Estructura del Proyecto
+
+El proyecto está organizado en **Fases de desarrollo** clara y escalable. Cada fase agrega capas sin alterar lo anterior.
+
+📚 **Documentación de estructura centralizada en `docs/`:**
+- Ver **[`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md)** para blueprint completo
+- Ver **[`docs/STRUCTURE_QUICK_REFERENCE.md`](docs/STRUCTURE_QUICK_REFERENCE.md)** para búsquedas rápidas
+- Ver **[`docs/README_DOCS.md`](docs/README_DOCS.md)** para índice de toda la documentación
+
+### Estructura Jerárquica (Resumen)
+
+```
+bi-agent/
+├── agent/                   # CORE: Lógica del agente (Fase 1+)
+│   ├── bi_agent.py         # ReAct agent orchestrator
+│   ├── tools.py            # 4 herramientas genéricas
+│   └── tools_semantic.py   # Búsqueda semántica (Fase 5+)
+│
+├── api/                     # API REST (Fase 2+)
+│   ├── main.py             # FastAPI server
+│   ├── routes/             # Endpoints organizados
+│   ├── models/             # Request/Response models
+│   └── middleware/         # Auth, rate-limit, errors
+│
+├── security/               # Guardrails (Fase 1.5+)
+│   ├── input_validator.py  # SQL/prompt injection
+│   └── output_validator.py # PII detection
+│
+├── evaluation/             # RAGAS evaluation (Fase 3+)
+│   ├── ragas_evaluator.py
+│   ├── test_cases.json
+│   └── results/
+│
+├── monitoring/             # Prometheus + Grafana (Fase 2+)
+│   ├── prometheus_config.py
+│   └── grafana/
+│
+├── mlflow/                 # Experiment tracking (Fase 3+)
+│   └── tracker.py
+│
+├── utils/                  # Utilidades compartidas
+│   ├── logging_config.py   # JSON logging
+│   ├── config.py           # Configuration
+│   └── metrics.py          # Prometheus setup
+│
+├── tests/                  # Test suite
+│   ├── unit/               # Tests unitarios
+│   └── integration/        # Tests de integración
+│
+├── empresa_docs/           # DATA: Datos de negocio
+│   ├── proyectos.json
+│   ├── consultores.json
+│   ├── clientes.json
+│   └── ... (nunca modificar programáticamente)
+│
+├── docs/                   # Documentación
+│   ├── IMPLEMENTACION_HIBRIDA.md
+│   ├── API_REFERENCE.md
+│   ├── MONITORING_GUIDE.md
+│   └── SECURITY_GUIDELINES.md
+│
+├── config/                 # Configuración
+│   ├── .env                # Variables (SECRETO)
+│   ├── .env.example        # Template (PÚBLICO)
+│   ├── docker-compose.yml  # Orchestración
+│   └── prometheus.yml      # Prometheus config
+│
+├── scripts/                # Automation
+│   ├── setup_chromadb.py   # Indexing setup
+│   └── run_evaluation.py   # RAGAS evaluation
+│
+├── logs/                   # Salida
+│   ├── app.log             # Structured JSON
+│   └── results/
+│
+├── main.py                 # CLI entry point
+├── requirements*.txt       # Dependencies
+└── PROJECT_STRUCTURE.md    # 👈 Referencia de estructura
+```
+
+### Matriz de Fases
+
+| Fase | Componente | Estado | Archivos Clave |
+|------|-----------|--------|-----------------|
+| **Fase 0** | Setup Inicial | ✅ COMPLETA | `.env`, `venv/`, `requirements-base.txt` |
+| **Fase 1** | Agent + Tools | ✅ COMPLETA | `agent/bi_agent.py`, `agent/tools.py`, `main.py` |
+| **Fase 1.5** | Security + Validation | 🔄 PRÓXIMA | `security/`, `tests/integration/` |
+| **Fase 2** | API + Monitoring | 📌 DESPUÉS | `api/`, `monitoring/`, `config/prometheus.yml` |
+| **Fase 3** | MLOps + Evaluation | 📊 LUEGO | `evaluation/`, `mlflow/`, `agent/prompts/` |
+| **Fase 4** | Docker + CI/CD | 📦 PRÓXIMO | `config/docker-compose.yml`, `.github/workflows/` |
+| **Fase 5** | Semantic Search | 🔍 OPCIONAL | `data/chromadb/`, `scripts/setup_chromadb.py` |
+
+**Referencia completa**: Consulta [`PROJECT_STRUCTURE.md`](PROJECT_STRUCTURE.md) para detalles exhaustivos.
 
 ---
 
