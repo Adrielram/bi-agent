@@ -1,9 +1,9 @@
-# 🤖 BI Agent MVP - Asistente de Inteligencia de Negocios Listo para Producción
+# 🤖 BI Agent MVP - Asistente de Inteligencia de Negocios con LangGraph
 
-> Agente de Business Intelligence impulsado por IA, construido con LangChain, Google Gemini, y observabilidad MLOps completa.
+> Agente de Business Intelligence impulsado por IA, construido con **LangGraph**, Google Gemini, y observabilidad MLOps completa. Memoria conversacional, reintentos automáticos y debugging visual.
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![LangChain](https://img.shields.io/badge/🦜🔗-LangChain-green.svg)](https://python.langchain.com/)
+[![LangGraph](https://img.shields.io/badge/🦜🔗-LangGraph-blue.svg)](https://langchain-ai.github.io/langgraph/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -91,7 +91,7 @@ El proyecto está organizado en **Fases de desarrollo** clara y escalable. Cada 
 ```
 bi-agent/
 ├── agent/                   # CORE: Lógica del agente (Fase 1+)
-│   ├── bi_agent.py         # ReAct agent orchestrator
+│   ├── bi_agent.py         # LangGraph StateGraph orchestrator
 │   ├── tools.py            # 4 herramientas genéricas
 │   └── tools_semantic.py   # Búsqueda semántica (Fase 5+)
 │
@@ -177,11 +177,13 @@ bi-agent/
 
 El agente utiliza un patrón **Copilot-Like** evolucionable:
 
-**Fases 1-4 (MVP Copilot-Like)**:
+**Fases 1-4 (MVP con LangGraph)**:
+- LangGraph StateGraph con nodos explícitos (reasoning → tools)
+- Memoria conversacional vía AgentState TypedDict
+- Reintentos automáticos con conditional edges
 - 4 herramientas genéricas sin indexación
 - Zero startup time, queries en 2-5 segundos
-- Ideal para MVP, demo, prototipo
-- Mismo agente funciona con cualquier dominio
+- Debugging visual con LangSmith graph traces
 
 **Fase 5+ (Hybrid con Indexación - Opcional)**:
 - Agregar ChromaDB + semantic search
@@ -194,11 +196,17 @@ El agente utiliza un patrón **Copilot-Like** evolucionable:
 │  Consulta del Usuario       │
 └──────────────┬──────────────┘
                │
-        ┌──────▼──────┐
-        │  Gemini 1.5 │  (Razonamiento + selección de tools)
-        │    Flash    │
-        └──────┬──────┘
+        ┌──────▼──────────┐
+        │ LangGraph State │  AgentState TypedDict
+        │   (messages,    │  (input, output, intermediate_steps)
+        │ filtered_data)  │
+        └──────┬──────────┘
                │
+        ┌──────▼──────────┐
+        │ Reasoning Node  │  Gemini 2.0 Flash
+        │  (LLM + Tools)  │  (Razonamiento + tool selection)
+        └──────┬──────────┘
+               │ (conditional routing)
      ┌─────────┼─────────┐
      ▼         ▼         ▼
 ┌────────┐ ┌──────┐ ┌─────────┐
@@ -208,10 +216,15 @@ El agente utiliza un patrón **Copilot-Like** evolucionable:
      │         │         │
      └─────────┼─────────┘
                │
-        ┌──────▼───────┐
-        │  Respuesta   │
-        │ Estructurada │
-        └──────────────┘
+        ┌──────▼──────────┐
+        │ Tools Node      │  ToolNode ejecuta tools
+        │ (ejecuta tools) │  (regresa al reasoning)
+        └──────┬──────────┘
+               │ (loop)
+        ┌──────▼──────────┐
+        │  Respuesta      │
+        │  Estructurada   │
+        └─────────────────┘
 ```
 
 ---
@@ -221,10 +234,10 @@ El agente utiliza un patrón **Copilot-Like** evolucionable:
 ### Tecnologías Core
 | Componente | Tecnología | Propósito |
 |-----------|------------|---------|
-| **Framework LLM** | LangChain 0.1.0 | Orquestación de agentes, tool calling |
-| **Proveedor LLM** | Google Gemini 1.5 Flash | Razonamiento rápido y cost-effective |
-| **Vector DB** | ChromaDB | Búsqueda semántica, almacenamiento de embeddings |
-| **Embeddings** | sentence-transformers (MiniLM) | Embeddings de texto |
+| **Framework Agente** | LangGraph 0.2.0+ | StateGraph con control explícito, memoria conversacional |
+| **Proveedor LLM** | Google Gemini 2.0 Flash | Razonamiento rápido y cost-effective |
+| **Vector DB** | ChromaDB (Fase 5+) | Búsqueda semántica, almacenamiento de embeddings |
+| **Embeddings** | sentence-transformers (MiniLM) | Embeddings de texto (Fase 5+) |
 | **Framework API** | FastAPI | Endpoints RESTful API |
 
 ### Observabilidad y Monitoreo
@@ -453,7 +466,7 @@ Licenciado bajo MIT. Ver [LICENSE](LICENSE) para detalles.
 
 ## 🙏 Agradecimientos
 
-- [LangChain](https://python.langchain.com/) - Framework para LLM apps
+- [LangGraph](https://langchain-ai.github.io/langgraph/) - Framework de grafos para agentes con memoria y control explícito
 - [Google Gemini](https://ai.google.dev/) - LLM rápido y económico
 - [RAGAS](https://github.com/explodinggradients/ragas) - Evaluación de RAG
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - Validación de outputs

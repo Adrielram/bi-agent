@@ -202,9 +202,11 @@ async def info():
         },
         "gemini_model": "gemini-2.0-flash",
         "features": [
-            "LangChain + Google Gemini 2.0",
+            "LangGraph StateGraph + Google Gemini 2.0",
+            "Conversational memory (AgentState)",
+            "Automatic retries & conditional routing",
             "Prometheus metrics",
-            "LangSmith tracing",
+            "LangSmith tracing with graph visualization",
             "Structured JSON logging",
             "Tool-based reasoning (ReAct pattern)"
         ]

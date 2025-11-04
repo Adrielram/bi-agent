@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 """
-BI Agent - Main Orchestrator
-Integrates LangChain + Google Gemini + LangSmith observability
+BI Agent - Main Orchestrator with LangGraph
+Integrates LangGraph + Google Gemini + LangSmith observability
+
+Architecture:
+- StateGraph with explicit nodes (reasoning, tool_execution, result_handling)
+- Conversational memory (AgentState persists between turns)
+- Automatic retries and conditional routing
+- Visual debugging in LangSmith
 
 Usage:
     python agent/bi_agent.py "Your query here"
@@ -11,14 +17,19 @@ Usage:
 import os
 import sys
 import time
-from typing import Optional
+import json
+from typing import TypedDict, List, Optional, Dict, Any, Annotated
+from operator import add
 from dotenv import load_dotenv
 
-# LangChain imports
+# LangGraph imports
+from langgraph.graph import StateGraph, END
+from langgraph.prebuilt import ToolNode
+
+# LangChain imports (for tools and LLM)
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.agents import AgentExecutor, create_react_agent
-from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
-from langchain_core.tools import Tool
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage, ToolMessage
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 # Local imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -30,11 +41,50 @@ from utils.logging_config import logger, log_query, log_tool_call
 load_dotenv()
 
 
+# ============================================
+# ESTADO: AgentState con Memoria Conversacional
+# ============================================
+
+class AgentState(TypedDict):
+    """
+    Estado que persiste entre turnos (MEMORIA CONVERSACIONAL).
+    LangGraph mantiene este estado automáticamente.
+    """
+    # Input/Output
+    input: str
+    output: str
+    
+    # Histórico conversacional
+    messages: Annotated[List[BaseMessage], add]
+    
+    # MEMORIA ACUMULADA (contexto entre queries)
+    filtered_data: Optional[List[Dict[str, Any]]]
+    current_analysis: Optional[Dict[str, Any]]
+    
+    # Metadata del flujo
+    intermediate_steps: List[tuple]
+    retry_count: int
+    tool_call_id: Optional[str]
+
+
+# ============================================
+# BI AGENT CON LANGGRAPH
+# ============================================
+
 class BIAgent:
-    """Business Intelligence Agent powered by LangChain + Google Gemini"""
+    """
+    Business Intelligence Agent powered by LangGraph + Google Gemini
+    
+    Ventajas vs LangChain:
+    ✅ Grafo explícito (ves el flujo de decisiones)
+    ✅ Memoria conversacional tipada (AgentState)
+    ✅ Reintentos automáticos (si tool falla)
+    ✅ Conditional routing basado en estado
+    ✅ Debugging visual en LangSmith
+    """
     
     def __init__(self):
-        """Initialize the BI Agent"""
+        """Initialize the BI Agent with LangGraph"""
         self.api_key = os.getenv("GOOGLE_API_KEY")
         if not self.api_key:
             raise ValueError(
@@ -51,92 +101,111 @@ class BIAgent:
         )
         
         # Setup tools
-        self.tools = self._setup_tools()
+        self.tools = [discover_files, read_collection, search_by_text]
+        self.llm_with_tools = self.llm.bind_tools(self.tools)
         
-        # Setup agent
-        self.agent = self._setup_agent()
+        # Build LangGraph
+        self.graph = self._build_graph()
         
-        logger.info("BI Agent initialized successfully")
+        logger.info("BI Agent (LangGraph) initialized successfully")
     
-    def _setup_tools(self) -> list[Tool]:
-        """Setup LangChain tools"""
-        tools = [
-            Tool(
-                name="discover_files",
-                func=discover_files.invoke,
-                description=discover_files.description
-            ),
-            Tool(
-                name="read_collection",
-                func=lambda x: read_collection.invoke({"collection_name": x}),
-                description=read_collection.description
-            ),
-            Tool(
-                name="search_by_text",
-                func=lambda x: search_by_text.invoke({"query": x}),
-                description=search_by_text.description
-            ),
-        ]
-        logger.info(f"Configured {len(tools)} tools")
-        return tools
-    
-    def _setup_agent(self) -> AgentExecutor:
-        """Setup ReAct agent with LangSmith tracing"""
-        from langchain import hub
-        
-        # Get the standard ReAct prompt from hub
-        try:
-            prompt = hub.pull("hwchase17/react")
-        except Exception:
-            # Fallback if hub is not available
-            logger.warning("Using fallback prompt (hub not available)")
-            from langchain_core.prompts import ChatPromptTemplate
-            prompt = ChatPromptTemplate.from_template(
-                """Answer the following questions as best you can. You have access to the following tools:
-
-{tools}
-
-Use the following format:
-
-Question: the input question you must answer
-Thought: you should always think about what to do
-Action: the action to take, should be one of [{tool_names}]
-Action Input: the input to the action
-Observation: the result of the action
-... (this Thought/Action/Action Input/Observation can repeat N times)
-Thought: I now know the final answer
-Final Answer: the final answer to the original input question
-
-Begin!
-
-Question: {input}
-Thought:{agent_scratchpad}"""
-            )
-        
-        # Create agent
-        agent = create_react_agent(
-            llm=self.llm,
-            tools=self.tools,
-            prompt=prompt
-        )
-        
-        # Create executor with error handling
-        executor = AgentExecutor(
-            agent=agent,
-            tools=self.tools,
-            verbose=False,
-            handle_parsing_errors=True,
-            max_iterations=10
-        )
-        
-        return executor
-    
-    def query(self, user_input: str) -> str:
+    def _build_graph(self) -> StateGraph:
         """
-        Execute a query and return the response
+        Construir StateGraph con nodos y conditional edges.
+        
+        Flujo:
+        1. reasoning (LLM piensa qué hacer)
+        2. conditional edge → tools o END
+        3. tools (ejecuta herramientas)
+        4. conditional edge → reasoning (loop) o END
+        """
+        workflow = StateGraph(AgentState)
+        
+        # Nodo 1: Reasoning (LLM decide qué hacer)
+        workflow.add_node("reasoning", self._reasoning_node)
+        
+        # Nodo 2: Tools (ejecuta herramientas con ToolNode)
+        tool_node = ToolNode(self.tools)
+        workflow.add_node("tools", tool_node)
+        
+        # Entry point
+        workflow.set_entry_point("reasoning")
+        
+        # Conditional edges
+        workflow.add_conditional_edges(
+            "reasoning",
+            self._should_continue,
+            {
+                "continue": "tools",
+                "end": END
+            }
+        )
+        
+        # Edge: tools → reasoning (loop back for multi-step reasoning)
+        workflow.add_edge("tools", "reasoning")
+        
+        # Compile graph
+        return workflow.compile()
+    
+    def _reasoning_node(self, state: AgentState) -> Dict:
+        """
+        Nodo de razonamiento: LLM decide qué hacer.
+        
+        Lee memoria del estado y genera respuesta/tool calls.
+        """
+        messages = state["messages"]
+        
+        # System prompt with context
+        system_prompt = """Eres un asistente de Business Intelligence para una consultora.
+
+Tu objetivo es ayudar con información sobre:
+- Proyectos ejecutados (tecnologías, costos, duraciones)
+- Consultores (expertise, experiencia, disponibilidad)
+- Clientes y casos de éxito
+- Propuestas comerciales
+
+INSTRUCCIONES:
+1. SIEMPRE cita fuentes específicas (IDs, nombres)
+2. Si no tienes información, dilo claramente - NO inventes
+3. Usa las herramientas disponibles para buscar datos
+4. Formatea respuestas de manera clara
+
+Herramientas disponibles:
+- discover_files: Descubre qué archivos/datos hay disponibles
+- read_collection: Lee una colección completa (ej: "consultores", "proyectos")
+- search_by_text: Busca texto específico en las colecciones
+"""
+        
+        # Add system message if not present
+        if not messages or not isinstance(messages[0], SystemMessage):
+            messages = [SystemMessage(content=system_prompt)] + messages
+        
+        # Invoke LLM with tools
+        response = self.llm_with_tools.invoke(messages)
+        
+        return {"messages": [response]}
+    
+    def _should_continue(self, state: AgentState) -> str:
+        """
+        Routing condicional: decidir si continuar con tools o terminar.
+        """
+        messages = state["messages"]
+        last_message = messages[-1]
+        
+        # Si el LLM llamó a tools, continuar
+        if hasattr(last_message, 'tool_calls') and last_message.tool_calls:
+            return "continue"
+        
+        # Si no hay tool calls, terminar
+        return "end"
+    
+    def query(self, user_input: str, thread_id: Optional[str] = None) -> str:
+        """
+        Execute a query with LangGraph (supports conversational memory).
         
         Args:
             user_input: User's natural language query
+            thread_id: Optional thread ID for multi-turn conversations
         
         Returns:
             Agent's response
@@ -148,11 +217,40 @@ Thought:{agent_scratchpad}"""
             # Log query start
             log_query(logger, user_input, status="started")
             
-            # Execute query
-            result = self.agent.invoke({"input": user_input})
+            # Prepare initial state
+            initial_state = {
+                "input": user_input,
+                "output": "",
+                "messages": [HumanMessage(content=user_input)],
+                "filtered_data": None,
+                "current_analysis": None,
+                "intermediate_steps": [],
+                "retry_count": 0,
+                "tool_call_id": None
+            }
+            
+            # Execute graph (LangSmith tracing automático)
+            config = {"recursion_limit": 10}
+            if thread_id:
+                config["configurable"] = {"thread_id": thread_id}
+            
+            result = self.graph.invoke(initial_state, config=config)
             
             # Calculate latency
             latency = time.time() - start_time
+            
+            # Extract response from messages
+            messages = result.get("messages", [])
+            
+            # Get last AI message
+            response = ""
+            for msg in reversed(messages):
+                if isinstance(msg, AIMessage) and msg.content:
+                    response = msg.content
+                    break
+            
+            if not response:
+                response = "No response generated"
             
             # Log query completion
             log_query(
@@ -161,8 +259,9 @@ Thought:{agent_scratchpad}"""
                 status="completed",
                 latency=latency
             )
+            logger.info(f"Response length: {len(response)} characters")
             
-            return result.get("output", "No response generated")
+            return response
         
         except Exception as e:
             latency = time.time() - start_time

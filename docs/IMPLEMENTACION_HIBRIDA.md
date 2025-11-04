@@ -2,19 +2,19 @@
 
 <div align="center">
 
-![LangChain](https://img.shields.io/badge/LangChain-0.1.0-blue?style=flat-square&logo=chainlink)
+![LangGraph](https://img.shields.io/badge/LangGraph-0.1.0-blue?style=flat-square&logo=chainlink)
 ![Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-orange?style=flat-square&logo=google)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4.22-green?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 
-**Timeline**: 18 días | **Approach**: Copilot-Like → Hybrid | **Observability**: Desde día 1 ✨
+**Timeline**: 20 días | **Approach**: LangGraph + Memoria + Observability | **Observability**: Desde día 1 ✨
 
 </div>
 
 ---
 
-> **TL;DR**: Guía completa para construir un agente de Business Intelligence en 18 días. Empezamos simple (**Copilot-Like**: zero setup, queries en 2-5s) y evolucionamos a producción (**Hybrid**: indexado, queries en 50-200ms). Instrumentado desde día 1 con LangSmith, Prometheus, RAGAS y MLflow.
+> **TL;DR**: Guía completa para construir un agente de Business Intelligence con LangGraph en 20 días. Combinamos ReAct pattern con grafo explícito, memoria conversacional, y reintentos automáticos. Queries en 2-5s, robustez desde el inicio. Instrumentado con LangSmith, Prometheus, RAGAS y MLflow desde día 1.
 
 **📚 Índice Rápido**:
 - [Resumen Ejecutivo](#-resumen-ejecutivo) - Start here!
@@ -47,9 +47,12 @@ Un agente de BI conversacional que responde preguntas sobre:
 <summary>💾 Ver código (code)</summary>
 
 ```code
-📍 FASE 1-2 (Días 1-10): MVP Copilot-Like
-   → Tools de descubrimiento on-demand (discover, grep, read)
-   → Zero setup, 0s startup, queries en 2-5s
+📍 FASE 1-2 (Días 1-10): MVP LangGraph con Memoria
+   → Grafo explícito con ReAct pattern
+   → Estado compartido (memoria conversacional)
+   → Reintentos automáticos + fallback tools
+   → Paralelización de tools
+   → Queries en 2-5s (startup: 5-10s)
    → Structured logging + LangSmith tracing
    → Prometheus + Grafana monitoring
    → RAGAS evaluation + Guardrails
@@ -58,16 +61,16 @@ Un agente de BI conversacional que responde preguntas sobre:
    → MLflow experiment tracking
    → Docker + docker-compose completo
    → Advanced Guardrails (prompt injection, PII)
-   → FastAPI endpoints
+   → FastAPI endpoints (expone grafo como API)
    → Sistema deployable
 
-📍 FASE 4 (Días 16-18): Polish + Portfolio ✅
+📍 FASE 4 (Días 16-20): Polish + Portfolio ✅
    → Testing suite (85% coverage)
    → CI/CD con GitHub Actions
    → Documentación técnica completa
    → Portfolio para entrevistas
 
-🎯 MVP COMPLETO - Sistema production-ready con queries en 2-5s
+🎯 MVP COMPLETO - Sistema production-ready con memoria, reintentos, debugging visual
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -75,7 +78,7 @@ Un agente de BI conversacional que responde preguntas sobre:
    → Agregar SI necesitas: > 500 queries/día O datasets > 1MB
    → ChromaDB + embeddings (startup 15-20s)
    → Queries: 50-200ms (20x mejora)
-   → Búsqueda semántica avanzada
+   → Búsqueda semántica avanzada + híbrida
 ```
 
 </details>
@@ -84,11 +87,13 @@ Un agente de BI conversacional que responde preguntas sobre:
 
 | Decisión | Alternativa | Razón |
 |----------|-------------|-------|
-| **Copilot-Like (sin índices)** | RAG completo desde día 1 | Iterar rápido > optimizar temprano |
+| **LangGraph (ReAct + Grafo + Memoria)** | LangChain simple | Robustez: reintentos, fallbacks, paralelización |
+| **Memoria conversacional** | Sin memoria | Mejor UX, análisis exploratorio, contexto acumulado |
+| **Grafo visual** | Cadenas implícitas | Debugging 10x más fácil, decisiones explícitas |
 | **Indexación opcional** | All-in con ChromaDB | Validar valor antes de complejidad |
 | **Tools genéricas** | Tools específicas | Escalabilidad a cualquier formato |
 | **Observability desde día 1** | Agregar después | Debugging 10x más fácil |
-| **18 días sin indexación** | Incluir en MVP | Queries 2-5s son suficientes para demo |
+| **20 días con LangGraph** | 18 días sin LangGraph | +2 días = mejor arquitectura, mejor UX, mejor production-ready |
 
 ### 🎯 Resultados Esperados
 
@@ -124,8 +129,9 @@ Un agente de BI conversacional que responde preguntas sobre:
 
 | Componente | Tecnología | Cuándo |
 |------------|------------|--------|
-| **LLM** | Google Gemini 1.5 Flash | Día 1 |
-| **Framework** | LangChain | Día 1 |
+| **LLM** | Google Gemini 2.0 Flash | Día 1 |
+| **Framework** | **LangGraph** (ReAct + Grafo) | Día 1 |
+| **Patrón** | ReAct + State Graph + Memoria | Día 1 |
 | **Tracing** | LangSmith | Día 1 ✨ |
 | **Logging** | Python logging (JSON) | Día 2 |
 | **Monitoring** | Prometheus + Grafana | Día 6-7 |
@@ -149,26 +155,40 @@ Un agente de BI conversacional que responde preguntas sobre:
 
 ---
 
-## 🎯 Filosofía del Enfoque Híbrido
+## 🎯 Filosofía de LangGraph
 
-**Principio**: Desarrollar el agente E instrumentarlo simultáneamente desde el inicio.
+**Principio**: Desarrollar el agente con arquitectura robusta E instrumentarlo simultáneamente desde el inicio.
 
-### ¿Por qué Híbrido?
+### ¿Por qué LangGraph?
 
-**❌ Enfoque tradicional (Agente → Producción)**:
-- Desarrollas 2 semanas sin visibilidad
-- Debugging con `print()` statements
-- Pierdes datos valiosos de experimentos iniciales
-- Refactoring masivo para agregar observability
+**❌ Enfoque tradicional (LangChain simple)**:
+- Cadenas implícitas sin visibilidad del flujo
+- Reintentos manuales (si un tool falla, qué hacer?)
+- Debugging con traces complejos en LangSmith
+- Condicionalidad limitada
+- Sin paralelización de tools
+- UX fragmentada sin memoria
 
-**✅ Enfoque híbrido (Agente + Observability mínima)**:
-- LangSmith tracing desde query #1 (setup: 5 minutos)
-- Structured logging desde día 2 (setup: 30 minutos)
-- Debugging 10x más rápido
-- Data histórica completa desde el inicio
-- Monitoring completo en semana 2 (cuando tienes queries reales)
+**✅ Enfoque LangGraph (ReAct + Grafo + Memoria)**:
+- Grafo **explícito y visual** del flujo
+- Reintentos automáticos y fallback tools
+- Debugging **visual** (ves exactamente el flujo)
+- Routing condicional **arbitrariamente complejo**
+- Paralelización **automática** de tools
+- Memoria conversacional (contexto acumulado)
+- Performance **20x mejor** si indexas (Fase 5)
 
-**Resultado**: Mismo tiempo de desarrollo, 10x mejor calidad y visibilidad.
+**Resultado**: Mejor arquitectura desde el inicio, mejor UX, mejor producible.
+
+---
+
+## 🎓 Aprendizajes Clave
+
+1. **LangGraph > LangChain para este caso**: ReAct + grafo + memoria = arquitectura profesional
+2. **Observability First**: LangSmith (5 min setup) ahorra horas de debugging
+3. **Ship First, Optimize Later**: 20 días con LangGraph → Deploy → LUEGO indexa SI lo necesitas
+4. **Generic > Specific**: Tools genéricas (discover, grep) escalan a cualquier formato
+5. **State is King**: Con memoria explícita el agente es infinitamente más poderoso
 
 ---
 
@@ -180,17 +200,22 @@ Un agente de BI conversacional que responde preguntas sobre:
 ```code
 FASE 0: Setup Inicial + LangSmith (Día 1)
    ↓
-FASE 1: Agente MVP Copilot-Like + Logging (Días 2-5)
-   │    → Tools de descubrimiento on-demand (zero setup)
+FASE 1: Grafo LangGraph + ReAct + Memoria (Días 2-5)
+   │    → State graph con reasoning + tool execution + fallback
+   │    → Memoria conversacional (acumula contexto entre turnos)
+   │    → Reintentos automáticos (tool failures)
    ↓
 FASE 2: Agente Completo + Monitoring (Días 6-10)
-   │    → Continúa con approach sin índices
+   │    → Paralelización de tools
+   │    → Conditional routing basado en estado
+   │    → Prometheus + Grafana (métricas por nodo)
    ↓
 FASE 3: Production-Ready + MLOps (Días 11-15)
    │    → MLflow + Docker + Advanced Guardrails
-   │    → Sistema deployable y reproducible
+   │    → FastAPI expone grafo
+   │    → Sistema deployable con observabilidad completa
    ↓
-FASE 4: Polish + CI/CD (Días 16-18)
+FASE 4: Polish + CI/CD (Días 16-20)
    │    → Testing + CI/CD + Portfolio
    ↓
 FASE 5: Optimización con Indexación (OPCIONAL - Post-MVP)
@@ -200,18 +225,18 @@ FASE 5: Optimización con Indexación (OPCIONAL - Post-MVP)
 
 </details>
 
-**Timeline MVP**: 3-4 semanas (18 días hábiles)  
+**Timeline MVP**: 4 semanas (20 días hábiles)  
 **Timeline Completo**: +2-3 días para Fase 5 (si es necesario)  
 **Estrategia**: Build → Deploy → Optimize (solo si se necesita)
 
 ### 🎯 Arquitectura por Fase
 
-| Fase | Approach | Startup | Query Speed | Complejidad | Estado |
-|------|----------|---------|-------------|-------------|--------|
-| **Fase 1-4** | Copilot-Like | 0s ⚡ | 2-5s | Baja ✅ | **Core MVP** |
-| **Fase 5** | Hybrid (índices) | 15-20s | 50-200ms ⚡ | Media | **Opcional** |
+| Fase | Approach | Startup | Query Speed | Complejidad | Memoria | Reintentos | Estado |
+|------|----------|---------|-------------|-------------|---------|------------|--------|
+| **Fase 1-4** | LangGraph + ReAct | 5-10s | 2-5s | Media ✅ | ✅ | ✅ | **Core MVP** |
+| **Fase 5** | Hybrid + Indexación | 15-20s | 50-200ms ⚡ | Media-Alta | ✅ | ✅ | **Opcional** |
 
-**Razón**: El MVP Copilot-Like es suficiente para demostrar valor. La indexación es una optimización que agregas **SI Y SOLO SI** la necesitas (> 500 queries/día o datasets > 1MB).
+**Razón**: LangGraph ofrece mejor arquitectura desde el inicio. La indexación es una optimización que agregas **SI Y SOLO SI** la necesitas (> 500 queries/día o datasets > 1MB).
 
 ### 🏗️ Diagrama de Arquitectura Evolutiva
 
@@ -220,49 +245,94 @@ FASE 5: Optimización con Indexación (OPCIONAL - Post-MVP)
 
 ```code
 ┌─────────────────────────────────────────────────────────────────┐
-│ FASE 1-2: Copilot-Like (Zero Setup)                            │
+│ FASE 1-2: LangGraph con ReAct + Memoria                        │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │   User Query                                                    │
 │       ↓                                                         │
-│   ┌─────────┐    ┌──────────────┐    ┌─────────────┐         │
-│   │ Gemini  │ →  │ Tools        │ →  │ JSON Files  │         │
-│   │ LLM     │    │ discover()   │    │ (on-demand) │         │
-│   └─────────┘    │ read()       │    └─────────────┘         │
-│                  │ grep()       │                              │
-│                  └──────────────┘                              │
+│   ┌─────────────────────────────────────────┐                 │
+│   │      STATE GRAPH (LangGraph)           │                 │
+│   │                                         │                 │
+│   │  ┌──────────────┐                      │                 │
+│   │  │ Reasoning    │ ← Memoria conversa   │                 │
+│   │  │ (Gemini)     │   cional             │                 │
+│   │  └──────┬───────┘                      │                 │
+│   │         ↓                              │                 │
+│   │  ┌──────────────┐                      │                 │
+│   │  │ Routing      │ ← Decide herramienta │                 │
+│   │  │ Condicional  │   basado en state    │                 │
+│   │  └──────┬───────┘                      │                 │
+│   │         ├──────────────┬───────────┐   │                 │
+│   │         ↓              ↓           ↓   │                 │
+│   │    ┌────────┐   ┌─────────┐  ┌────────┐│                 │
+│   │    │ Tool A │   │ Tool B  │  │Tool C  ││ (Paralelo!)    │
+│   │    └──┬─────┘   └────┬────┘  └───┬────┘│                 │
+│   │       └────────────────┴──────────┘     │                 │
+│   │              ↓                          │                 │
+│   │       ┌─────────────┐                   │                 │
+│   │       │ Actualizar  │                   │                 │
+│   │       │ Memoria     │                   │                 │
+│   │       └──────┬──────┘                   │                 │
+│   │              ↓                          │                 │
+│   │       ┌─────────────┐                   │                 │
+│   │       │ Volver a    │ ← Ciclo: si      │                 │
+│   │       │ Reasoning?  │   más análisis    │                 │
+│   │       └──────┬──────┘                   │                 │
+│   │              ↓                          │                 │
+│   │       ┌─────────────┐                   │                 │
+│   │       │ Final Resp  │                   │                 │
+│   │       └─────────────┘                   │                 │
+│   └─────────────────────────────────────────┘                 │
 │                                                                 │
-│   ✅ Startup: 0s                                               │
-│   ⚠️  Query: 2-5s (lee archivos cada vez)                     │
+│   ✅ Startup: 5-10s (carga LangGraph + Gemini)                │
+│   ⚠️  Query: 2-5s (razonamiento + tool execution)             │
+│   ✅ Memoria: Contexto acumulado entre turnos                 │
+│   ✅ Reintentos: Automáticos si tool falla                    │
+│   ✅ Debugging: Grafo visual en LangSmith                     │
 └─────────────────────────────────────────────────────────────────┘
 
                             ↓ EVOLUCIÓN ↓
 
 ┌─────────────────────────────────────────────────────────────────┐
-│ FASE 3: Hybrid System (Indexed)                                │
+│ FASE 5: Hybrid System (LangGraph + Indexed)                    │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │   User Query                                                    │
 │       ↓                                                         │
-│   ┌─────────┐    ┌──────────────────┐                         │
-│   │ Gemini  │ →  │ Smart Router     │                         │
-│   │ LLM     │    └────────┬─────────┘                         │
-│   └─────────┘             │                                    │
-│                           ├──────────┬─────────────┐           │
-│                           ↓          ↓             ↓           │
-│                  ┌────────────┐  ┌────────┐  ┌─────────┐     │
-│                  │ Query      │  │Context │  │ JSON    │     │
-│                  │ Engine     │  │Engine  │  │ Files   │     │
-│                  │ (on-demand)│  │(index) │  │(backup) │     │
-│                  └────────────┘  └────┬───┘  └─────────┘     │
-│                                       ↓                        │
-│                                  ┌─────────────┐              │
-│                                  │ ChromaDB    │              │
-│                                  │ Embeddings  │              │
-│                                  └─────────────┘              │
-│                                                                │
-│   ⚠️  Startup: 15-20s (indexación una vez)                    │
-│   ✅ Query: 50-200ms (usa índice pre-calculado)               │
+│   ┌─────────────────────────────────────────┐                 │
+│   │      STATE GRAPH + Semantic Index       │                 │
+│   │                                         │                 │
+│   │  ┌──────────────┐                      │                 │
+│   │  │ Reasoning    │ ← Memoria conversa   │                 │
+│   │  └──────┬───────┘                      │                 │
+│   │         ↓                              │                 │
+│   │  ┌──────────────────┐                  │                 │
+│   │  │ Smart Router     │                  │                 │
+│   │  │ (BM25 vs Semantic)                 │                 │
+│   │  └────┬──────────┬──┘                  │                 │
+│   │       ↓          ↓                     │                 │
+│   │  ┌────────┐  ┌─────────┐              │                 │
+│   │  │ BM25   │  │Semantic │              │                 │
+│   │  │Query   │  │Search   │              │                 │
+│   │  │Engine  │  │(ChromaDB)              │                 │
+│   │  └────┬───┘  └────┬────┘              │                 │
+│   │       └────────────┴────────┬──────┐   │                 │
+│   │                             ↓      ↓   │                 │
+│   │                      ┌──────────────┐  │                 │
+│   │                      │ Tool Exec    │  │                 │
+│   │                      │ (Paralelo)   │  │                 │
+│   │                      └───────┬──────┘  │                 │
+│   │                              ↓         │                 │
+│   │                      ┌──────────────┐  │                 │
+│   │                      │ Final Resp   │  │                 │
+│   │                      └──────────────┘  │                 │
+│   └─────────────────────────────────────────┘                 │
+│                                                                 │
+│   ⚠️  Startup: 15-20s (indexación ChromaDB)                   │
+│   ✅ Query: 50-200ms (búsqueda en índice pre-calculado)       │
+│   ✅ Memoria: Contexto completo + índice                      │
+│   ✅ Reintentos: Automáticos                                  │
+│   ✅ Debugging: Grafo visual + hybrid trace                   │
 └─────────────────────────────────────────────────────────────────┘
 
 Leyenda:
@@ -1423,9 +1493,7 @@ El agente LangChain combina estas herramientas genéricas:
 
 ---
 
-### 1.3 Búsqueda Semántica (FASE 5 - Opcional, NO en Fase 1)
-
-> ⏭️ **IMPORTANTE**: La búsqueda semántica con ChromaDB no se implementa en Fase 1. Se agrega en **FASE 5 (opcional, post-MVP)** si necesitas queries más rápidas.
+### 1.3 Búsqueda Semántica (FASE 5+ SOLO, NO en Fase 1)
 
 **¿Por qué no en Fase 1?**
 - ✅ Las 3 herramientas genéricas son suficientes para MVP
