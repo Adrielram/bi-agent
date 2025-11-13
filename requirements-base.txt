@@ -5,13 +5,14 @@
 # Zero setup, queries rápidas (2-5s)
 # Versiones actualizadas y compatibles (Nov 2025)
 
-# Core Dependencies - LangChain + Google Gemini
+# Core Dependencies - LangGraph + Google Gemini
+langgraph>=0.2.0,<1.0
 langchain>=0.3.0,<0.4
 langchain-core>=0.3.0,<0.4
 langchain-google-genai>=2.0.0,<3.0
 langchain-community>=0.3.0,<0.4
 
-# Observability (Día 1) - LangSmith
+# Observability (Día 1) - LangSmith (automático con LangGraph)
 langsmith>=0.1.0,<1.0
 
 # API Server (Fase 3)

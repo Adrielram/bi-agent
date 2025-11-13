@@ -50,16 +50,19 @@ bi-agent/
 ---
 
 ## Project Overview
-This is a **Business Intelligence agent** MVP built with LangChain and Google Gemini that enables natural language queries over consulting company data (projects, consultants, clients, case studies, proposals). The project follows a **hybrid evolution pattern**: starting simple (Copilot-like approach) with zero setup, then optionally evolving to indexed search for production scale.
+This is a **Business Intelligence agent** MVP built with **LangGraph** and Google Gemini that enables natural language queries over consulting company data (projects, consultants, clients, case studies, proposals). The project uses **LangGraph StateGraph** for explicit control flow, conversational memory, automatic retries, and visual debugging.
 
 ## Architecture Philosophy
 
-### Evolutionary Approach (Phases 0-5)
-- **Phase 0**: Setup (venv, .env, requirements)
-- **Phases 1-4 (Core MVP)**: Copilot-Like architecture with on-demand file reading
-  - Zero startup time, 2-5s query latency
+### LangGraph Architecture (Phases 0-5)
+- **Phase 0**: Setup (venv, .env, requirements with langgraph)
+- **Phases 1-4 (Core MVP)**: LangGraph with ReAct + Memory
+  - Explicit StateGraph with reasoning → tools → conditional routing
+  - Conversational memory (AgentState TypedDict)
+  - Automatic retries and fallback strategies
+  - 5-10s startup time, 2-5s query latency
   - Generic tools: `discover_files()`, `read_collection()`, `search_by_text()`
-  - Sufficient for demo/portfolio (< 500 queries/day, datasets < 1MB)
+  - Visual debugging with LangSmith graph traces
   
 - **Phase 5 (Optional)**: Hybrid System with indexed search
   - 15-20s startup for indexing, 50-200ms query latency (20x faster)
@@ -67,12 +70,15 @@ This is a **Business Intelligence agent** MVP built with LangChain and Google Ge
   - Only implement if needed for production scale
 
 ### Key Design Patterns
-1. **Observability from Day 1**: LangSmith tracing, structured JSON logging, Prometheus metrics configured before first query
-2. **Format-Agnostic Tools**: Generic file discovery & search tools that work with ANY data structure (JSON, CSV, text, nested objects, etc.)
-3. **No Domain Coupling**: Tools don't assume fixed schemas - agent dynamically handles any data format
-4. **ReAct Pattern**: Agent uses reasoning-action cycles with Google Gemini 2.0 Flash for cost-effective inference
-5. **Guardrails**: Input validation (SQL/prompt injection) and output validation (PII detection) via Guardrails AI
-6. **Structure-First Development**: All new code respects defined directory structure
+1. **LangGraph StateGraph**: Explicit graph with nodes (reasoning, tools) and conditional edges - better than LangChain chains
+2. **Conversational Memory**: AgentState TypedDict persists context between turns for multi-step analysis
+3. **Automatic Retries**: Conditional routing handles tool failures with automatic retry logic
+4. **Observability from Day 1**: LangSmith tracing (graph visualization), structured JSON logging, Prometheus metrics
+5. **Format-Agnostic Tools**: Generic file discovery & search tools that work with ANY data structure (JSON, CSV, text, nested objects, etc.)
+6. **No Domain Coupling**: Tools don't assume fixed schemas - agent dynamically handles any data format
+7. **ReAct Pattern + Graph**: Agent uses reasoning-action cycles within explicit StateGraph with Google Gemini 2.0 Flash
+8. **Guardrails**: Input validation (SQL/prompt injection) and output validation (PII detection) via Guardrails AI
+9. **Structure-First Development**: All new code respects defined directory structure
 
 ## Data Structure (EXAMPLE)
 
@@ -241,11 +247,13 @@ def your_tool_name(param: str, optional_param: Optional[str] = None) -> str:
 
 ## Integration Points
 
-### LangChain + Gemini Setup
-- Use `ChatGoogleGenerativeAI` from `langchain-google-genai`
+### LangGraph + Gemini Setup
+- Framework: `langgraph` for StateGraph (explicit control flow)
+- LLM: `ChatGoogleGenerativeAI` from `langchain-google-genai`
 - Model: `gemini-2.0-flash` (latest, most capable)
 - Temperature: 0.0 for factual, 0.3 for creative
 - Streaming: Disabled by default
+- Tools: Bound to LLM with `.bind_tools()` method
 
 ### LangSmith Integration
 - Tracing is **automatic** when `LANGCHAIN_TRACING_V2=true`
