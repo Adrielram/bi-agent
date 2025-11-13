@@ -50,13 +50,13 @@ class AgentState(TypedDict):
     
     Memoria: Acumula mensajes y contexto entre queries de la MISMA sesión.
     """
-    input: str
-    messages: Annotated[List[BaseMessage], add]  # Acumula mensajes (memoria)
-    filtered_data: Optional[List[Dict[str, Any]]]
-    current_analysis: Optional[Dict[str, Any]]
-    intermediate_steps: List[tuple]
-    retry_count: int
-    tool_call_id: Optional[str]
+    input: str  # Current user query
+    messages: Annotated[List[BaseMessage], add]  # Accumulated conversation history (memoria)
+    filtered_data: Optional[List[Dict[str, Any]]]  # Results from previous filtering operations
+    current_analysis: Optional[Dict[str, Any]]  # Results from previous analysis step
+    intermediate_steps: List[tuple]  # Tool execution steps (ReAct trace)
+    retry_count: int  # Number of retry attempts for current operation
+    tool_call_id: Optional[str]  # ID of current tool call (for tracing)
 
 
 # ============================================
