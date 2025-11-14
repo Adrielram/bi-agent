@@ -359,6 +359,160 @@ def _python_grep(pattern: str, filename: Optional[str], case_sensitive: bool) ->
     return json.dumps(result, indent=2, ensure_ascii=False)
 
 
+def _run_git_command(cmd, cwd):
+    """Helper function para ejecutar comandos de git con manejo de codificación"""
+    try:
+        # Ejecutar con text=False para manejar la codificación explícitamente
+        result = subprocess.run(
+            cmd,
+            cwd=cwd,
+            capture_output=True,
+            text=False,  # No decodificar automáticamente
+            timeout=10
+        )
+
+        # Decodificar la salida usando UTF-8 con manejo de errores
+        stdout = result.stdout.decode('utf-8', errors='replace')
+        stderr = result.stderr.decode('utf-8', errors='replace')
+
+        return {
+            'returncode': result.returncode,
+            'stdout': stdout,
+            'stderr': stderr
+        }
+    except subprocess.TimeoutExpired:
+        return {
+            'returncode': -1,  # Indicar error de timeout
+            'stdout': '',
+            'stderr': 'Timeout'
+        }
+    except Exception as e:
+        return {
+            'returncode': -1,  # Indicar error general
+            'stdout': '',
+            'stderr': str(e)
+        }
+
+
+def _run_git_command(cmd, cwd):
+    """Helper function para ejecutar comandos de git con manejo de codificación"""
+    try:
+        # Ejecutar con text=False para manejar la codificación explícitamente
+        result = subprocess.run(
+            cmd,
+            cwd=cwd,
+            capture_output=True,
+            text=False,  # No decodificar automáticamente
+            timeout=10
+        )
+
+        # Decodificar la salida usando UTF-8 con manejo de errores
+        stdout = result.stdout.decode('utf-8', errors='replace')
+        stderr = result.stderr.decode('utf-8', errors='replace')
+
+        return {
+            'returncode': result.returncode,
+            'stdout': stdout,
+            'stderr': stderr
+        }
+    except subprocess.TimeoutExpired:
+        return {
+            'returncode': -1,  # Indicar error de timeout
+            'stdout': '',
+            'stderr': 'Timeout'
+        }
+    except Exception as e:
+        return {
+            'returncode': -1,  # Indicar error general
+            'stdout': '',
+            'stderr': str(e)
+        }
+
+
+@tool
+def search(pattern: str, filename: Optional[str] = None, case_sensitive: bool = False) -> str:
+    """
+    🔍 BÚSQUEDA ULTRA-RÁPIDA con git grep (busca en TODOS los archivos).
+
+    Esta es la herramienta MÁS IMPORTANTE. Úsala SIEMPRE que busques algo.
+
+    Args:
+        pattern: Texto a buscar (ej: "React", "2024", "Juan Pérez")
+        filename: (Opcional) Limitar búsqueda a un archivo específico
+        case_sensitive: False por defecto (búsqueda case-insensitive)
+
+    Returns:
+        JSON agrupado por archivo con:
+        - Total de matches por archivo
+        - Line numbers
+        - Previews de los primeros matches
+        - Sugerencias de qué leer después
+
+    Examples:
+        search("React")
+        → Busca "React" en TODOS los archivos, retorna matches agrupados por archivo
+
+        search("React", filename="consultores.json")
+        → Busca solo en consultores.json
+
+        search("CONS-012")
+        → Encuentra en qué archivos se menciona este ID
+
+    IMPORTANTE:
+    - Esta tool es GRATIS (no consume tokens del contenido)
+    - Retorna SOLO metadata (line numbers + previews cortos)
+    - git grep escanea archivos gigantes en milisegundos
+    - Usa esto ANTES de read_lines() para saber QUÉ leer
+
+    PATRÓN RECOMENDADO:
+    1. search("keyword") → Ve en qué archivos aparece
+    2. read_lines(filename, around_line, count) → Lee contexto completo
+    """
+
+    try:
+        # Verificar si estamos en un repo git
+        is_git_repo = (EMPRESA_DOCS_PATH.parent / ".git").exists()
+
+        if is_git_repo:
+            # OPCIÓN 1: git grep (ULTRA RÁPIDO)
+            cmd = ["git", "grep", "-n"]  # -n = line numbers
+
+            if not case_sensitive:
+                cmd.append("-i")  # case insensitive
+
+            cmd.append(pattern)
+
+            # Si se especifica filename, limitar búsqueda
+            if filename:
+                search_path = f"empresa_docs/{filename}"
+            else:
+                search_path = "empresa_docs/"
+
+            cmd.append(search_path)
+
+            # Usar la función auxiliar para manejar la codificación
+            result = _run_git_command(cmd, EMPRESA_DOCS_PATH.parent)
+
+            if result['returncode'] == 0:
+                return _parse_git_grep_output(result['stdout'], pattern, filename)
+            elif result['returncode'] == 1:
+                # No matches found
+                return json.dumps({
+                    "matches": 0,
+                    "pattern": pattern,
+                    "message": f"No matches found for '{pattern}'" + (f" in {filename}" if filename else " in any file")
+                }, indent=2)
+            else:
+                # Error - fall back to Python grep
+                pass
+
+        # OPCIÓN 2: Python grep (fallback si no hay git)
+        return _python_grep(pattern, filename, case_sensitive)
+
+    except Exception as e:
+        return json.dumps({"error": f"Search failed: {str(e)}"})
+
+
 # ============================================
 # TOOL 3: read_lines (UNIFIED READING - context + chunked)
 # ============================================

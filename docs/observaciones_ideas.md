@@ -16,3 +16,11 @@
     Ej: Encuentra que en consultores.json hay campos faltantes o malformados
   - Agente de LangGraph: Optimiza el rendimiento del grafo de ejecución
     Ej: Detecta que una consulta simple hace 3 llamadas innecesarias a herramientas
+
+- NUEVOS NODOS PARA EL GRAFO:
+  - memory_management: Gestión inteligente de contexto acumulado
+  - validation: Validación de coherencia y precisión de respuestas
+  - planning: Descomposición de consultas complejas en pasos
+  - context_enhancement: Enriquecimiento del contexto antes de razonamiento
+  - error_handling: Manejo sofisticado de errores y fallos
+  - summarization: Resumen de conversaciones extensas para mantener contexto

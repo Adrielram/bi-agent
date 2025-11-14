@@ -1,0 +1,15 @@
+{
+  "graphs": {
+    "bi_agent": "agent.bi_agent:create_graph"
+  },
+  "dependencies": [
+    "."
+  ],
+  "env": {
+    "LANGCHAIN_TRACING_V2": "true",
+    "LANGCHAIN_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGCHAIN_API_KEY": "${LANGCHAIN_API_KEY}",
+    "GOOGLE_API_KEY": "${GOOGLE_API_KEY}",
+    "LANGCHAIN_PROJECT": "bi-agent-dev"
+  }
+}
