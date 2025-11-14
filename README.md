@@ -52,10 +52,10 @@ Agente: Usa herramientas genéricas para explorar, buscar y sintetizar informaci
 ```
 
 ### 🎯 Herramientas Genéricas (Format-Agnostic)
-Las 4 herramientas funcionan con **CUALQUIER estructura de datos**:
+Las 3 herramientas optimizadas funcionan con **CUALQUIER estructura de datos**:
 - **discover_files()**: Explorar qué datos están disponibles
-- **read_collection()**: Leer colecciones completas para análisis profundo  
-- **search_by_text()**: Búsqueda exacta en cualquier estructura (JSON, CSV, nested objects, etc.)
+- **search()**: Búsqueda ultra-rápida (git grep) en cualquier estructura
+- **read_lines()**: Lectura progresiva de archivos (chunks y contexto)
 - **semantic_search()**: Búsqueda semántica por similitud conceptual (Fase 5+)
 
 ### 📊 Monitoreo en Producción

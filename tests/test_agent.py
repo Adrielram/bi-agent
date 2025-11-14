@@ -12,59 +12,65 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from agent.tools import discover_files, read_collection, search_by_text
+from agent.tools import discover_files, search, read_lines
 
 
 class TestTools:
     """Test core tools"""
-    
+
     def test_discover_files_returns_string(self):
         """discover_files should return a string"""
         result = discover_files.invoke({})
         assert isinstance(result, str)
-    
+
     def test_discover_files_finds_data(self):
         """discover_files should find JSON files"""
         result = discover_files.invoke({})
         assert "json" in result.lower()
-    
-    def test_read_collection_works(self):
-        """read_collection should read a JSON file"""
-        # Try reading consultores which should exist
-        result = read_collection.invoke({"collection_name": "consultores"})
-        assert isinstance(result, str)
-        assert len(result) > 0
-    
-    def test_read_collection_with_invalid_name(self):
-        """read_collection should handle invalid collection names gracefully"""
-        result = read_collection.invoke({"collection_name": "nonexistent"})
-        # Should return error message or empty, not crash
-        assert isinstance(result, str)
-    
-    def test_search_by_text_finds_content(self):
-        """search_by_text should find content"""
+
+    def test_search_works(self):
+        """search should find content in files"""
         # Search for something that should exist in our data
-        result = search_by_text.invoke({"query": "Python"})
+        result = search.invoke({"pattern": "Python"})
         assert isinstance(result, str)
+
+    def test_search_with_filename_works(self):
+        """search should work with specific filename"""
+        result = search.invoke({"pattern": "Python", "filename": "consultores.json"})
+        assert isinstance(result, str)
+
+    def test_read_lines_works(self):
+        """read_lines should read a file properly"""
+        # Try reading first few lines of consultores.json which should exist
+        result = read_lines.invoke({"filename": "consultores.json", "start": 0, "count": 10})
+        assert isinstance(result, str)
+        assert "error" not in result.lower()
+
+    def test_read_lines_with_invalid_name(self):
+        """read_lines should handle invalid filename gracefully"""
+        result = read_lines.invoke({"filename": "nonexistent.json", "start": 0, "count": 10})
+        # Should return error message, not crash
+        assert isinstance(result, str)
+        assert "error" in result.lower()
 
 
 class TestToolDescriptions:
     """Test that tools have proper documentation"""
-    
+
     def test_discover_files_has_description(self):
         """discover_files should have a description"""
         assert hasattr(discover_files, "description")
         assert len(discover_files.description) > 0
-    
-    def test_read_collection_has_description(self):
-        """read_collection should have a description"""
-        assert hasattr(read_collection, "description")
-        assert len(read_collection.description) > 0
-    
-    def test_search_by_text_has_description(self):
-        """search_by_text should have a description"""
-        assert hasattr(search_by_text, "description")
-        assert len(search_by_text.description) > 0
+
+    def test_search_has_description(self):
+        """search should have a description"""
+        assert hasattr(search, "description")
+        assert len(search.description) > 0
+
+    def test_read_lines_has_description(self):
+        """read_lines should have a description"""
+        assert hasattr(read_lines, "description")
+        assert len(read_lines.description) > 0
 
 
 class TestDataAvailability:

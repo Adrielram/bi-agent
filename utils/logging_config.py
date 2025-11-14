@@ -187,7 +187,7 @@ if __name__ == "__main__":
     # Test tool logging
     log_tool_call(
         test_logger,
-        "search_by_text",
+        "search",
         "Python",
         status="completed",
         latency=0.45
