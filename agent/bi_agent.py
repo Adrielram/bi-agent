@@ -33,6 +33,13 @@ from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, System
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tools import discover_files, search, read_lines
 from utils.logging_config import logger, log_query, log_tool_call
+try:
+    from agent.guardrails_config import validate_input, validate_output
+    from monitoring.guardrails_metrics import guard_input_blocked_total, guard_output_redacted_total
+except Exception:
+    # Fall back to local validators if guardrails not available
+    from security.input_validator import validate_user_input as validate_input
+    from security.output_validator import validate_and_sanitize_output as validate_output
 
 
 # Load environment
@@ -319,19 +326,41 @@ class BIAgent:
         start_time = time.time()
 
         try:
+            # Validate input with guardrails (Fase 1.5)
+            try:
+                validated_input = validate_input(user_input)
+            except Exception as e:
+                logger.warning(f"Input validation failed: {str(e)}")
+                log_query(logger, user_input, status="blocked")
+                guard_input_blocked_total.inc()
+                return f"No puedo procesar esa consulta: {str(e)}"
+
             log_query(logger, user_input, status="started")
 
             # Create state (with or without session memory)
             initial_state = self._create_initial_state(user_input, use_session_memory)
 
             # Execute graph
-            config = {"recursion_limit": 10}
+            config = {"recursion_limit": 20}
             result = self.graph.invoke(initial_state, config=config)
 
             # Extract response
             latency = time.time() - start_time
             messages = result.get("messages", [])
             response = self._extract_response(messages)
+
+            # Validate & sanitize output before returning
+            # Validate and sanitize output with Guardrails (or fallback)
+            try:
+                validated_response = validate_output(response)
+            except Exception:
+                validated_response = response
+            # If Guardrails flagged modifications, log it
+            # (Guardrails raises or returns sanitized output depending on rules)
+            # If guardrails sanitized or changed content, increment metric
+            if validated_response != response:
+                guard_output_redacted_total.inc()
+            response = validated_response
 
             # If using session memory, save all messages for next query
             if use_session_memory:

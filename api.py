@@ -13,7 +13,7 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
-from prometheus_client import Counter, Histogram, generate_latest, REGISTRY
+from prometheus_client import Counter, Histogram, generate_latest, REGISTRY, CollectorRegistry
 import uvicorn
 
 from agent.bi_agent import BIAgent
@@ -26,38 +26,71 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Initialize Agent
+# ============================================================================
+# Prometheus Metrics - with custom registry to prevent duplicates on reload
+# ============================================================================
+
+# Create a custom registry to avoid duplication issues with uvicorn reload
+registry = REGISTRY
+
+# Try to unregister existing metrics (in case of reload)
+try:
+    if hasattr(registry, '_collector_to_names'):
+        # Clear any existing metrics with these names
+        metrics_to_remove = []
+        for collector in list(registry._collector_to_names.keys()):
+            if hasattr(collector, '_name'):
+                if collector._name in ['bi_agent_queries_total', 'bi_agent_query_latency_seconds', 'bi_agent_errors_total']:
+                    metrics_to_remove.append(collector)
+        for collector in metrics_to_remove:
+            try:
+                registry.unregister(collector)
+            except Exception:
+                pass
+except Exception:
+    pass
+
+# Counter for total queries
+try:
+    query_counter = Counter(
+        'bi_agent_queries_total',
+        'Total number of queries processed',
+        ['status'],
+        registry=registry
+    )
+except ValueError:
+    # Metric already exists, get reference to it
+    query_counter = None
+
+# Histogram for query latency
+try:
+    query_latency = Histogram(
+        'bi_agent_query_latency_seconds',
+        'Query latency in seconds',
+        buckets=(0.5, 1.0, 2.0, 5.0, 10.0, 30.0, 60.0),
+        registry=registry
+    )
+except ValueError:
+    query_latency = None
+
+# Counter for errors
+try:
+    error_counter = Counter(
+        'bi_agent_errors_total',
+        'Total number of errors',
+        ['error_type'],
+        registry=registry
+    )
+except ValueError:
+    error_counter = None
+
+# Initialize Agent (after metrics, so metrics are ready)
 try:
     agent = BIAgent()
     logger.info("Agent initialized successfully on startup")
 except Exception as e:
     logger.error(f"Failed to initialize agent: {e}")
     agent = None
-
-# ============================================================================
-# Prometheus Metrics
-# ============================================================================
-
-# Counter for total queries
-query_counter = Counter(
-    'bi_agent_queries_total',
-    'Total number of queries processed',
-    ['status']
-)
-
-# Histogram for query latency
-query_latency = Histogram(
-    'bi_agent_query_latency_seconds',
-    'Query latency in seconds',
-    buckets=(0.5, 1.0, 2.0, 5.0, 10.0, 30.0, 60.0)
-)
-
-# Counter for errors
-error_counter = Counter(
-    'bi_agent_errors_total',
-    'Total number of errors',
-    ['error_type']
-)
 
 # ============================================================================
 # Pydantic Models
@@ -117,14 +150,16 @@ async def query(request: QueryRequest):
         ```
     """
     if not agent:
-        error_counter.labels(error_type="agent_not_ready").inc()
+        if error_counter:
+            error_counter.labels(error_type="agent_not_ready").inc()
         raise HTTPException(
             status_code=503,
             detail="Agent is not initialized. Check logs."
         )
     
     if not request.user_input or not request.user_input.strip():
-        error_counter.labels(error_type="invalid_input").inc()
+        if error_counter:
+            error_counter.labels(error_type="invalid_input").inc()
         raise HTTPException(
             status_code=400,
             detail="user_input cannot be empty"
@@ -143,8 +178,10 @@ async def query(request: QueryRequest):
         latency = time.time() - start_time
         
         # Record metrics
-        query_counter.labels(status="success").inc()
-        query_latency.observe(latency)
+        if query_counter:
+            query_counter.labels(status="success").inc()
+        if query_latency:
+            query_latency.observe(latency)
         
         # Log the response
         log_query(logger, request.user_input, latency, "success")
@@ -164,8 +201,10 @@ async def query(request: QueryRequest):
         latency = time.time() - start_time
         
         # Record error metrics
-        query_counter.labels(status="error").inc()
-        error_counter.labels(error_type=type(e).__name__).inc()
+        if query_counter:
+            query_counter.labels(status="error").inc()
+        if error_counter:
+            error_counter.labels(error_type=type(e).__name__).inc()
         
         # Log error
         logger.error(f"Query failed: {str(e)}")
@@ -266,7 +305,8 @@ if __name__ == "__main__":
     # Get config from environment
     host = os.getenv("API_HOST", "localhost")
     port = int(os.getenv("API_PORT", "8001"))
-    reload = os.getenv("API_RELOAD", "true").lower() == "true"
+    # FIXED: Disable reload to prevent duplicate metrics on reload
+    reload = False  # os.getenv("API_RELOAD", "true").lower() == "true"
     
     logger.info(f"Starting BI Agent API on {host}:{port}")
     logger.info(f"Docs available at: http://{host}:{port}/docs")

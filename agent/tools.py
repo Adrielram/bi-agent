@@ -11,6 +11,14 @@ from pathlib import Path
 import json
 import subprocess
 import os
+from utils.logging_config import logger, log_tool_call
+try:
+    from agent.guardrails_config import validate_tool_output
+    _HAS_GUARDRAILS_TOOL = True
+except Exception:
+    from security.output_validator import redact_tools_output as validate_tool_output
+    _HAS_GUARDRAILS_TOOL = False
+from security.input_validator import is_query_suspicious
 
 EMPRESA_DOCS_PATH = Path(__file__).parent.parent / "empresa_docs"
 
@@ -157,6 +165,9 @@ def search(pattern: str, filename: Optional[str] = None, case_sensitive: bool = 
     """
 
     try:
+        # Guard: pattern shouldn't indicate prompt injection or dangerous queries
+        if is_query_suspicious(pattern):
+            return json.dumps({"error": "Suspicious search pattern detected. Try a safer phrase or rephrase."}, indent=2)
         # Verificar si estamos en un repo git
         is_git_repo = (EMPRESA_DOCS_PATH.parent / ".git").exists()
 
@@ -627,7 +638,16 @@ def read_lines(filename: str, start: int = 0, count: int = 50) -> str:
         if total_lines > 2000 and start == 0 and count > 100:
             result["metadata"]["warning"] = "⚠️ Large file detected. Consider using search() first to locate relevant sections"
 
-        return json.dumps(result, indent=2, ensure_ascii=False)
+        # Before returning, redact any PII present in the read chunk
+        output_str = json.dumps(result, indent=2, ensure_ascii=False)
+        sanitized, details = validate_tool_output("read_lines", output_str)
+        # Log tool call; if redaction happened mark as 'redacted'
+        if details and details.get("pii"):
+            log_tool_call(logger, "read_lines", f"{filename} lines {start}-{end}", status="redacted")
+        else:
+            log_tool_call(logger, "read_lines", f"{filename} lines {start}-{end}", status="completed")
+
+        return sanitized
 
     except Exception as e:
         return json.dumps({"error": f"❌ Failed to read file: {str(e)}"})
